@@ -21,7 +21,7 @@
 
         <li class="dropdown">
           <a href="#"><span class="arrow">素養成長坊 ▼</span></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style="display: none;">
             <li><a href="#">影片欣賞</a></li>
             <li><a href="#">實力測驗</a></li>
           </ul>
