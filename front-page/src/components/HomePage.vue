@@ -46,8 +46,25 @@
 
 
   <div class="content">
-
+     <form action="" class="form">
+        <div class="account">
+            <h3>帳號：</h3>
+            <input type="text" placeholder="請輸入帳號" class="text" name="username">  
+        </div>
+        <div class="account">
+            <h3>密碼：</h3>
+            <input type="password" placeholder="請輸入密碼" class="text" name="password" >  
+        </div>
+        <div id="goreg">
+           <input type="submit" value="登入" class="button "> 
+        </div>    
+      </form>     
   </div>
+
+  <footer>
+  <p>校園凌制零</p>
+</footer>
+
 
 </div>
 
