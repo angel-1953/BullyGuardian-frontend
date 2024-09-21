@@ -1,3 +1,39 @@
 #body{
-    background-color: #766f3b;
+    background-color: #fffdee;
 }
+
+h1{
+    font-weight: bold;
+    color: rgb(149, 96, 96);
+    padding:50px 5% 0 5%;
+}
+
+.page{
+    display: flex;
+    justify-content: end;
+  }
+
+  .title_login{
+    background-color: #f4d5ce;
+    padding: 15px 40px;
+    margin:0 30px 0  30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: rgb(133, 116, 102);
+    
+  }
+
+  .register{
+    background-color: rgb(250, 235, 221);
+  }
+
+  .register:hover{
+    background-color: rgb(248, 218, 173);
+  }
+
+  .content{
+    background-color: white;
+    border-top: 3px solid #f0dad6;
+    border-bottom: 3px solid #f4d5ce;
+    height: 500px;
+  }

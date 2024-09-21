@@ -8,7 +8,7 @@
 
     <div class="login_register">
       <a href="#" class="login">登入</a>
-      <a href="#" class="register">註冊</a>
+      <a href="#" class="login">註冊</a>
     </div>
 
   </header>
@@ -31,22 +31,25 @@
       </ul>
   </nav>
 
-<body style="background-color:aqua;">
+<div id="body" >
 
   <h1>會員登入</h1>
+  <div class="page">
+      <div class="title_login">
+        <h2>會員登入</h2> 
+      </div>
+      <div class="title_login register">
+        <h2>會員註冊</h2>
+      </div>
+  </div>
 
-  <div class="title_login">
-    <h2>會員登入</h2>
-  </div>
-  <div class="title_register">
-    <h2>會員註冊</h2>
-  </div>
+
 
   <div class="content">
 
   </div>
 
-</body>
+</div>
 
 </template>
 
