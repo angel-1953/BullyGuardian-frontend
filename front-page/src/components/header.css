@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Microsoft JhengHei';    
+}
+
+.header{
+    background-color: rgb(241, 198, 178);
+    display: flex;
+    padding:10px 5%;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.logo{
+    width: 30%;
+}
+
+.login_register>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    margin: 10px;
+}
+
+.nav{
+    background-color: rgb(250, 229, 215);
+    display: flex; 
+    align-items: center;
+    flex-direction: column;  
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.nav>ul{
+    display: flex;
+    width: 100%;
+}
+
+.nav>ul>li{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav>ul>li:hover{
+background-color: rgb(255, 248, 198);
+}
+
+.nav>ul>li a{
+    color: rgb(149, 96, 96);
+    width: 100%;
+}
+
+.nav img{
+    width: 30px; 
+    height: 30px; 
+    padding: 5px;
+}
+
+.nav a{
+    width: 90px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+
+
+/* 下拉選單樣式 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #faf2ee;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #b76e61;
+    font-size: 20px;
+  }
+  
+  /* 當鼠標懸停時顯示下拉選單 */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
