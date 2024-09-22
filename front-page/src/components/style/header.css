@@ -21,13 +21,21 @@
     width: 30%;
 }
 
-.login_register>a{
+.login_register{
     text-decoration: none;
     font-weight: bold;
     color: white;
     font-size: 22px;
     margin: 10px;
+    display: flex;
 }
+
+.header_link{
+  color: inherit;  /* 繼承父元素顏色 */
+  text-decoration: none;  /* 去除下劃線 */
+  width: 80px;
+}
+
 
 .nav{
     background-color: rgb(250, 229, 215);
@@ -108,11 +116,7 @@ background-color: rgb(255, 248, 198);
     display: block;
   }
 
-  .header_link>a {
-    color: inherit;  /* 繼承父元素顏色 */
-    text-decoration: none;  /* 去除下劃線 */
-  }
-  
+
   footer{
     padding: 15px;
     background-color: rgb(241, 198, 178);

@@ -21,7 +21,7 @@
     border-radius: 25px;
 }
 .content2{
-    margin: 10px;
+    margin: 15px;
     border: 4px solid #f6dfc6;
     border-radius: 20px;
     background-color: white;
@@ -61,10 +61,10 @@
     text-decoration: none ;  /* 去除下劃線 */
   }
 
-  .button_noti>p{
-    color: #7a524b;
+  .button_noti{
+    color: #d77c7c;
     background-color: white;
-    border:3px solid #f2aeae ;
+    border:3px solid #e58f8f ;
     padding: 10px 20px;
     border-radius: 15px;
     font-size: 20px;

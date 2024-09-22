@@ -3,7 +3,7 @@
 
   <header class="header">
 
-    <router-link to="/home" class="header_link">
+    <router-link to="/home" class="pgoto_link">
       <div class="logo">
         <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
       </div>
@@ -11,10 +11,10 @@
 
     <div class="login_register">
       <router-link to="/login" class="header_link">
-        <a href="#" class="login">登入</a>
+        <p>登入</p>
       </router-link>
       <router-link to="/register" class="header_link">
-        <a href="#" class="login">註冊</a>
+        <p>註冊</p>
       </router-link>      
     </div>
 
@@ -23,7 +23,7 @@
   <nav class="nav">
       <ul>
         <li>
-          <router-link to="/notification" class="">
+          <router-link to="/notification" class="" >
             <p>事件通報門</p>
           </router-link>
         </li>
