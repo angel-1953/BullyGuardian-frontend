@@ -22,7 +22,7 @@
     
     <nav class="nav">
       <ul>
-        <li style="background-color: #fcf6c5;">
+        <li style="background-color: rgb(255, 250, 209);">
           <router-link to="/notification" class="" >
             <p>事件通報門</p>
           </router-link>

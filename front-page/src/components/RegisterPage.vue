@@ -54,7 +54,7 @@
   
     <h1>會員登入</h1>
     <div class="page">
-      <router-link to="/home" class="link">
+      <router-link to="/login" class="link">
         <div class="title_login register">
           <h2>會員登入</h2> 
         </div>

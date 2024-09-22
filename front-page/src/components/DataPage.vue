@@ -27,7 +27,7 @@
             <p>事件通報門</p>
           </router-link>
         </li>
-        <li style="background-color: #fcf6c5;" >
+        <li style="background-color: rgb(255, 250, 209);" >
           <router-link to="/data" class="" >
             <p>霸凌雷達站</p>
           </router-link>

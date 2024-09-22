@@ -41,7 +41,7 @@
           </ul>
         </li>
     
-        <li style="background-color: #fcf6c5;">
+        <li style="background-color: rgb(255, 250, 209);">
             <router-link to="/news" class="" >
                 <p>資訊導航室</p>
             </router-link>
