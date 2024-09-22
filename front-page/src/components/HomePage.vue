@@ -37,8 +37,16 @@
         <li class="dropdown">
           <a href="#"><span class="arrow">素養成長坊 ▼</span></a>
           <ul class="dropdown-menu">
-            <li class="drop"><a href="#">影片欣賞</a></li>
-            <li class="drop"><a href="#">實力測驗</a></li>
+            <li class="drop">
+              <router-link to="/video" class="" >
+                <p>影片欣賞</p>
+              </router-link>
+            </li>
+            <li class="drop">
+              <router-link to="/test" class="" >
+                <p>實力測驗</p>
+              </router-link>
+            </li>
           </ul>
         </li>
     
@@ -53,7 +61,7 @@
 </div>
 
 
-  <div class="body">
+  <div id="body">
     <div class="picture">
       <h1>
         我是輪播圖

@@ -14,6 +14,8 @@ import LoginPage from './components/LoginPage.vue';
 import NotificationPage from './components/NotificationPage.vue';
 import DataPage from './components/DataPage.vue';
 import NewsPage from './components/NewsPage.vue';
+import TestPage from './components/TestPage.vue';
+import VideoPage from './components/VideoPage.vue';
 
 export default {
   data() {
@@ -30,6 +32,8 @@ export default {
       if (this.currentPage === 'notification') return NotificationPage;
       if (this.currentPage === 'data') return DataPage;
       if (this.currentPage === 'news') return NewsPage;
+      if (this.currentPage === 'video') return VideoPage;
+      if (this.currentPage === 'test') return TestPage;
       return null; 
     }
   }

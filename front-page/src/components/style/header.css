@@ -9,8 +9,8 @@
   top: 0;
 }
 
-.body{
-  margin-top: 170px;
+#body{
+  margin-top: 140px;
 }
 
 .router-link {    
@@ -21,9 +21,10 @@
 .header{
     background-color: rgb(241, 198, 178);
     display: flex;
-    padding:10px 5%;
+    padding:0 5%;
     align-items: center;
     justify-content:space-between;
+    height: 75px;
 }
 
 .logo{
@@ -50,10 +51,12 @@
     background-color: rgb(250, 229, 215);
     display: flex; 
     align-items: center;
+    justify-content: center;
     flex-direction: column;  
     font-weight: bold;
     font-size: 22px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.05); 
+    height: 65px;
 }
 
 .nav>ul{
@@ -64,8 +67,9 @@
 .nav>ul>li{
     list-style-type: none;
     display: flex;
+    align-items: center;
     width: 100%;
-    padding: 5px 0;
+    height: 65px;
     position: relative;
 }
 
@@ -81,7 +85,6 @@ background-color: rgb(255, 250, 209);
 .nav img{
     width: 30px; 
     height: 30px; 
-    padding: 5px;
 }
 
 .nav a{
@@ -93,7 +96,6 @@ background-color: rgb(255, 250, 209);
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 0px;
 }
 
 
@@ -107,10 +109,6 @@ background-color: rgb(255, 250, 209);
     background-color: #faf2ee;
     list-style: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
   }
   
@@ -118,6 +116,10 @@ background-color: rgb(255, 250, 209);
     text-decoration: none;
     color: #b76e61;
     font-size: 20px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .dropdown-menu {
