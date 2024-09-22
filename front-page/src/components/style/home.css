@@ -4,6 +4,11 @@
     font-family: 'Microsoft JhengHei';    
 }
 
+.router-link {    
+    color: inherit;  /* 繼承父元素顏色 */
+    text-decoration: none ;  /* 去除下劃線 */
+  }
+
 .picture{
     background-color: rgb(237, 231, 227);
     height: 350px;

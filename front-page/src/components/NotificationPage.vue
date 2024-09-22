@@ -40,8 +40,43 @@
     </nav>
   
   <div id="body" >
+
+    <div class="noti_title">
+        <h1>事件通報</h1>
+        <router-link to="/register" class="button_noti">
+            <p>查看歷史通報紀錄</p>
+        </router-link> 
+    </div>
+
+
+    <div class="content1">
+        <div class="content2">
+            <form action="" class="form">
+                <div class="event">
+                    <h3>Facebook連結：</h3>
+                    <input type="text" placeholder="請輸入Facebook連結" class="text" name="username">  
+                </div>
+                <div class="event">
+                    <h3>不當來源：</h3>                    
+                </div>
+                <div class="event">
+                    <h3>補充說明：</h3>
+                    <input type="text" placeholder="請輸入Facebook連結" class="text" name="username">  
+                </div>
+                <div class="event">
+                    <h3>附加圖片：</h3>                    
+                </div>
+                
+                <div id="goreg">
+                    <input type="submit" value="送出" class="button "> 
+                </div>    
+            </form>  
+        </div>            
+    </div>
+
+    </div>
   
-  </div>
+
   
   
     <footer>

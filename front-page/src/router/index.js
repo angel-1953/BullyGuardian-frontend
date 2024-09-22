@@ -25,7 +25,7 @@ const routes = [
       component: RegisterPage
     },
     {
-      path: '/notificationr',
+      path: '/notification',
       name: 'Notification',
       component: NotificationPage
     },

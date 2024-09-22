@@ -2,6 +2,11 @@
     background-color: #fffdee;
 }
 
+.router-link {    
+  color: inherit;  /* 繼承父元素顏色 */
+  text-decoration: none ;  /* 去除下劃線 */
+}
+
 h1{
     font-weight: bold;
     color: rgb(149, 96, 96);

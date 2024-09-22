@@ -24,7 +24,7 @@
       <ul>
         <li>
           <router-link to="/notification" class="">
-            <a href="#">事件通報門</a>
+            <p>事件通報門</p>
           </router-link>
         </li>
         <li><a href="#">霸凌雷達站</a></li>
@@ -79,5 +79,5 @@
 </template>
 
 <script src="./JavaScript/HomePage.js"></script>
-<style src="./style/header.css" ></style>
-<style src="./style/home.css" ></style>
+<style scoped src="./style/header.css" ></style>
+<style scoped src="./style/home.css" ></style>
