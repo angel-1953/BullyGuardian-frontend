@@ -92,6 +92,6 @@
           
           </template>
           
-          <script src="./JavaScript/NewsPage.js"></script>
+          <script src="./JavaScript/TestPage.js"></script>
           <style src="./style/header.css" ></style>
           <style src="./style/notification.css" ></style>

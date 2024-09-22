@@ -66,7 +66,12 @@
                 <h1>影片欣賞</h1>
             </div>
 
-            <div style="height: 600px;">
+            <div style="height: 600px;" class="video">
+                <div v-for="video in videos" :key="video.id" class="card">
+                  <img :src="video.image" :alt="video.title" class="thumbnail">
+                  <h3>{{ video.title }}</h3>
+                  <p>{{ video.views }} 次點擊</p>
+            </div>
 
             </div>
  
@@ -85,6 +90,7 @@
           
           </template>
           
-          <script src="./JavaScript/NewsPage.js"></script>
+          <script src="./JavaScript/VideoPage.js"></script>
           <style src="./style/header.css" ></style>
           <style src="./style/notification.css" ></style>
+          <style src="./style/video.css" ></style>
