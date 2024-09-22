@@ -127,13 +127,13 @@
   
     
   
-    <footer>
-    <p>校園凌制零</p>
-  </footer>
+
   
   
   </div>
-  
+      <footer>
+    <p>校園凌制零</p>
+  </footer>
   </template>
   
   <script src="./JavaScript/RegisterPage.js"></script>

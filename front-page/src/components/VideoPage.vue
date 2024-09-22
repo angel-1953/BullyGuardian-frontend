@@ -66,12 +66,12 @@
                 <h1>影片欣賞</h1>
             </div>
 
-            <div style="height: 600px;" class="video">
+            <div class="video">
                 <div v-for="video in videos" :key="video.id" class="card">
-                  <img :src="video.image" :alt="video.title" class="thumbnail">
+                  <img :src="require(`./assets/${video.image}`)" :alt="video.title" class="thumbnail">
                   <h3>{{ video.title }}</h3>
                   <p>{{ video.views }} 次點擊</p>
-            </div>
+                </div>
 
             </div>
  
