@@ -10,6 +10,8 @@
 <script>
 import HomePage from './components/HomePage.vue';
 import RegisterPage from './components/RegisterPage.vue';
+import LoginPage from './components/LoginPage.vue';
+import NotificationPage from './components/NotificationPage.vue';
 
 export default {
   data() {
@@ -22,6 +24,8 @@ export default {
     currentPageComponent() {
       if (this.currentPage === 'home') return HomePage;
       if (this.currentPage === 'register') return RegisterPage;
+      if (this.currentPage === 'login') return LoginPage;
+      if (this.currentPage === 'notificationPage') return NotificationPage;
       return null; 
     }
   }

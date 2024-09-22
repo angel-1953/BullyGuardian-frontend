@@ -103,6 +103,11 @@ background-color: rgb(255, 248, 198);
     display: block;
   }
 
+  .header_link>a {
+    color: inherit;  /* 繼承父元素顏色 */
+    text-decoration: none;  /* 去除下劃線 */
+  }
+  
   footer{
     padding: 15px;
     background-color: rgb(241, 198, 178);

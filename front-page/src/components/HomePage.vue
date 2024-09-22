@@ -3,20 +3,30 @@
 
   <header class="header">
 
-    <div class="logo">
-      <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
-    </div>
+    <router-link to="/home" class="header_link">
+      <div class="logo">
+        <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
+      </div>
+    </router-link> 
 
     <div class="login_register">
-      <a href="#" class="login">登入</a>
-      <a href="#" class="login">註冊</a>
+      <router-link to="/login" class="header_link">
+        <a href="#" class="login">登入</a>
+      </router-link>
+      <router-link to="/register" class="header_link">
+        <a href="#" class="login">註冊</a>
+      </router-link>      
     </div>
 
   </header>
   
   <nav class="nav">
       <ul>
-        <li><a href="#">事件通報門</a></li>
+        <li>
+          <router-link to="/notification" class="">
+            <a href="#">事件通報門</a>
+          </router-link>
+        </li>
         <li><a href="#">霸凌雷達站</a></li>
 
         <li class="dropdown">
@@ -32,48 +42,42 @@
       </ul>
   </nav>
 
-<div id="body" >
+  <div class="body">
+    <div class="picture">
+      <h1>
+        我是輪播圖
+      </h1>
+    </div>
 
-  <h1>會員登入</h1>
-  <div class="page">
-      <div class="title_login">
-        <h2>會員登入</h2> 
+    <div class="div2">
+      <div class="count_title">
+          <h1> 霸凌雷達站 </h1>
+          <router-link to="/home" id="more">
+            <h2 >MORE>></h2>
+          </router-link> 
       </div>
-      <router-link to="/register" class="link">
-        <div class="title_login register">
-          <h2>會員註冊</h2>
-        </div>
-      </router-link>
       
-  </div>
-
-
-
-  <div class="content">
-     <form action="" class="form">
-        <div class="account">
-            <h3>帳號：</h3>
-            <input type="text" placeholder="請輸入帳號" class="text" name="username">  
+      <div class="count">
+        <div class="count_index">
         </div>
-        <div class="account">
-            <h3>密碼：</h3>
-            <input type="password" placeholder="請輸入密碼" class="text" name="password" >  
-        </div>
-        <div id="goreg">
-           <input type="submit" value="登入" class="button "> 
-        </div>    
-      </form>     
+      </div>
+
+    </div>
+
+    <div class="video">
+      <h1>影片欣賞</h1>
+
+    </div>
+
   </div>
 
   <footer>
-  <p>校園凌制零</p>
-</footer>
+    <p>校園凌制零</p>
+  </footer>
 
-
-</div>
 
 </template>
 
-<script src="./HomePage.js"></script>
-<style src="./header.css" ></style>
-<style src="./login.css" ></style>
+<script src="./JavaScript/HomePage.js"></script>
+<style src="./style/header.css" ></style>
+<style src="./style/home.css" ></style>
