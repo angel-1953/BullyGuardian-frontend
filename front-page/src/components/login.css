@@ -85,3 +85,9 @@ h1{
 .button:hover{
     background-color: rgb(237, 183, 146);
 }
+
+.link {
+  /* 清除預設樣式 */
+  color: inherit;  /* 繼承父元素顏色 */
+  text-decoration: none;  /* 去除下劃線 */
+}

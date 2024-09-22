@@ -39,9 +39,12 @@
       <div class="title_login">
         <h2>會員登入</h2> 
       </div>
-      <div class="title_login register">
-        <h2>會員註冊</h2>
-      </div>
+      <router-link to="/register" class="link">
+        <div class="title_login register">
+          <h2>會員註冊</h2>
+        </div>
+      </router-link>
+      
   </div>
 
 
