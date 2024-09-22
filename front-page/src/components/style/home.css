@@ -11,8 +11,8 @@
 
 .picture{
     background-color: rgb(237, 231, 227);
-    height: 350px;
-    margin-bottom: 80px;
+    height: 400px;
+    margin-bottom: 150px;
 }
 
 .count{
@@ -26,7 +26,7 @@
     background-color: white;
     margin: 30px;
     width: 100%;
-    height: 500px;
+    height: 700px;
     border-radius: 30px;
 }
 
@@ -51,6 +51,19 @@
     font-size: 18px;
 }
 
-.video{
-    height: 500px;
+.video_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
 }
+
+
+.line{
+    margin: 5%;
+    height: 0px;
+    width: 10%;
+    border: 1.5px solid #edd9d9;
+}
+

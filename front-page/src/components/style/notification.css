@@ -7,6 +7,7 @@
 #body{
     background-color: #fffdee;
     margin: 0;
+    padding-bottom: 80px;
 }
 
 .nav{
@@ -16,12 +17,12 @@
 
 
 .content1{
-    margin:0 5% 50px 5%;
+    margin:0 8% 0px 8%;
     border: 4px solid #f2aeae;
     border-radius: 25px;
 }
 .content2{
-    margin: 15px;
+    margin: 10px;
     border: 4px solid #f6dfc6;
     border-radius: 20px;
     background-color: white;
@@ -47,7 +48,7 @@
 .noti_title{
     display: flex;
     align-items: center;
-    margin:0px 10%;
+    margin:0px 8%;
     padding: 50px 0;
     justify-content: space-between;
 }

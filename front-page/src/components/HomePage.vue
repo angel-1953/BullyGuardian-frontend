@@ -1,14 +1,14 @@
 
 <template>
 
-  <header class="header">
-
+<header class="header">
+    
     <router-link to="/home" class="pgoto_link">
       <div class="logo">
         <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
       </div>
     </router-link> 
-
+    
     <div class="login_register">
       <router-link to="/login" class="header_link">
         <p>登入</p>
@@ -17,18 +17,22 @@
         <p>註冊</p>
       </router-link>      
     </div>
-
-  </header>
-  
-  <nav class="nav">
+    
+    </header>
+    
+    <nav class="nav">
       <ul>
         <li>
           <router-link to="/notification" class="" >
             <p>事件通報門</p>
           </router-link>
         </li>
-        <li><a href="#">霸凌雷達站</a></li>
-
+        <li>
+          <router-link to="/data" class="" >
+            <p>霸凌雷達站</p>
+          </router-link>
+        </li>
+    
         <li class="dropdown">
           <a href="#"><span class="arrow">素養成長坊 ▼</span></a>
           <ul class="dropdown-menu" style="display: none;">
@@ -36,11 +40,15 @@
             <li><a href="#">實力測驗</a></li>
           </ul>
         </li>
-
-        <li><a href="#">資訊導航室</a></li>
-
+    
+        <li>
+            <router-link to="/news" class="" >
+                <p>資訊導航室</p>
+            </router-link>
+        </li>
+    
       </ul>
-  </nav>
+    </nav>
 
   <div class="body">
     <div class="picture">
@@ -64,8 +72,13 @@
 
     </div>
 
-    <div class="video">
-      <h1>影片欣賞</h1>
+    <div class="video_title">
+      <div class="line"></div>
+        <h1>影片欣賞</h1>
+      <div class="line"></div>
+    </div >
+
+    <div style="height: 500px;">
 
     </div>
 
