@@ -77,15 +77,47 @@
                     <h3>Facebook連結：</h3>
                     <input type="text" placeholder="請輸入Facebook連結" class="text" name="username">  
                 </div>
+
                 <div class="event">
-                    <h3>不當來源：</h3>                    
+                  <h3>不當來源：</h3>
+                  <label>
+                    <input 
+                      type="radio" 
+                      value="個人頁面" 
+                      v-model="sourceType"
+                      required
+                    />
+                    個人頁面
+                  </label>
+                  <label>
+                    <input 
+                      type="radio" 
+                      value="社團" 
+                      v-model="sourceType"
+                    />
+                    社團
+                  </label>
+                  <label>
+                    <input 
+                      type="radio" 
+                      value="粉絲專頁" 
+                      v-model="sourceType"
+                    />
+                    粉絲專頁
+                  </label>
                 </div>
+
                 <div class="event">
                     <h3>補充說明：</h3>
                     <input type="text" placeholder="請輸入Facebook連結" class="text" name="username">  
                 </div>
                 <div class="event">
-                    <h3>附加圖片：</h3>                    
+                    <h3>附加圖片：</h3> 
+                    <input 
+                      type="file" 
+                      id="image-upload" 
+                      @change="handleImageUpload"
+                    />                   
                 </div>
                 
                 <div id="goreg">
