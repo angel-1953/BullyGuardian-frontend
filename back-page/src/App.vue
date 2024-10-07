@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <!-- <button @click="currentPage = 'home'">Home</button>
+    <button @click="currentPage = 'register'">Register</button> -->
+
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HomePage from './components/HomePage.vue';
+import RegisterPage from './components/RegisterPage.vue';
+import LoginPage from './components/LoginPage.vue';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      currentPage: 'home' // 預設顯示首頁
+    };
+  },
+  computed: {
+    // 根據 currentPage 返回對應的組件
+    currentPageComponent() {
+      if (this.currentPage === 'home') return HomePage;
+      if (this.currentPage === 'register') return RegisterPage;
+      if (this.currentPage === 'login') return LoginPage;
+      return null; 
+    }
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
