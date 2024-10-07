@@ -1,7 +1,6 @@
-
 <template>
 
-<div id="header">
+    <div id="header">
       <header class="header">
         
         <router-link to="/home" class="pgoto_link">
@@ -52,31 +51,9 @@
           </ul>
         </nav>
     </div>
-      
-      <div id="body" >
-    
-        <div class="noti_title">
-            <h1>數據圖表展示</h1>
-        </div>
 
-        <div style="height: 700px;">
+    </template>
 
-        </div>
-    
-    
-        </div>
-      
-    
-      
-      
-        <footer>
-        <p>校園凌制零</p>
-      </footer>
-      
-    
-      
-      </template>
-      
-      <script src="./JavaScript/DataPage.js"></script>
-      <style src="./style/header.css" ></style>
-      <style src="./style/notification.css" ></style>
+<script src="./JavaScript/BookPage.js"></script>
+<style src="./style/header.css" ></style>
+<style src="./style/notification.css" ></style>
