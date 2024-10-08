@@ -1,0 +1,46 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 50px;
+    border-radius: 20px; /* 表格整体的圆角 */
+    overflow: hidden; /* 防止内容溢出 */
+    border: 2px solid #fae1d6;
+  }
+
+  th, td {
+    padding: 20px;
+    border: 1px solid #fff7f3;
+    font-size: 22px;
+    font-weight: bold;
+    color: #a7786f;
+  }
+
+  th {
+    background-color: #fff7f3;
+    color: #8f6a6a;
+    font-size: 24px;
+    border-bottom: #fce2e2 2px double;
+  }
+
+  .odd-row {
+    background-color: #fff5f0;
+  }
+
+  .view-btn {
+    border: none;
+    padding: 5px 40px;
+    cursor: pointer;
+    color: #dd8f8f;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    border: #dd8f8f 3px solid;
+    border-radius: 10px;
+  }
+
+  .view-btn:hover {
+    background-color: #f5b3a7;
+    color: white;
+  }

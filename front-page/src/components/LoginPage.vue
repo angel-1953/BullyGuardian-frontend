@@ -97,6 +97,6 @@
   
   </template>
   
-  <script src="./JavaScript/LoginPage.js"></script>
+  <script scoped src="./JavaScript/LoginPage.js"></script>
   <style scoped src="./style/header.css" ></style>
   <style scoped src="./style/login.css" ></style>

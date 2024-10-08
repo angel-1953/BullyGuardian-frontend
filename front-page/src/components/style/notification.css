@@ -71,6 +71,20 @@
     font-weight: bold;
     text-decoration: none ;
   }
+  .button_02{
+    color: #ffffff;
+    background-color: rgb(243, 157, 157);
+    border:0;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none ;
+    margin: 30px;
+  }
+  .button_02:hover{
+    background-color: #b2d7d5;
+  }
 
 
   .shuoming>h3{
@@ -84,12 +98,14 @@
     justify-content: center;
   }
   
-  .at{
-    background-color: aliceblue;
+  h1{
+    color: #b56e6e;
+    font-size: 30px;
   }
 
-  .nav>ul>li>.at:hover{
-    background-color: #d77c7c;
+  h3{
+    font-size: 22px;
+    color: #93665c;
   }
 
 

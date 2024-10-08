@@ -43,7 +43,7 @@
                 <p>實力測驗</p>
               </router-link>
             </li>
-            <li>
+            <li class="at">
                 <router-link to="/news" class="" >
                     <p>資訊導航</p>
                 </router-link>
@@ -58,17 +58,47 @@
         <div class="noti_title">
             <h1>最新相關資訊</h1>
         </div>
-        <div class="content1" style="margin-bottom: 50px;">
+        <div class="content1" style="margin:0 8%; width: 84%;">
             <div class="content2" style="height: 500px;">
-
+              <table>
+                    <thead>
+                      <tr>
+                        <th>序號</th>
+                        <th>網站名稱/連結</th>
+                        <th>更新日期</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.date }}</td>
+                        <td><button class="view-btn">查看</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>            
         </div>
-        <div class="noti_title">
+        <div class="noti_title" >
             <h1>教育部網路霸凌相關網站</h1>
         </div>
-        <div class="content1">
+        <div class="content1" style="margin:0 8%; width: 84%;">
             <div class="content2" style="height: 500px;">
-
+              <table>
+                    <thead>
+                      <tr>
+                        <th>序號</th>
+                        <th>網站名稱/連結</th>
+                        <th>更新日期</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.date }}</td>
+                        <td><button class="view-btn">查看</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>            
         </div>
     
@@ -85,6 +115,7 @@
       
       </template>
       
-      <script src="./JavaScript/NewsPage.js"></script>
-      <style src="./style/header.css" ></style>
-      <style src="./style/notification.css" ></style>
+      <script scoped src="./JavaScript/NewsPage.js"></script>
+      <style scoped src="./style/header.css" ></style>
+      <style scoped src="./style/notification.css" ></style>
+      <style scoped src="./style/table.css" ></style>

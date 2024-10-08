@@ -80,10 +80,6 @@
               <input type="password" placeholder="請輸入密碼" class="text" name="password" >  
           </div>
           <div class="account">
-              <h3>密碼：</h3>
-              <input type="password" placeholder="請輸入密碼" class="text" name="password" >  
-          </div>
-          <div class="account">
               <h3>密碼確認：</h3>
               <input type="password" placeholder="請輸入密碼確認" class="text" name="password" >  
           </div>
@@ -108,8 +104,8 @@
               <input type="text" placeholder="請輸入學號" class="text" name="password" >  
           </div>
           <div class="account">
-              <h3>隨機碼：</h3>
-              <input type="text" placeholder="請輸入隨機碼" class="text" name="password" >  
+              <h3>Facebook網址：</h3>
+              <input type="text" placeholder="請輸入Facebook主頁網址" class="text" name="password" >  
           </div>
           <div id="goreg">
              <input type="submit" value="註冊" class="button "> 
@@ -129,6 +125,6 @@
   </footer>
   </template>
   
-  <script src="./JavaScript/RegisterPage.js"></script>
-  <style src="./style/header.css" ></style>
-  <style src="./style/login.css" ></style>
+  <script scoped src="./JavaScript/RegisterPage.js"></script>
+  <style scoped src="./style/header.css" ></style>
+  <style scoped src="./style/login.css" ></style>

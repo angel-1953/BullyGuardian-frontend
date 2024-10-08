@@ -56,7 +56,7 @@
 
   <div id="body">
     <div >
-      <img src="./assets/pic.png" alt="" class="topimg"/>
+      <img src="./assets/pic.png" alt="" class="topimg" style="width: 100%; margin-bottom: 50px;"/>
     </div>
 
     <div class="div2">
@@ -99,6 +99,6 @@
 </template>
 
 
-<script src="./JavaScript/HomePage.js"></script>
+<script scoped src="./JavaScript/HomePage.js"></script>
 <style scoped src="./style/header.css" ></style>
 <style scoped src="./style/home.css" ></style>

@@ -33,7 +33,7 @@
                 <p>好書推薦</p>
               </router-link>
             </li>
-            <li>
+            <li class="at">
               <router-link to="/video" class="" >
                 <p>影片欣賞</p>
               </router-link>
@@ -83,7 +83,7 @@
           
           </template>
           
-          <script src="./JavaScript/VideoPage.js"></script>
-          <style src="./style/header.css" ></style>
-          <style src="./style/notification.css" ></style>
-          <style src="./style/video.css" ></style>
+          <script scoped src="./JavaScript/VideoPage.js"></script>
+          <style scoped src="./style/header.css" ></style>
+          <style scoped src="./style/notification.css" ></style>
+          <style scoped src="./style/video.css" ></style>

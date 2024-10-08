@@ -25,7 +25,7 @@
           <ul>
             <li class="at">
               <router-link to="/data"  >
-                <p>霸凌雷達</p>
+                <p >霸凌雷達</p>
               </router-link>
             </li>
             <li class="nono">
@@ -33,17 +33,17 @@
                 <p>好書推薦</p>
               </router-link>
             </li>
-            <li>
+            <li class="nono">
               <router-link to="/video" class="" >
                 <p>影片欣賞</p>
               </router-link>
             </li>
-            <li>
+            <li class="nono">
               <router-link to="/test" class="" >
                 <p>實力測驗</p>
               </router-link>
             </li>
-            <li>
+            <li class="nono">
                 <router-link to="/news" class="" >
                     <p>資訊導航</p>
                 </router-link>
@@ -77,6 +77,7 @@
       
       </template>
       
-      <script src="./JavaScript/DataPage.js"></script>
-      <style src="./style/header.css" ></style>
-      <style src="./style/notification.css" ></style>
+      <script scoped src="./JavaScript/DataPage.js"></script>
+      <style scoped src="./style/header.css" ></style>
+      <style scoped src="./style/notification.css" ></style>
+      <style scoped src="./style/table.css" ></style>
