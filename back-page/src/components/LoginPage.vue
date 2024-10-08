@@ -104,5 +104,5 @@
   </template>
   
   <script src="./JavaScript/LoginPage.js"></script>
-  <style scoped src="./style/header.css" ></style>
+  <style scoped src="./style/common.css" ></style>
   <style scoped src="./style/login.css" ></style>
