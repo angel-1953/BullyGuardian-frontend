@@ -1,3 +1,9 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Microsoft JhengHei';    
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -5,7 +11,7 @@
 }
 
 .header {
-  background-color: #4CAF50;
+  background-color: #D3E8EA;
   color: white;
   padding: 10px;
   text-align: center;
@@ -18,7 +24,7 @@
 
 .sidebar {
   width: 200px;
-  background-color: #f4f4f4;
+  background-color: #D3E8EA;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -29,13 +35,14 @@
 }
 
 .sidebar nav ul li {
+  
   margin-bottom: 15px;
 }
 
 .sidebar nav ul li a {
   display: flex;
   align-items: center;
-  color: #333;
+  color: #647F8C;
   text-decoration: none;
 }
 
