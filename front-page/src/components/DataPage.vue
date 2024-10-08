@@ -23,12 +23,12 @@
         
         <nav class="nav">
           <ul>
-            <li>
-              <router-link to="/data" class="" >
+            <li class="at">
+              <router-link to="/data"  >
                 <p>霸凌雷達</p>
               </router-link>
             </li>
-            <li>
+            <li class="nono">
               <router-link to="/book" class="" >
                 <p>好書推薦</p>
               </router-link>

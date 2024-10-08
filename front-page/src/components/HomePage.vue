@@ -55,17 +55,15 @@
 
 
   <div id="body">
-    <div class="picture">
-      <h1>
-        我是輪播圖
-      </h1>
+    <div >
+      <img src="./assets/pic.png" alt="" class="topimg"/>
     </div>
 
     <div class="div2">
       <div class="count_title">
-          <h1> 霸凌雷達站 </h1>
+          <h1> 霸凌雷達 </h1>
           <router-link to="/home" id="more">
-            <h2 >MORE>></h2>
+            <h2 ><router-link to="/data" class="header_link" >MORE>></router-link></h2>
           </router-link> 
       </div>
       

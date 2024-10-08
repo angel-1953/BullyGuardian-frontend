@@ -24,7 +24,7 @@
         <nav class="nav">
           <ul>
             <li>
-              <router-link to="/data" class="" >
+              <router-link to="/data" class="at" >
                 <p>霸凌雷達</p>
               </router-link>
             </li>

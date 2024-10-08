@@ -21,7 +21,7 @@
 .header{
     background-color: rgb(241, 198, 178);
     display: flex;
-    padding:0 5%;
+    padding:5px 5%;
     align-items: center;
     justify-content:space-between;
     height: 75px;

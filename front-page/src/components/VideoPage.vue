@@ -45,7 +45,7 @@
             </li>
             <li>
                 <router-link to="/news" class="" >
-                    <p>資訊導航</p>
+                <p>資訊導航</p>
                 </router-link>
             </li>
         
