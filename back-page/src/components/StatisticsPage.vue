@@ -77,5 +77,5 @@
   </div>
 </template>
 
-<script scoped src="./JavaScript/NetworkInfo.js" ></script>
+<script scoped src="./JavaScript/StatisticsPage.js"></script>
 <style scoped src="./style/Common.css" ></style>

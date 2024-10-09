@@ -1,5 +1,5 @@
 export default {
-    name: "Events",
+    name: "EventList",
     mounted() {
       document.title = "事件檢視";
     }

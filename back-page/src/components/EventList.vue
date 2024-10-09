@@ -28,7 +28,7 @@
                 </div>
               </li>
               <li>
-                <router-link to="/events" class="link">
+                <router-link to="/eventList" class="link">
                   <img src="./assets/事件檢視.png" class="icon" />
                   事件檢視
                 </router-link>
@@ -40,7 +40,7 @@
                 </router-link>
               </li>
               <li>
-                <router-link to="/stats" class="link">
+                <router-link to="/statisticsPage" class="link">
                   <img src="./assets/數據統計.png" class="icon" />
                   數據統計
                 </router-link>
@@ -52,7 +52,7 @@
                 </router-link>
               </li>
               <li>
-                <router-link to="/resources" class="link">
+                <router-link to="/resourcePage" class="link">
                   <img src="./assets/素養資料.png" class="icon" />
                   素養資料
                 </router-link>
@@ -77,5 +77,5 @@
     </div>
   </template>
 
-<script scoped src="./JavaScript/Events.js" ></script>
+<script scoped src="./JavaScript/EventList.js" ></script>
 <style scoped src="./style/Common.css" ></style>

@@ -1,5 +1,5 @@
 export default {
-    name: "Stats",
+    name: "StatisticsPage",
     mounted() {
       document.title = "數據統計";
     }

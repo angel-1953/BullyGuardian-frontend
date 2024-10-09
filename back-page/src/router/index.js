@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LoginPage from '../components/LoginPage.vue';
 import RegisterPage from '../components/RegisterPage.vue';
-import Events from '../components/Events.vue';
+import EventList from '../components/EventList.vue';
 import UserInfo from '../components/UserInfo.vue';
-import Stats from '../components/Stats.vue';
+import StatisticsPage from '../components/StatisticsPage.vue';
 import NetworkInfo from '../components/NetworkInfo.vue';
-import Resources from '../components/Resources.vue';
+import ResourcePage from '../components/ResourcePage.vue';
 
 
 
 const routes = [
   {
     path: '/',
-    redirect: '/register' // 預設重定向到登入
+    redirect: '/login' // 預設重定向到登入
   },
   {
     path: '/login',
@@ -25,9 +25,9 @@ const routes = [
     component: RegisterPage
   },
   {
-    path: '/events',
-    name: 'Events',
-    component: Events
+    path: '/eventList',
+    name: 'EventList',
+    component: EventList
   },
   {
     path: '/userInfo',
@@ -35,9 +35,9 @@ const routes = [
     component: UserInfo
   },
   {
-    path: '/stats',
-    name: 'Stats',
-    component: Stats
+    path: '/statisticsPage',
+    name: 'StatisticsPage',
+    component: StatisticsPage
   },
   {
     path: '/networkInfo',
@@ -45,9 +45,9 @@ const routes = [
     component: NetworkInfo
   },
   {
-    path: '/resources',
-    name: 'Resources',
-    component: Resources
+    path: '/resourcePage',
+    name: 'ResourcePage',
+    component: ResourcePage
   },
   ];
   
