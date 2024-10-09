@@ -56,7 +56,7 @@
     <div id="body" >
 
                    <div class="noti_title">
-                <h1>作答紀錄</h1>
+                <h1>好書推薦</h1>
             </div>
             <div class="content1" style="margin:0 8%; width: 84%;">
                 <div class="content2" style="height: 500px;">
