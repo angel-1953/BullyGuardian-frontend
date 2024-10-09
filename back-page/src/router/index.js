@@ -3,6 +3,7 @@ import LoginPage from '../components/LoginPage.vue';
 import RegisterPage from '../components/RegisterPage.vue';
 import EventList from '../components/EventList.vue';
 import UserInfo from '../components/UserInfo.vue';
+import ManagementPage from '../components/ManagementPage.vue';
 import StatisticsPage from '../components/StatisticsPage.vue';
 import NetworkInfo from '../components/NetworkInfo.vue';
 import ResourcePage from '../components/ResourcePage.vue';
@@ -33,6 +34,11 @@ const routes = [
     path: '/userInfo',
     name: 'UserInfo',
     component: UserInfo
+  },
+  {
+    path: '/managementPage',
+    name: 'ManagementPage',
+    component: ManagementPage
   },
   {
     path: '/statisticsPage',

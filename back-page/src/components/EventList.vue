@@ -2,20 +2,6 @@
     <div class="app-container">
       <header>
         <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
-        <div class="header-button">
-          
-            <router-link to="/login" class="link-button">
-              <button class="button">
-                登入
-              </button>
-            </router-link>
-          
-            <router-link to="/register" class="link-button">
-              <button class="button">
-                註冊
-              </button>
-            </router-link>
-        </div>
       </header>
       <div class="main-container">
         <aside class="sidebar">
@@ -37,6 +23,12 @@
                 <router-link to="/userInfo" class="link">
                   <img src="./assets/使用者資訊.png" class="icon" />
                   使用者資訊
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/managementPage" class="link">
+                  <img src="./assets/社群管理.png" class="icon" />
+                  社群管理
                 </router-link>
               </li>
               <li>

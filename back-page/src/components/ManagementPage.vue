@@ -1,10 +1,10 @@
 <template>
-  <div class="app-container">
-    <header>
-      <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
-    </header>
-    <div class="main-container">
-      <aside class="sidebar">
+    <div class="app-container">
+      <header>
+        <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
+      </header>
+      <div class="main-container">
+        <aside class="sidebar">
           <nav>
             <ul>
               <li>
@@ -58,16 +58,13 @@
             </router-link>
           </footer>
         </aside>
-      <main class="content">
-        <h2>會員註冊</h2>
-        <div class="line"> </div>
-        <div class="register-container">
-        
-        </div>
-      </main>
+        <main class="content">
+          <h2>社群管理</h2>
+          <div class="line"> </div>
+        </main>
+      </div>
     </div>
-  </div>
-</template>
+  </template>
 
-<script scoped src="./JavaScript/UserInfo.js" ></script>
+<script scoped src="./JavaScript/ManagementPage.js" ></script>
 <style scoped src="./style/Common.css" ></style>

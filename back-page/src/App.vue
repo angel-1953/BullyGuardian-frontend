@@ -12,6 +12,7 @@ import LoginPage from './components/LoginPage.vue';
 import RegisterPage from './components/RegisterPage.vue';
 import EventList from './components/EventList.vue';
 import UserInfo from './components/UserInfo.vue';
+import ManagementPage from './components/ManagementPage.vue';
 import StatisticsPage from './components/StatisticsPage.vue';
 import NetworkInfo from './components/NetworkInfo.vue';
 import ResourcePage from './components/ResourcePage.vue';
@@ -29,6 +30,7 @@ export default {
       if (this.currentPage === 'register') return RegisterPage;
       if (this.currentPage === 'eventList') return EventList;
       if (this.currentPage === 'userInfo') return UserInfo;
+      if (this.currentPage === 'managementPage') return ManagementPage;
       if (this.currentPage === 'statisticsPage') return StatisticsPage;
       if (this.currentPage === 'networkInfo') return NetworkInfo;
       if (this.currentPage === 'resourcePage') return ResourcePage;
