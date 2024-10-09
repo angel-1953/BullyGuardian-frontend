@@ -1,0 +1,13 @@
+.search{
+    margin: 30px;
+    background-color: white;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+
+}
+
+h3{
+    background-color: rgb(180, 76, 76);
+    font-size: 24px;
+    margin: 30px;
+}

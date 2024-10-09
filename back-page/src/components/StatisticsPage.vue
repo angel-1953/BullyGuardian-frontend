@@ -4,6 +4,7 @@
       <img src="./assets/Final.png" alt="Logo" class="logo" width="15%"/>
     </header>
     <div class="main-container">
+
       <aside class="sidebar">
           <nav>
             <ul>
@@ -58,12 +59,15 @@
             </router-link>
           </footer>
         </aside>
+
       <main class="content">
         <h2>數據統計</h2>
         <div class="line"> </div>
+
         <div class="register-container">
-        
+          
         </div>
+
       </main>
     </div>
   </div>
