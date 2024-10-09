@@ -24,13 +24,28 @@ table {
     border-bottom: #fce2e2 2px double;
   }
 
+  .td_link{
+    text-align: left;
+  }
+
+  td a{
+    
+    font-size: 22px;
+    font-weight: bold;
+    color: #a7786f;
+  }
+
+  td a:hover{
+    color: #f5b3a7;
+  }
+
   .odd-row {
     background-color: #fff5f0;
   }
 
   .view-btn {
     border: none;
-    padding: 5px 40px;
+    padding: 5px 30px;
     cursor: pointer;
     color: #dd8f8f;
     font-weight: bold;

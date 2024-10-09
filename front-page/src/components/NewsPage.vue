@@ -82,20 +82,20 @@
             <h1>教育部網路霸凌相關網站</h1>
         </div>
         <div class="content1" style="margin:0 8%; width: 84%;">
-            <div class="content2" style="height: 500px;">
+            <div class="content2">
               <table>
                     <thead>
                       <tr >
-                        <th style="width: 20%;">序號</th>
-                        <th style="width: 30%;">網站名稱</th>
-                        <th style="width: 50%;">網站連結</th>
+                        <th style="width: 15%;">序號</th>
+                        <th style="width: 40%;">網站名稱</th>
+                        <th class="td_link" style="width: 45%;">網站連結</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
                         <td>{{ item.id }}</td>
                         <td>{{ item.name }}</td>
-                        <td>{{ item.path }}</td>
+                        <td class="td_link"><a :href="item.path" target="_blank">{{ item.path }}</a></td> 
                       </tr>
                     </tbody>
                   </table>
