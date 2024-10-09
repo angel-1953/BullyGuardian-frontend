@@ -69,9 +69,6 @@
         <main class="content">
           <h2>會員註冊</h2>
           <div class="line"> </div>
-          <div class="register-container">
-          
-          </div>
         </main>
       </div>
     </div>

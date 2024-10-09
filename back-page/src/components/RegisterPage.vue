@@ -66,6 +66,7 @@
           </router-link>
         </footer>
       </aside>
+      
       <main class="content">
         <h2>會員註冊</h2>
         <div class="line"> </div>
