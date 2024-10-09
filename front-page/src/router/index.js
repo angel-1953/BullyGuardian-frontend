@@ -8,7 +8,7 @@ import NewsPage from '../components/NewsPage.vue';
 import VideoPage from '../components/VideoPage.vue';
 import TestPage from '../components/TestPage.vue';
 import BookPage from '../components/BookPage.vue';
-
+import WritePage from '../components/WritePage.vue';
 
 const routes = [
     {
@@ -59,6 +59,11 @@ const routes = [
       path: '/book',
       name: 'Book',
       component: BookPage
+    },
+    {
+      path: '/write',
+      name: 'Write',
+      component: WritePage
     },
   ];
   

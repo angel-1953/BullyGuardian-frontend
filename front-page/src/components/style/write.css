@@ -1,0 +1,10 @@
+.test{
+  margin:0 8%;
+}
+.card{
+  background-color: white;
+  padding: 30px;
+  margin: 15px;
+  border: 2px solid rgb(215, 187, 165);
+  border-radius: 15px;
+}

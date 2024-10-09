@@ -17,6 +17,7 @@ import NewsPage from './components/NewsPage.vue';
 import TestPage from './components/TestPage.vue';
 import VideoPage from './components/VideoPage.vue';
 import BookPage from './components/BookPage.vue';
+import WritePage from './components/WritePage.vue';
 
 export default {
   data() {
@@ -36,6 +37,7 @@ export default {
       if (this.currentPage === 'video') return VideoPage;
       if (this.currentPage === 'test') return TestPage;
       if (this.currentPage === 'book') return BookPage;
+      if (this.currentPage === 'write') return WritePage;
       return null; 
     }
   }
