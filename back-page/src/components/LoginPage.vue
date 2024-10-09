@@ -66,11 +66,12 @@
           </router-link>
         </footer>
       </aside>
+      
       <main class="content">
         <h2>會員註冊</h2>
         <div class="line"> </div>
         <div class="register-container">
-        <form @submit.prevent="submitForm">
+          <form @submit.prevent="submitForm">
           <div class="form-group">
             <label for="account">帳號：</label>
             <input type="text" v-model="form.account" id="account" required />
@@ -81,40 +82,10 @@
             <input type="password" v-model="form.password" id="password" required />
           </div>
 
-          <div class="form-group">
-            <label for="confirmPassword">密碼確認：</label>
-            <input type="password" v-model="form.confirmPassword" id="confirmPassword" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-MAIL：</label>
-            <input type="email" v-model="form.email" id="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="name">姓名：</label>
-            <input type="text" v-model="form.name" id="name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="school">學校：</label>
-            <input type="text" v-model="form.school" id="school" required />
-          </div>
-
-          <div class="form-group">
-            <label for="photo">教師證明：</label>
-            <div class="custom-file-input">
-              <input type="file" @change="handleFileUpload" id="photo" style="display:none" />
-              <button type="button" @click="triggerFileInput">上傳圖片</button>
-              <span v-if="form.photoName">{{ form.photoName }}</span>
-            </div>
-          </div>
-
           <div class="form-footer">
-            <button type="submit">註冊</button>
+            <button type="submit">登入</button>
           </div>
-          
-        </form>
+          </form>
         </div>
       </main>
     </div>
@@ -123,4 +94,4 @@
   
 <script src="./JavaScript/LoginPage.js"></script>
 <style scoped src="./style/Common.css" ></style>
-<style scoped src="./style/Register.css" ></style>
+<style scoped src="./style/LoginPage.css" ></style>
