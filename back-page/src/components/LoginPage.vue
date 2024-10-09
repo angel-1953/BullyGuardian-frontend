@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <header>
-      <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
+      <img src="./assets/Final.png" alt="Logo" class="logo" width="15%"/>
       <div class="header-button">
         
           <router-link to="/login" class="link-button">
@@ -22,7 +22,7 @@
           <nav>
             <ul>
               <li>
-                <div class="link">
+                <div class="nolink">
                   <img src="./assets/個人頭像.png" class="icon" />
                   XXX,您好
                 </div>

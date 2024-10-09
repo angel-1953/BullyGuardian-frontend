@@ -1,14 +1,14 @@
 <template>
     <div class="app-container">
       <header>
-        <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
+        <img src="./assets/Final.png" alt="Logo" class="logo" width="15%"/>
       </header>
       <div class="main-container">
         <aside class="sidebar">
           <nav>
             <ul>
               <li>
-                <div class="link">
+                <div class="nolink">
                   <img src="./assets/個人頭像.png" class="icon" />
                   XXX,您好
                 </div>
@@ -25,8 +25,8 @@
                   使用者資訊
                 </router-link>
               </li>
-              <li>
-                <router-link to="/managementPage" class="link">
+              <li style="background-color: #f5f2ca;">
+                <router-link to="/managementPage" class="link" style="background-color: #f5f2ca;">
                   <img src="./assets/社群管理.png" class="icon" />
                   社群管理
                 </router-link>

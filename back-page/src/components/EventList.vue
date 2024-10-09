@@ -1,20 +1,21 @@
 <template>
     <div class="app-container">
       <header>
-        <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
+        <img src="./assets/Final.png" alt="Logo" class="logo" width="15%"/>
       </header>
       <div class="main-container">
+
         <aside class="sidebar">
           <nav>
             <ul>
               <li>
-                <div class="link">
+                <div class="nolink">
                   <img src="./assets/個人頭像.png" class="icon" />
                   XXX,您好
                 </div>
               </li>
-              <li>
-                <router-link to="/eventList" class="link">
+              <li style="background-color: #f5f2ca;">
+                <router-link to="/eventList" class="link" style="background-color: #f5f2ca;">
                   <img src="./assets/事件檢視.png" class="icon" />
                   事件檢視
                 </router-link>
@@ -58,10 +59,12 @@
             </router-link>
           </footer>
         </aside>
+
         <main class="content">
-          <h2>會員註冊</h2>
+          <h2>事件檢視</h2>
           <div class="line"> </div>
         </main>
+
       </div>
     </div>
   </template>
