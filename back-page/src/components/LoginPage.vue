@@ -1,108 +1,126 @@
 <template>
-
-<div id="header">
-  <header class="header">
-    
-    <router-link to="/home" class="pgoto_link">
-      <div class="logo">
-        <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
+  <div class="app-container">
+    <header>
+      <img src="./assets/Final.png" alt="Logo" class="logo" width="20%"/>
+      <div class="header-button">
+        
+          <router-link to="/login" class="link-button">
+            <button class="button">
+              登入
+            </button>
+          </router-link>
+        
+          <router-link to="/register" class="link-button">
+            <button class="button">
+              註冊
+            </button>
+          </router-link>
       </div>
-    </router-link> 
-    
-    <div class="login_register">
-      <router-link to="/login" class="header_link">
-        <p>登入</p>
-      </router-link>
-      <router-link to="/register" class="header_link">
-        <p>註冊</p>
-      </router-link>      
-    </div>
-    
     </header>
-    
-    <nav class="nav">
-      <ul>
-        <li>
-          <router-link to="/notification" class="" >
-            <p>事件通報門</p>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/data" class="" >
-            <p>霸凌雷達站</p>
-          </router-link>
-        </li>
-    
-        <li class="dropdown">
-          <a href="#"><span class="arrow">素養成長坊 ▼</span></a>
-          <ul class="dropdown-menu">
-            <li class="drop">
-              <router-link to="/video" class="" >
-                <p>影片欣賞</p>
+    <div class="main-container">
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li>
+              <div class="link">
+                <img src="./assets/個人頭像.png" class="icon" />
+                XXX,您好
+              </div>
+            </li>
+            <li>
+              <router-link to="/events" class="link">
+                <img src="./assets/事件檢視.png" class="icon" />
+                事件檢視
               </router-link>
             </li>
-            <li class="drop">
-              <router-link to="/test" class="" >
-                <p>實力測驗</p>
+            <li>
+              <router-link to="/userInfo" class="link">
+                <img src="./assets/使用者資訊.png" class="icon" />
+                使用者資訊
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/stats" class="link">
+                <img src="./assets/數據統計.png" class="icon" />
+                數據統計
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/networkInfo" class="link">
+                <img src="./assets/網路資訊.png" class="icon" />
+                網路資訊
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/resources" class="link">
+                <img src="./assets/素養資料.png" class="icon" />
+                素養資料
               </router-link>
             </li>
           </ul>
-        </li>
-    
-        <li>
-            <router-link to="/news" class="" >
-                <p>資訊導航室</p>
-            </router-link>
-        </li>
-    
-      </ul>
-    </nav>
-</div>
-  
-  <div id="body" >
-  
-    <h1>會員登入</h1>
-    <div class="page">
-        <div class="title_login">
-          <h2>會員登入</h2> 
-        </div>
-        <router-link to="/register" class="link">
-          <div class="title_login register">
-            <h2>會員註冊</h2>
+        </nav>
+        <footer>
+          <router-link to="/login" class="link">
+            <img src="./assets/登入.png" class="icon" />
+            登入
+          </router-link>
+        </footer>
+      </aside>
+      <main class="content">
+        <h2>會員註冊</h2>
+        <div class="line"> </div>
+        <div class="register-container">
+        <form @submit.prevent="submitForm">
+          <div class="form-group">
+            <label for="account">帳號：</label>
+            <input type="text" v-model="form.account" id="account" required />
           </div>
-        </router-link>
-        
-    </div>
-  
-  
-  <div class="div">
-      <div class="content">
-       <form action="" class="form">
-          <div class="account">
-              <h3>帳號：</h3>
-              <input type="text" placeholder="請輸入帳號" class="text" name="username">  
-          </div>
-          <div class="account">
-              <h3>密碼：</h3>
-              <input type="password" placeholder="請輸入密碼" class="text" name="password" >  
-          </div>
-          <div id="goreg">
-             <input type="submit" value="登入" class="button "> 
-          </div>    
-        </form>     
-    </div>
-  </div>
-  
-  
 
-  
+          <div class="form-group">
+            <label for="password">密碼：</label>
+            <input type="password" v-model="form.password" id="password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">密碼確認：</label>
+            <input type="password" v-model="form.confirmPassword" id="confirmPassword" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-MAIL：</label>
+            <input type="email" v-model="form.email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="name">姓名：</label>
+            <input type="text" v-model="form.name" id="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="school">學校：</label>
+            <input type="text" v-model="form.school" id="school" required />
+          </div>
+
+          <div class="form-group">
+            <label for="photo">教師證明：</label>
+            <div class="custom-file-input">
+              <input type="file" @change="handleFileUpload" id="photo" style="display:none" />
+              <button type="button" @click="triggerFileInput">上傳圖片</button>
+              <span v-if="form.photoName">{{ form.photoName }}</span>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit">註冊</button>
+          </div>
+          
+        </form>
+        </div>
+      </main>
+    </div>
   </div>
-      <footer>
-    <p>校園凌制零</p>
-  </footer>
+</template>
   
-  </template>
-  
-  <script src="./JavaScript/LoginPage.js"></script>
-  <style scoped src="./style/common.css" ></style>
-  <style scoped src="./style/login.css" ></style>
+<script src="./JavaScript/LoginPage.js"></script>
+<style scoped src="./style/Common.css" ></style>
+<style scoped src="./style/Register.css" ></style>

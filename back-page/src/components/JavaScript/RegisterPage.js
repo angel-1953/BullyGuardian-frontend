@@ -12,7 +12,7 @@ export default {
           email: '',
           name: '',
           school: '',
-          photo: null
+          photoName: ''
         }
       };
     },
@@ -26,9 +26,12 @@ export default {
         // Submit form logic
         console.log("Form submitted", this.form);
       },
+      triggerFileInput() {
+        document.getElementById('photo').click();
+      },
       handleFileUpload(event) {
-        this.form.photo = event.target.files[0];
-        console.log("File uploaded", this.form.photo);
+        const file = event.target.files[0];
+        this.form.photoName = file ? file.name : '';
       }
     }
   };
