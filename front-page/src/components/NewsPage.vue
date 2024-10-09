@@ -69,7 +69,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                      <tr v-for="(item, index) in Data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                         <td>{{ item.id }}</td>
                         <td>{{ item.date }}</td>
                         <td><button class="view-btn">查看</button></td>
