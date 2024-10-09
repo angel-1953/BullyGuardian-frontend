@@ -69,7 +69,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                      <tr v-for="(item, index) in Data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                         <td>{{ item.id }}</td>
                         <td>{{ item.date }}</td>
                         <td><button class="view-btn">查看</button></td>
@@ -85,17 +85,17 @@
             <div class="content2" style="height: 500px;">
               <table>
                     <thead>
-                      <tr>
-                        <th>序號</th>
-                        <th>網站名稱/連結</th>
-                        <th>更新日期</th>
+                      <tr >
+                        <th style="width: 20%;">序號</th>
+                        <th style="width: 30%;">網站名稱</th>
+                        <th style="width: 50%;">網站連結</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
                         <td>{{ item.id }}</td>
-                        <td>{{ item.date }}</td>
-                        <td><button class="view-btn">查看</button></td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.path }}</td>
                       </tr>
                     </tbody>
                   </table>
