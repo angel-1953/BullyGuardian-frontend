@@ -176,7 +176,7 @@ h2{
   background-color: white;
   display: flex;
   justify-content: end;
-  margin: 0 30px;
+  margin:15px 30px 0 30px;
   cursor: pointer; /* 鼠標懸停時顯示手形光標 */
   transition: background-color 0.3s; /* 平滑過渡效果 */
   text-decoration: none !important;
@@ -243,3 +243,39 @@ h2{
   border-top-left-radius: 15px;
   align-items: center;
 }
+
+.content-main h2{
+  font-size: 24px;
+}
+
+.post{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.post a{
+  color: #478ac4;
+}
+
+.post h3{
+  font-size: 26px;
+  color: #6b5a4f;
+  width: 180px;
+  text-align: end;
+}
+
+.keyword{
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.keyword h2{
+  background-color: #e4b07f;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 30px;
+}
+

@@ -61,17 +61,24 @@
         <main class="content">
           
           <h2>素養資料-題庫</h2>
+
+        <div style="display: flex; flex-direction: row; justify-content:space-between;align-items: start;">
+            <button class="button03" @click="openModal" style="margin: 10px 40px; padding: 7px 30px;">新增</button>
+  
           <div class="page">
             <router-link to="/resourcePage" >
-                <h1 >書籍</h1>
+                <h1>書籍</h1>
             </router-link> 
             <router-link to="/videoPage" >
-                <h1>影片</h1>
+                <h1 style="background-color: #b1d0cb;">影片</h1>
             </router-link> 
             <router-link to="/testPage" >
-                <h1 style="background-color: #b1d0cb;">題庫</h1>
+                <h1>題庫</h1>
             </router-link> 
           </div>
+          
+          </div>
+
           <div class="register-container">
   
             <table class="styled-table">

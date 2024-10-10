@@ -78,15 +78,32 @@
           <div class="line"> </div>
           
           <div class="content-main">
-            <h3>發文者：</h3>
-            <h3>發文時間：</h3>
-            <h3>貼文內容：</h3>
-            <h3>貼文網址：</h3>
+          <div class="post">
+            <h3>發文者：</h3> <h2>{{ postDetails.author }}</h2>
+            </div>
+            <div class="post">
+            <h3>發文時間：</h3> <h2>{{ postDetails.postTime }}</h2>
           </div>
+            <div class="post">
+            <h3>貼文內容：</h3> <h2>{{ postDetails.content }}</h2>
+          </div>
+            <div class="post">
+            <h3>貼文網址：</h3> <h2><a :href="postDetails.url" target="_blank">{{ postDetails.url }}</a></h2>
+          </div>
+          <div class="post">
+            <h3>霸凌關鍵字：</h3>
+            <div class="keyword">
+                <div v-for="(keyword, index) in postDetails.keywords" :key="index" class="post-title" >
+                <h2 class="keyword">{{ keyword }}</h2>
+            </div>
+            </div>
+
+            </div>
+        </div>
 
           <div class="content-button">
             <router-link to="/eventList" >
-                <input type="submit" value="返回" class="button02" style="width: 80px;">
+                <input type="submit" value="返回" class="button02" style="width: 150px; padding: 10px; margin: 50px;">
             </router-link> 
           </div>
 

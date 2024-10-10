@@ -61,6 +61,9 @@
         <main class="content">
           
           <h2>素養資料-影片</h2>
+
+          <div style="display: flex; flex-direction: row; justify-content:space-between;align-items: start;">
+            <button class="button03" @click="openModal" style="margin: 10px 40px; padding: 7px 30px;">新增</button>
   
           <div class="page">
             <router-link to="/resourcePage" >
@@ -73,6 +76,9 @@
                 <h1>題庫</h1>
             </router-link> 
           </div>
+
+          </div>
+
           <div class="register-container">
   
             <table class="styled-table">
@@ -95,6 +101,28 @@
                 </tr>
               </tbody>
             </table>
+
+                    <!-- Modal for Adding a New Book -->
+        <div v-if="showModal" class="modal">
+          <div class="modal-content">
+            <h2>新增書籍</h2>
+            <form @submit.prevent="addNewBook">
+              <label for="bookName">書名：</label>
+              <input type="text" v-model="newBook.BookName" id="bookName" required>
+
+              <label for="bookAuthor">作者：</label>
+              <input type="text" v-model="newBook.BookAuthor" id="bookAuthor" required>
+
+              <label for="bookYear">出版年：</label>
+              <input type="number" v-model="newBook.BookYear" id="bookYear" required>
+
+              <div class="modal-actions">
+                <button type="button" class="button02" @click="closeModal">取消</button>
+                <button type="submit" class="button02">確認</button>
+              </div>
+            </form>
+          </div>
+        </div>
           
           </div>
         </main>
