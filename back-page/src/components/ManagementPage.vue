@@ -58,13 +58,38 @@
             </router-link>
           </footer>
         </aside>
+
         <main class="content">
           <h2>社群管理</h2>
-          <div class="line"> </div>
+
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>序號</th>
+                <th>社團名稱</th>
+                <th>Facebook連結</th>
+                <th>功能</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(row, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                <td>{{ index + 1 }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.path }}</td>
+                <td><button class="button02">刪除</button></td>
+              </tr>
+            </tbody>
+          </table>
+
         </main>
+
+
       </div>
+
+
     </div>
   </template>
 
 <script scoped src="./JavaScript/ManagementPage.js" ></script>
 <style scoped src="./style/Common.css" ></style>
+<style scoped src="./style/table.css" ></style>

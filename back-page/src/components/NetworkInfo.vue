@@ -58,11 +58,31 @@
             </router-link>
           </footer>
         </aside>
+        
       <main class="content">
         <h2>網路資訊</h2>
-        <div class="line"> </div>
+
         <div class="register-container">
-        
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>序號</th>
+                <th>網站名稱</th>
+                <th>網站連結</th>
+                <th>更新日期</th>
+                <th>功能</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(item, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.path }}</td>
+                <td>{{ item.date }}</td>
+                <td><button class="button02">查看</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>
@@ -71,3 +91,4 @@
 
 <script scoped src="./JavaScript/NetworkInfo.js" ></script>
 <style scoped src="./style/Common.css" ></style>
+<style scoped src="./style/table.css" ></style>

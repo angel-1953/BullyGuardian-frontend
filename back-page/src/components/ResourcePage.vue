@@ -59,9 +59,36 @@
           </footer>
         </aside>
       <main class="content">
+        
         <h2>素養資料</h2>
-        <div class="line"> </div>
+
+        <div class="page">
+          <h1>書籍</h1>
+          <h1>影片</h1>
+          <h1>題庫</h1>
+        </div>
         <div class="register-container">
+
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>序號</th>
+                <th>書名</th>
+                <th>作者</th>
+                <th>出版年</th>
+                <th>功能</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(row, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
+                <td>{{ index + 1 }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.author }}</td>
+                <td>{{ row.year }}</td>
+                <td><input type="submit" value="查看" class="button02"> </td>
+              </tr>
+            </tbody>
+          </table>
         
         </div>
       </main>
@@ -71,3 +98,4 @@
 
 <script scoped src="./JavaScript/ResourcePage.js"></script>
 <style scoped src="./style/Common.css" ></style>
+<style scoped src="./style/table.css" ></style>

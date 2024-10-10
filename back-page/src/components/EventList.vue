@@ -63,25 +63,22 @@
         <main class="content">
           <h2>事件檢視</h2>
 
-          <div class="line"> </div>
 
           <table class="styled-table">
             <thead>
               <tr>
                 <th>序號</th>
-                <th>案件編號</th>
-                <th>霸凌來源</th>
-                <th>處理人員</th>
-                <th>處理時間</th>
+                <th>發現日期</th>
+                <th>發文帳號</th>
+                <th>事件網址</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(row, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
-                <td>{{ row.caseId }}</td>
-                <td>{{ row.bullySource }}</td>
-                <td>{{ row.handler }}</td>
-                <td>{{ row.handleDate }}</td>
+                <td>{{ row.date }}</td>
+                <td>{{ row.account }}</td>
+                <td>{{ row.path }}</td>
               </tr>
             </tbody>
           </table>

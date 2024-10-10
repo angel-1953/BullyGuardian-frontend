@@ -6,16 +6,9 @@ export default {
     data() {
       return {
         tableData: [
-          { caseId: 'A19530001', bullySource: '人工鑑證', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530002', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530003', bullySource: '系統分類', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530004', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530005', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530006', bullySource: '系統分類', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530007', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530008', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530009', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
-          { caseId: 'A19530010', bullySource: '系統爬蟲', handler: 'XXX', handleDate: '113/09/10' },
+          { caseId: 'A19530001', date: '113/09/10', account:'曾小凌' ,path:'https://www.facebook.com/TaichungTech/' },
+          { caseId: 'A19530001', date: '113/09/10', account:'曾小凌' ,path:'https://www.facebook.com/TaichungTech/' },
+
         ],
       };
     },
