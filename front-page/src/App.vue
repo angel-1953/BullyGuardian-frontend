@@ -16,7 +16,6 @@ import NotificationPage from './components/NotificationPage.vue';
 import DataPage from './components/DataPage.vue';
 import NewsPage from './components/NewsPage.vue';
 import TestPage from './components/TestPage.vue';
-import ViewAnswer from './components/ViewAnswer.vue';
 import VideoPage from './components/VideoPage.vue';
 import BookPage from './components/BookPage.vue';
 import ContentBook from './components/ContentBook.vue';
@@ -40,7 +39,6 @@ export default {
       if (this.currentPage === 'news') return NewsPage;
       if (this.currentPage === 'video') return VideoPage;
       if (this.currentPage === 'test') return TestPage;
-      if (this.currentPage === 'viewAnswer') return ViewAnswer;
       if (this.currentPage === 'book') return BookPage;
       if (this.currentPage === 'contentBook') return ContentBook;
       if (this.currentPage === 'write') return WritePage;

@@ -28,22 +28,22 @@
                 <p >霸凌雷達</p>
               </router-link>
             </li>
-            <li class="nono">
+            <li>
               <router-link to="/book" class="" >
                 <p>好書推薦</p>
               </router-link>
             </li>
-            <li class="nono">
+            <li>
               <router-link to="/video" class="" >
                 <p>影片欣賞</p>
               </router-link>
             </li>
-            <li class="nono">
+            <li>
               <router-link to="/test" class="" >
                 <p>實力測驗</p>
               </router-link>
             </li>
-            <li class="nono">
+            <li>
                 <router-link to="/news" class="" >
                     <p>資訊導航</p>
                 </router-link>

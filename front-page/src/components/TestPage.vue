@@ -68,9 +68,7 @@
                 <img src="./assets/Group 63.png" alt="Campus Bully Guardian Logo" style="width: 70px;"/>
               </div>
               <div id="goreg">
-                <router-link to="/write" class="" >
-                <input type="submit" value="開始作答" class="button_02">
-              </router-link>  
+                <input type="submit" value="開始作答" class="button_02"> 
               </div>  
             </div>
 
@@ -94,7 +92,7 @@
                         <td>{{ item.id }}</td>
                         <td>{{ item.questions }}</td>
                         <td>{{ item.date }}</td>
-                        <td><router-link to="/viewAnswer" class="" ><button class="view-btn">查看</button></router-link></td>
+                        <td><button class="view-btn">查看</button></td>
                       </tr>
                     </tbody>
                   </table>

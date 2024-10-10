@@ -94,4 +94,5 @@
         
         <script scoped src="./JavaScript/VideoPage.js"></script>
         <style scoped src="./style/header.css" ></style>
-        <style scoped src="./style/VideoPage.css" ></style>
+        <style scoped src="./style/notification.css" ></style>
+        <style scoped src="./style/table.css" ></style>
