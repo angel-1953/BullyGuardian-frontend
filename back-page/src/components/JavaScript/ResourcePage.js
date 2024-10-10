@@ -6,7 +6,7 @@ export default {
     data() {
       return {
         data: [
-          { id: 1, name:'書名' , author:'作者', year:'2000'},
+          { id: 1, BookName:'BookName' , BookAuthor:'BookAuthor', BookYear:'BookYear'},
           { id: 2, name:'書名2' , author:'作者2', year:'1999'},
         ]
       };

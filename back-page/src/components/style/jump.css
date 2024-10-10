@@ -1,0 +1,73 @@
+/* 彈跳視窗背景 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 彈跳視窗內容 */
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+
+  }
+  
+  /* 彈跳視窗按鈕 */
+  .modal-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button02, .button03 {
+    margin-left: 10px;
+  }
+
+  .club{
+    color: rgb(135, 122, 103);
+    font-size: 24px;
+    margin:30px 0px;
+    width: 200px;
+    text-align: end;
+  }
+
+  .type{
+    display: flex;
+    padding:10px 30px;
+  }
+
+  .text{
+    margin:20px 30px;
+    padding:10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #d2cdb8;
+    color: #91755f;
+    width: 55%;
+  }
+
+  .modal-content>h3{
+    font-size: 30px;
+    margin:0px 0px 30px 0px;
+    padding:20px 10px;
+    border-radius: 10px;
+    background-color: #e8f5f2;
+    display: flex;
+    justify-content: center;
+    color: #78695d;
+  }
+
+  .modal-actions{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  }
+  

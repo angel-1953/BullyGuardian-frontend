@@ -12,6 +12,7 @@
     font-size: 22px;
     color: #6e6560;
   }
+  
   .styled-table th {
     background-color: #f5ebde;
     text-align: center;
@@ -30,4 +31,10 @@
 
   tr{
     background-color: #fef1f1;
+  }
+
+  .flex{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }

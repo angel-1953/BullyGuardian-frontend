@@ -60,7 +60,10 @@
         </aside>
         
       <main class="content">
-        <h2>網路資訊</h2>
+        <div class="title_light">
+           <h2>網路資訊</h2>        
+            <h3 style="background-color: white; margin: 0 30px; color: darkgray;">最後更新時間：2024/10/10 12:00</h3>
+          </div>
 
         <div class="register-container">
           <table class="styled-table">
@@ -75,11 +78,11 @@
             </thead>
             <tbody>
               <tr v-for="(item, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
-                <td>{{ item.id }}</td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.path }}</td>
-                <td>{{ item.date }}</td>
-                <td><button class="button02">查看</button></td>
+                <td>{{ index + 1 }}</td>
+                <td>{{ item.NetName }}</td>
+                <td>{{ item.NetURL }}</td>
+                <td>{{ item.NetDate }}</td>
+                <td><button class="button02">刪除</button></td>
               </tr>
             </tbody>
           </table>

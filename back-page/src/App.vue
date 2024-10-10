@@ -16,6 +16,10 @@ import ManagementPage from './components/ManagementPage.vue';
 import StatisticsPage from './components/StatisticsPage.vue';
 import NetworkInfo from './components/NetworkInfo.vue';
 import ResourcePage from './components/ResourcePage.vue';
+import PostPage from './components/PostPage.vue';
+import UserPage from './components/UserPage.vue';
+import VideoPage from './components/VideoPage.vue';
+import TestPage from './components/TestPage.vue';
 
 export default {
   data() {
@@ -34,6 +38,10 @@ export default {
       if (this.currentPage === 'statisticsPage') return StatisticsPage;
       if (this.currentPage === 'networkInfo') return NetworkInfo;
       if (this.currentPage === 'resourcePage') return ResourcePage;
+      if (this.currentPage === 'postPage') return PostPage;
+      if (this.currentPage === 'userPage') return UserPage;
+      if (this.currentPage === 'videoPage') return VideoPage;
+      if (this.currentPage === 'testPage') return TestPage;
       return null; 
     }
   }

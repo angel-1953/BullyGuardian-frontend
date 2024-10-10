@@ -7,6 +7,10 @@ import ManagementPage from '../components/ManagementPage.vue';
 import StatisticsPage from '../components/StatisticsPage.vue';
 import NetworkInfo from '../components/NetworkInfo.vue';
 import ResourcePage from '../components/ResourcePage.vue';
+import PostPage from '../components/PostPage.vue';
+import UserPage from '../components/UserPage.vue';
+import VideoPage from '../components/VideoPage.vue';
+import TestPage from '../components/TestPage.vue';
 
 
 
@@ -54,6 +58,26 @@ const routes = [
     path: '/resourcePage',
     name: 'ResourcePage',
     component: ResourcePage
+  },
+  {
+    path: '/postPage',
+    name: 'PostPage',
+    component: PostPage
+  },
+  {
+    path: '/userPage',
+    name: 'UserPage',
+    component: UserPage
+  },
+  {
+    path: '/videoPage',
+    name: 'VideoPage',
+    component: VideoPage
+  },
+  {
+    path: '/TestPage',
+    name: 'TestPage',
+    component: TestPage
   },
   ];
   

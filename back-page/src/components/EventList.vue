@@ -61,7 +61,11 @@
         </aside>
 
         <main class="content">
-          <h2>事件檢視</h2>
+
+          <div class="title_light">
+           <h2>事件檢視</h2>        
+            <h3 style="background-color: white; margin: 0 30px; color: darkgray;">最後更新時間：2024/10/10 12:00</h3>
+          </div>
 
 
           <table class="styled-table">
@@ -71,6 +75,7 @@
                 <th>發現日期</th>
                 <th>發文帳號</th>
                 <th>事件網址</th>
+                <th>功能</th>
               </tr>
             </thead>
             <tbody>
@@ -79,6 +84,11 @@
                 <td>{{ row.date }}</td>
                 <td>{{ row.account }}</td>
                 <td>{{ row.path }}</td>
+                <td>
+                  <router-link to="/PostPage" >
+                    <input type="submit" value="查看" class="button02">
+                  </router-link> 
+                </td>
               </tr>
             </tbody>
           </table>

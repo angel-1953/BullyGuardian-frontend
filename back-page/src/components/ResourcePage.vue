@@ -60,13 +60,19 @@
         </aside>
       <main class="content">
         
-        <h2>素養資料</h2>
+        <h2>素養資料-書籍</h2>
 
         <div class="page">
-          <h1>書籍</h1>
-          <h1>影片</h1>
-          <h1>題庫</h1>
-        </div>
+            <router-link to="/resourcePage" >
+                <h1 style="background-color: #b1d0cb;">書籍</h1>
+            </router-link> 
+            <router-link to="/videoPage" >
+                <h1>影片</h1>
+            </router-link> 
+            <router-link to="/testPage" >
+                <h1>題庫</h1>
+            </router-link> 
+          </div>
         <div class="register-container">
 
           <table class="styled-table">
@@ -82,10 +88,10 @@
             <tbody>
               <tr v-for="(row, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
-                <td>{{ row.name }}</td>
-                <td>{{ row.author }}</td>
-                <td>{{ row.year }}</td>
-                <td><input type="submit" value="查看" class="button02"> </td>
+                <td>{{ row.BookName }}</td>
+                <td>{{ row.BookAuthor }}</td>
+                <td>{{ row.BookYear }}</td>
+                <td><input type="submit" value="???" class="button02"> </td>
               </tr>
             </tbody>
           </table>

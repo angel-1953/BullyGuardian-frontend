@@ -3,6 +3,10 @@
   margin: 0px;
   font-family: 'Microsoft JhengHei'; 
   font-weight: bolder;   
+
+}
+
+template{
   background-color: #D3E8EA;
 }
 
@@ -39,13 +43,29 @@ header {
   color: #fff; /* 按鈕文字顏色 */
   border: none; /* 無邊框 */
   font-size: 20px;
-  padding: 5px 10px; /* 上下左右的內邊距 */
+  padding: 5px 15px; /* 上下左右的內邊距 */
   margin-left: 10px; /* 按鈕間距 */
   border-radius: 5px; /* 圓角 */
   cursor: pointer; /* 鼠標懸停時顯示手形光標 */
   transition: background-color 0.3s; /* 平滑過渡效果 */
 }
+.button03 {
+  background-color: #b0d8ce; /* 按鈕的初始背景顏色 */
+  color: #fff; /* 按鈕文字顏色 */
+  border: none; /* 無邊框 */
+  font-size: 20px;
+  padding: 3px 20px; /* 上下左右的內邊距 */
+  margin-left: 10px; /* 按鈕間距 */
+  border-radius: 5px; /* 圓角 */
+  cursor: pointer; /* 鼠標懸停時顯示手形光標 */
+  transition: background-color 0.3s; /* 平滑過渡效果 */
+  margin:0 50px;
+  box-shadow: 2px 2px 5px rgba(171, 178, 197, 0.8);
+}
 .button:hover {
+  background-color: #EECDAE; /* 懸停時的背景顏色 */
+}
+.button02:hover {
   background-color: #EECDAE; /* 懸停時的背景顏色 */
 }
 
@@ -149,20 +169,77 @@ h2{
 .color{
   background-color: #82776c !important;
 }
-
+.page a{
+  text-decoration: none !important;
+}
 .page{
   background-color: white;
   display: flex;
   justify-content: end;
   margin: 0 30px;
+  cursor: pointer; /* 鼠標懸停時顯示手形光標 */
+  transition: background-color 0.3s; /* 平滑過渡效果 */
+  text-decoration: none !important;
 }
 
-.page>h1{
+.light{
+  background-color: rgb(234, 240, 243);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 0 30px;
+  padding: 10px;
+  color: rgb(98, 95, 76);
+  width: 400px;
+  height: 40px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 2px rgb(168, 177, 172);
+
+}
+
+.light>h1{
+  font-size: 24px;
+  background-color: rgb(234, 240, 243);
+  margin-right: 30px;
+}
+
+.page h1{
   margin: 0 10px;
-  padding: 10px 30px;
+  padding: 10px 40px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   color: #ffffff;
-  background-color: #edc4b2;
+  background-color: #f1baa2;
   font-size: 24px;
+  cursor: pointer; /* 鼠標懸停時顯示手形光標 */
+  transition: background-color 0.3s; /* 平滑過渡效果 */
+  text-decoration: none !important;
+}
+
+.page h1:hover{
+  background-color: #f5d39f;
+  text-decoration: none;
+}
+
+.light-color{
+  width: 30px; 
+  height: 30px; 
+  border-radius:500px; 
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title_light{
+  display: flex;
+  background-color: white;
+  border-top-left-radius: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.title_light02{
+  display: flex;
+  background-color: white;
+  border-top-left-radius: 15px;
+  align-items: center;
 }
