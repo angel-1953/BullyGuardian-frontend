@@ -72,6 +72,6 @@
         
         </template>
         
-        <script scoped src="./JavaScript/VideoPage.js"></script>
+        <script scoped src="./JavaScript/WritePage.js"></script>
         <style scoped src="./style/header.css" ></style>
         <style scoped src="./style/table.css" ></style>

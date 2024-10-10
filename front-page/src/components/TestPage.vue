@@ -69,11 +69,9 @@
                 <img src="./assets/Group 63.png" alt="Campus Bully Guardian Logo" style="width: 70px;"/>
               </div>
 
-              <router-link to="/write" class="" >
-                <div id="goreg">
-                  <input type="submit" value="開始作答" class="button_02"> 
-                </div>  
-              </router-link>
+              <div id="goreg">
+                <input type="submit" value="開始作答" class="button_02">  
+              </div> 
             </div>
           
 
@@ -121,4 +119,5 @@
           <script scoped src="./JavaScript/TestPage.js"></script>
           <style scoped src="./style/header.css" ></style>
           <style scoped src="./style/notification.css" ></style>
+          <style scoped src="./style/VideoPage.css" ></style>
           <style scoped src="./style/table.css" ></style>
