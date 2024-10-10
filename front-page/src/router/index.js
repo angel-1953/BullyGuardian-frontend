@@ -8,6 +8,7 @@ import DataPage from '../components/DataPage.vue';
 import NewsPage from '../components/NewsPage.vue';
 import VideoPage from '../components/VideoPage.vue';
 import TestPage from '../components/TestPage.vue';
+import ViewAnswer from '../components/ViewAnswer.vue';
 import BookPage from '../components/BookPage.vue';
 import ContentBook from '../components/ContentBook.vue';
 import WritePage from '../components/WritePage.vue';
@@ -61,6 +62,11 @@ const routes = [
       path: '/test',
       name: 'Test',
       component: TestPage
+    },
+    {
+      path: '/viewAnswer',
+      name: 'ViewAnswer',
+      component: ViewAnswer
     },
     {
       path: '/book',

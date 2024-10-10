@@ -54,16 +54,11 @@
       
       <div id="body" >
       
-        <h1>會員登入</h1>
+        <h1>個人中心</h1>
         <div class="page">
             <div class="title_login">
-              <h2>會員登入</h2> 
+              <h2>個人資料管理</h2> 
             </div>
-            <router-link to="/register" class="link">
-              <div class="title_login register">
-                <h2>會員註冊</h2>
-              </div>
-            </router-link>
             
         </div>
       
@@ -71,16 +66,50 @@
       <div class="div">
           <div class="content">
            <form action="" class="form">
-              <div class="account">
-                  <h3>帳號：</h3>
-                  <input type="text" placeholder="請輸入帳號" class="text" name="username">  
+              <div class="field">
+                <h4>帳號：</h4>
+                <span>{{ account }}</span>
               </div>
-              <div class="account">
-                  <h3>密碼：</h3>
-                  <input type="password" placeholder="請輸入密碼" class="text" name="password" >  
+              
+              <div class="field">
+                <h4>密碼：</h4>
+                <input type="password" v-model="password" @input="checkPassword" />
               </div>
+
+              <div class="field">
+                <h4>密碼確認：</h4>
+                <input type="password" v-model="confirmPassword" @input="checkPassword" />
+                <span v-if="passwordError" class="error">{{ passwordError }}</span>
+              </div>
+
+              <div class="field">
+                <h4>E-MAIL：</h4>
+                <span>{{ email }}</span>
+              </div>
+
+              <div class="field">
+                <h4>姓名：</h4>
+                <span>{{ name }}</span>
+              </div>
+
+              <div class="field">
+                <h4>學校：</h4>
+                <span>{{ school }}</span>
+              </div>
+
+              <div class="field">
+                <h4>班級：</h4>
+                <span>{{ grade }}</span>
+              </div>
+
+              <div class="field">
+                <h4>學號：</h4>
+                <span>{{ studentId }}</span>
+              </div>
+
+
               <div id="goreg">
-                 <input type="submit" value="登入" class="button "> 
+                 <input type="submit" value="變更密碼" class="button "> 
               </div>    
             </form>     
         </div>

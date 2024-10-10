@@ -94,7 +94,7 @@
                         <td>{{ item.id }}</td>
                         <td>{{ item.questions }}</td>
                         <td>{{ item.date }}</td>
-                        <td><button class="view-btn">查看</button></td>
+                        <td><router-link to="/viewAnswer" class="" ><button class="view-btn">查看</button></router-link></td>
                       </tr>
                     </tbody>
                   </table>

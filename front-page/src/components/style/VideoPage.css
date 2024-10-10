@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Microsoft JhengHei';    
+}
+
+#body{
+    background-color: #fffdee;
+    padding-bottom: 80px;
+}
+
+.nav{
+    margin: 0;
+}
+
+
+
+.content1{
+    width: 60%;
+    border: 4px solid #f2aeae;
+    border-radius: 25px;
+}
+.content2{
+    margin: 10px;
+    border: 4px solid #f6dfc6;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.event{
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.text{
+    padding: 10px;
+}
+
+.event>h3{
+    width: 190px;
+    text-align: end;
+}
+
+.noti_title{
+    display: flex;
+    align-items: center;
+    margin:0px 8%;
+    padding: 50px 0;
+    justify-content: space-between;
+}
+
+.noti_title>h1{
+   padding: 0
+};
+
+.router-link {    
+    color: inherit;  /* 繼承父元素顏色 */
+    text-decoration: none ;  /* 去除下劃線 */
+  }
+
+  .button_noti{
+    color: #d77c7c;
+    background-color: white;
+    border:3px solid #e58f8f ;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none ;
+  }
+  .button_02{
+    color: #ffffff;
+    background-color: rgb(243, 157, 157);
+    border:0;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none ;
+    margin: 30px;
+  }
+  .button_02:hover{
+    background-color: #b2d7d5;
+  }
+
+
+  .shuoming>h3{
+    margin: 30px;
+  }
+
+  #test{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1{
+    color: #b56e6e;
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 22px;
+    color: #93665c;
+  }
+
+.book{
+  text-align: left;
+}
+
