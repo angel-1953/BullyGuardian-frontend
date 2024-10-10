@@ -9,12 +9,12 @@
           </div>
         </router-link> 
         
-        <div class="login_register">
-          <router-link to="/login" class="header_link">
-            <p>登入</p>
-          </router-link>
-          <router-link to="/register" class="header_link">
-            <p>註冊</p>
+        <div class="personal">
+          <router-link to="/personalPage" class="header_link">
+            <div class="personal-content">
+              <img src="./assets/user.png" alt="Personal Logo" />
+              <p>個人中心</p>
+            </div> 
           </router-link>      
         </div>
         

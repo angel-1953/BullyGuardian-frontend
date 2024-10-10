@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../components/HomePage.vue';
 import RegisterPage from '../components/RegisterPage.vue';
 import LoginPage from '../components/LoginPage.vue';
+import PersonalPage from '../components/PersonalPage.vue';
 import NotificationPage from '../components/NotificationPage.vue';
 import DataPage from '../components/DataPage.vue';
 import NewsPage from '../components/NewsPage.vue';
@@ -30,6 +31,11 @@ const routes = [
       path: '/register',
       name: 'Register',
       component: RegisterPage
+    },
+    {
+      path: '/personalPage',
+      name: 'PersonalPage',
+      component: PersonalPage
     },
     {
       path: '/notification',

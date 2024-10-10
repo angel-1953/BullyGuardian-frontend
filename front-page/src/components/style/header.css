@@ -40,6 +40,40 @@
     display: flex;
 }
 
+.personal {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: #FAF3F0;
+  color: #936766;
+  border-radius: 10px;
+  padding: 10px 35px 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.personal:hover {
+  background-color: #FEFFDA;
+}
+
+.personal-content {
+  display: flex;
+  align-items: center;
+}
+
+.personal-content img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px; 
+}
+
+.personal-content p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bolder;
+  white-space: nowrap;
+  
+}
+
 .header_link{
   color: inherit;  /* 繼承父元素顏色 */
   text-decoration: none;  /* 去除下劃線 */
