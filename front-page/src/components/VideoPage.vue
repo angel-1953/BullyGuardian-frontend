@@ -72,19 +72,15 @@
         
         </div>
           
-        
+        <footer>
+          <p>校園凌制零</p>
+        </footer>
           
-          
-            <footer>
-            <p>校園凌制零</p>
-          </footer>
-          
-        
-          
-          </template>
+        </template>
           
           <script scoped src="./JavaScript/VideoPage.js"></script>
           <style scoped src="./style/header.css" ></style>
           <style scoped src="./style/notification.css" ></style>
           <style scoped src="./style/VideoPage.css" ></style>
+          <style scoped src="./style/video.css" ></style>
           <style scoped src="./style/table.css" ></style>

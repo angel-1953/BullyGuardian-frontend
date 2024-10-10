@@ -64,13 +64,18 @@
                     <h3>本測驗取自政府開放資料集【中小學資訊素養教學教材】，透過進行本測驗可提升您辨識霸凌行為、保護自己及他人的能力，從而在網路環境中維護自身安全，減少網路霸凌的發生。</h3>
                   </div>        
               </div>
+
               <div class="arrow">
                 <img src="./assets/Group 63.png" alt="Campus Bully Guardian Logo" style="width: 70px;"/>
               </div>
-              <div id="goreg">
-                <input type="submit" value="開始作答" class="button_02"> 
-              </div>  
+
+              <router-link to="/write" class="" >
+                <div id="goreg">
+                  <input type="submit" value="開始作答" class="button_02"> 
+                </div>  
+              </router-link>
             </div>
+          
 
 
             <div class="noti_title">
