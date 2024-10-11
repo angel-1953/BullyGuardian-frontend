@@ -1,27 +1,29 @@
 export default {
-    name: "VideoPage",
-    mounted() {
-      document.title = "素養資料-影片";
-    },
-    data() {
-      return {
-        data: [
-          { id: 1, VideoName:'VideoName' , VideoURL:'VideoURL', VideoTimes:'VideoTimes'},
-        ]
-      };
-    },
-    methods: {
-        openModal() {
-          this.showModal = true; // Open modal
-        },
-        closeModal() {
-          this.showModal = false; // Close modal
-          this.newBook = { BookName: '', BookAuthor: '', BookYear: '' }; // Reset form fields
-        },
-        addNewBook() {
-          // Add the new book to the table data
-          this.data.push({ ...this.newBook });
-          this.closeModal(); // Close modal after adding
-        }
-      }
+  name: "VideoPage",
+  mounted() {
+    document.title = "素養資料-影片";
+  },
+  data() {
+    return {
+      data: [
+        { id: 1, VideoName: 'VideoName', VideoURL: 'VideoURL', VideoTimes: 'VideoTimes' }
+      ],
+      showModal: false, // 控制彈跳視窗顯示的布林值
+      newVideo: { VideoName: '', VideoURL: '', VideoTimes: '' } // 新影片的初始化
     };
+  },
+  methods: {
+    openModal() {
+      this.showModal = true; // 開啟彈跳視窗
+    },
+    closeModal() {
+      this.showModal = false; // 關閉彈跳視窗
+      this.newVideo = { VideoName: '', VideoURL: '', VideoTimes: '' }; // 重置表單欄位
+    },
+    addNewVideo() {
+      // 新增影片到資料中
+      this.data.push({ ...this.newVideo });
+      this.closeModal(); // 新增後關閉彈跳視窗
+    }
+  }
+};

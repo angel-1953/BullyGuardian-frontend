@@ -2,8 +2,7 @@
   padding: 0px;
   margin: 0px;
   font-family: 'Microsoft JhengHei'; 
-  font-weight: bolder;   
-
+  font-weight: bolder;  
 }
 
 template{
@@ -164,6 +163,8 @@ h2{
 
 .main-container{
   display: flex;
+  background-color: #D3E8EA;
+
 }
 
 .color{

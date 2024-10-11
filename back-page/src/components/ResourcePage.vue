@@ -97,10 +97,39 @@
                 <td>{{ row.BookName }}</td>
                 <td>{{ row.BookAuthor }}</td>
                 <td>{{ row.BookYear }}</td>
-                <td><input type="submit" value="???" class="button02"> </td>
+                <td><input type="submit" value="刪除" class="button02"> </td>
               </tr>
             </tbody>
           </table>
+
+
+          <div v-if="showModal" class="modal">
+            <div class="modal-content">
+              <h3>新增書籍</h3>
+              <form @submit.prevent="addNewBook">
+                
+                <div class="type">
+                  <label for="bookName" class="club">書名：</label>
+                  <input type="text" v-model="newBook.BookName" id="bookName" class="text" required>
+                </div>
+
+                <div class="type">
+                  <label for="bookAuthor" class="club">作者：</label>
+                  <input type="text" v-model="newBook.BookAuthor" id="bookAuthor" class="text" required>
+                </div>
+
+                <div class="type">
+                  <label for="bookYear" class="club">出版年：</label>
+                  <input type="number" v-model="newBook.BookYear" id="bookYear" class="text" required>
+                </div>
+
+                <div class="modal-actions">
+                  <button type="button" class="button02" @click="closeModal" style="background-color: #bfb6ad;">取消</button>
+                  <button type="submit" class="button02">確認</button>
+                </div>
+              </form>
+            </div>
+          </div>
 
           
         
@@ -113,3 +142,4 @@
 <script scoped src="./JavaScript/ResourcePage.js"></script>
 <style scoped src="./style/Common.css" ></style>
 <style scoped src="./style/table.css" ></style>
+<style scoped src="./style/jump.css" ></style>

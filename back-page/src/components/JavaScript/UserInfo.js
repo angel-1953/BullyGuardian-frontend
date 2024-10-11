@@ -6,11 +6,11 @@ export default {
   data() {
     return {
       tableData: [
-        { Id: '1', name: '曾小凌', class: '國一5', status: '危險' },
-        { Id: '2', name: '李明', class: '國一5', status: '安全' },
-        { Id: '3', name: '王小華', class: '國一5', status: '警示' },
-        { Id: '4', name: '張三', class: '國一5', status: '危險' },
-        { Id: '5', name: '李四', class: '國一5', status: '安全' },
+        { Id: '1', UserName: '曾小凌', UserSchool:'00國中', UserClass: '國一5', status: '危險' },
+        { Id: '2', UserName: '李明', UserSchool:'00國中',UserClass: '國一5', status: '安全' },
+        { Id: '3', UserName: '王小華', UserSchool:'00國中',UserClass: '國一5', status: '警示' },
+        { Id: '4', UserName: '張三', UserSchool:'00國中',UserClass: '國一5', status: '危險' },
+        { Id: '5', UserName: '李四', UserSchool:'00國中',UserClass: '國一5', status: '安全' },
       ],
       filteredStatus: null, // 追蹤當前篩選的狀態
     };

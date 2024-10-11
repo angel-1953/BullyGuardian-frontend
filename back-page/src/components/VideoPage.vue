@@ -97,27 +97,28 @@
                   <td>{{ row.VideoName }}</td>
                   <td>{{ row.VideoURL }}</td>
                   <td>{{ row.VideoTimes }}</td>
-                  <td><input type="submit" value="???" class="button02"> </td>
+                  <td><input type="submit" value="刪除" class="button02"> </td>
                 </tr>
               </tbody>
             </table>
 
-                    <!-- Modal for Adding a New Book -->
-        <div v-if="showModal" class="modal">
+            <div v-if="showModal" class="modal">
           <div class="modal-content">
-            <h2>新增書籍</h2>
-            <form @submit.prevent="addNewBook">
-              <label for="bookName">書名：</label>
-              <input type="text" v-model="newBook.BookName" id="bookName" required>
+            <h3>新增影片</h3>
+            <form @submit.prevent="addNewVideo">
+              
+              <div class="type">
+                <label for="videoName" class="club" >影片名稱：</label>
+                <input type="text" v-model="newVideo.VideoName" id="videoName" class="text" required>
+              </div>
 
-              <label for="bookAuthor">作者：</label>
-              <input type="text" v-model="newBook.BookAuthor" id="bookAuthor" required>
-
-              <label for="bookYear">出版年：</label>
-              <input type="number" v-model="newBook.BookYear" id="bookYear" required>
+              <div class="type">
+                <label for="videoURL" class="club">影片網址：</label>
+                <input type="text" v-model="newVideo.VideoURL" id="videoURL" class="text" required>
+              </div>
 
               <div class="modal-actions">
-                <button type="button" class="button02" @click="closeModal">取消</button>
+                <button type="button" class="button02" @click="closeModal" style="background-color: #bfb6ad;">取消</button>
                 <button type="submit" class="button02">確認</button>
               </div>
             </form>
@@ -133,3 +134,4 @@
   <script scoped src="./JavaScript/VideoPage.js"></script>
   <style scoped src="./style/Common.css" ></style>
   <style scoped src="./style/table.css" ></style>
+  <style scoped src="./style/jump.css" ></style>

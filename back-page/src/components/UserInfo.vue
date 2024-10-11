@@ -89,7 +89,7 @@
               <tr v-for="(row, index) in filteredTableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
                 <td>{{ row.UserName }}</td>
-                <td>{{ row.UserSchool }}{{ row.UserClass }}</td>
+                <td>{{ row.UserSchool }}/ {{ row.UserClass }}</td>
                 <td class="status flex">
                   <span class="status-circle" :class="{'red': row.status === '危險', 'yellow': row.status === '警示', 'green': row.status === '安全'}"></span>
                   {{ row.status }}

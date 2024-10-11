@@ -62,8 +62,7 @@
           
           <h2>素養資料-題庫</h2>
 
-        <div style="display: flex; flex-direction: row; justify-content:space-between;align-items: start;">
-            <button class="button03" @click="openModal" style="margin: 10px 40px; padding: 7px 30px;">新增</button>
+        <div style="display: flex; flex-direction: row; justify-content:end;align-items: start;">
   
           <div class="page">
             <router-link to="/resourcePage" >
@@ -95,7 +94,7 @@
                   <td>{{ index + 1 }}</td>
                   <td>{{ row.TestQuestion }}</td>
                   <td>{{ row.TsetAnswer }}</td>
-                  <td><input type="submit" value="???" class="button02"> </td>
+                  <td><input type="submit" value="刪除" class="button02"> </td>
                 </tr>
               </tbody>
             </table>
