@@ -62,7 +62,7 @@
         <main class="content">
           <div class="title_light02">
            <h2>社群管理</h2>        
-           <button class="button03" @click="openModal">新增</button>
+           <button class="button03" @click="openModal" style="margin-left: 30px;">新增</button>
 
           </div>
 

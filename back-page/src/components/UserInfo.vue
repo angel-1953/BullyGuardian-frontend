@@ -61,16 +61,30 @@
       <main class="content">
 
         <div class="title_light">
-           <h2>使用者資訊</h2>
-        
-        
-        <div class="light">
-          <h1 >社群使用紅綠燈</h1>
-          <div @click="filterByStatus('安全')" class="light-color green"></div>
-            <div @click="filterByStatus('警示')" class="light-color yellow"></div>
-            <div @click="filterByStatus('危險')" class="light-color red"></div>
-            <div @click="filterByStatus(null)" class="light-color white">all</div>
-        </div>
+          <h2>使用者資訊</h2>
+          <div class="light">
+            <h1>社群使用紅綠燈</h1>
+            <div 
+              @click="filterByStatus('安全')" 
+              class="light-color green status-circle" 
+              :class="{'selected': selectedStatus === '安全'}"
+            ></div>
+            <div 
+              @click="filterByStatus('警示')" 
+              class="light-color yellow status-circle" 
+              :class="{'selected': selectedStatus === '警示'}"
+            ></div>
+            <div 
+              @click="filterByStatus('危險')" 
+              class="light-color red status-circle" 
+              :class="{'selected': selectedStatus === '危險'}"
+            ></div>
+            <div 
+              @click="filterByStatus(null)" 
+              class="light-color white" 
+              :class="{'selected': selectedStatus === null}"
+            >all</div>
+          </div>
         </div>
        
         <div class="register-container">
@@ -115,26 +129,50 @@
 <style scoped src="./style/table.css" ></style>
 
 <style scoped>
-  .status-circle {
-    display: inline-block;
-    width: 24px; 
-    height: 24px; 
-    border-radius:500px; 
-    margin: 6px;
+.status-circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: 26px; /* 添加寬度 */
+  height: 26px; /* 添加高度 */
+  margin: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selected {
+  box-shadow: 0 0 5px 1px rgba(74, 87, 103, 0.2); /* 外框效果 */
+  border: 3px solid rgb(255, 254, 254);
+}
+
+.red {
+  background-color: rgb(239, 116, 116);
+}
+
+.yellow {
+  background-color: rgb(255, 196, 114);
+}
+
+.green {
+  background-color: rgb(127, 207, 144);
+}
+
+.white {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #8dacd2;
+  color: #7991ad;
+}
+
+.status-circle:active {
+  transform: scale(1.3);
+  animation: blink 0.3s ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
   }
-  
-  .red {
-    background-color: rgb(239, 116, 116);
+  50% {
+    opacity: 0.5;
   }
-  .yellow {
-    background-color: rgb(255, 196, 114);
-  }
-  .green {
-    background-color: rgb(127, 207, 144);
-  }
-  .white {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #8dacd2;
-    color: #7991ad;
-  }
+}
+
 </style>
