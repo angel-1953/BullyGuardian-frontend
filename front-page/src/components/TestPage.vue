@@ -70,7 +70,9 @@
               </div>
 
               <div id="goreg">
-                <input type="submit" value="開始作答" class="button_02">  
+                <router-link to="/write" class="" >
+                  <input type="submit" value="開始作答" class="button_02">  
+              </router-link>
               </div> 
             </div>
           
