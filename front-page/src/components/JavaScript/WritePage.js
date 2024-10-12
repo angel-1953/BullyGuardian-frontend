@@ -1,5 +1,5 @@
 export default {
-    name: "VideoPage",
+    name: "WritePage",
     mounted() {
       document.title = "校園凌制零-測驗";
     },

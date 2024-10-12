@@ -86,15 +86,18 @@
                   <th>序號</th>
                   <th>題目</th>
                   <th>答案</th>
-                  <th>功能</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="(row, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                   <td>{{ index + 1 }}</td>
-                  <td>{{ row.TestQuestion }}</td>
-                  <td>{{ row.TsetAnswer }}</td>
-                  <td><input type="submit" value="刪除" class="button02"> </td>
+                  <td>{{ row.Question1 }} <br>
+                      A.{{ row.Option1 }}<br>
+                      B.{{ row.Option2 }}<br>
+                      C.{{ row.Option3 }}<br>
+                      D.{{ row.Answer }}
+                  </td> <!-- 這裡的 `row.Question` 必須與你的 API 資料格式相符 -->
+                  <td>{{ row.Answer }}</td> <!-- 這裡的 `row.Answer` 必須與你的 API 資料格式相符 -->
                 </tr>
               </tbody>
             </table>
