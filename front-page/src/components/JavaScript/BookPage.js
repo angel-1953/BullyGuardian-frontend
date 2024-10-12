@@ -1,23 +1,47 @@
 export default {
-    name: "BookPage",
-    mounted() {
-      document.title = "校園凌制零-好書推薦";
-    },
+  name: "BookPage",
+  data() {
+    return {
+      tableData: []
+    };
+  },
+  mounted() {
+    this.fetchBookList();  // 當頁面掛載時，調用 fetchBookList 方法
+  },
+  methods: {
+    async fetchBookList() {
+      try {
+        // 從 localStorage 中獲取 token
+        const token = localStorage.getItem('token');
 
-    data() {
-      return {
-        tableData: [
-          { id: 1, book:'改變情緒的姿勢： ' , writer: '楠戶太臣' , date: '2020/02/04'  },
-          { id: 2, book:'情緒解鎖： ' , writer: '馬克．布雷克特' , date: '2020/04/01'  },
-          { id: 3, book:'好好鬧情緒： ' , writer: '竹慶本樂仁波切' , date: '2023/06/28'  },
-          { id: 4, book:'壓力與情緒管理自助手冊 ' , writer: '邱美華' , date: '2020/02/06'  },
-          { id: 5, book:'整理情緒背包 ' , writer: '薇薇安‧狄特瑪 ' , date: '2020/02/25'  },
-          { id: 6, book:'好好生氣，不懊悔的技術：' , writer: '安藤俊介' , date: '2021/10/27'  },
-          { id: 7, book:'怨念的毒情緒 使你傷更重： ' , writer: '杉山崇 ' , date: '2022/01/05'  },
-          { id: 8, book:'告別隱形傷痕：' , writer: '孫廷沇' , date: '2023/07/28'  },
-          { id: 9, book:'親愛的, 那不是你的錯：' , writer: '瑪麗安．羅哈斯' , date: '2023/03/10'  },
-          { id: 10, book:'情緒平復練習：' , writer: '賽斯．吉爾罕' , date: '2021/03/12'  }
-        ]
-      };
+        // 如果沒有 token，則顯示錯誤提示
+        if (!token) {
+          alert('未檢測到登入狀態，請先登入。');
+          this.$router.push('/login');  // 導向登入頁面
+          return;
+        }
+
+        const response = await fetch('http://localhost:5280/api/Front/GetBookList', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`  // 將 token 加入到請求的 Authorization 標頭中
+          }
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          this.tableData = result;  // 將獲取到的書籍數據賦值給 tableData
+          this.tableData = result.Message; // 確認返回資料結構是否正確
+
+        } else {
+          const errorResult = await response.json();
+          alert(`獲取書籍列表失敗: ${errorResult.Message || response.statusText}`);
+        }
+      } catch (error) {
+        console.error('Error fetching book list:', error);
+        alert('獲取書籍列表時發生錯誤，請稍後再試。');
+      }
     }
-  };
+  }
+};
