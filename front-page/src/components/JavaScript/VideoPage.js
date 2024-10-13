@@ -2,14 +2,44 @@ export default {
   name: "VideoPage",
   data() {
     return {
-      videos: [] // 空陣列，將透過API填入資料
+      videos: [], // 空陣列，將透過API填入資料
+      isLoggedIn: false, // Track login status
     };
   },
   mounted() {
     document.title = "校園凌制零-影片欣賞";
+    this.handleHeaderDisplay();  // Call handleHeaderDisplay when the page is loaded
     this.fetchVideos(); // 組件載入時呼叫此方法來獲取影片資料
   },
   methods: {
+    // 判斷是否有 token，並根據狀態動態切換 header
+    handleHeaderDisplay() {
+      const token = localStorage.getItem('token'); // 從 localStorage 中抓取 token
+      const loginRegisterSection = document.querySelector('.login_register');
+      const personalSection = document.querySelector('.personal');
+
+      if (token) {
+        // 已登入
+        this.isLoggedIn = true;
+        if (loginRegisterSection) loginRegisterSection.style.display = 'none';
+        if (personalSection) personalSection.style.display = 'block';
+        console.log("已登入");
+      } else {
+        // 未登入
+        this.isLoggedIn = false;
+        if (loginRegisterSection) loginRegisterSection.style.display = 'block';
+        if (personalSection) personalSection.style.display = 'none';
+        console.log("未登入");
+      }
+    },
+    // 登出函數，清除 token 並更新 header 顯示狀態
+    logout() {
+      localStorage.removeItem('token'); // 清除 token
+      this.isLoggedIn = false;
+      this.handleHeaderDisplay(); // 更新 header
+      console.log("已登出");
+      this.$router.push('/login'); // Redirect to login page after logout
+    },
     // Fetch the video list from the API
     async fetchVideos() {
       const token = localStorage.getItem('token');
@@ -27,7 +57,7 @@ export default {
         if (response.ok) {
           const data = await response.json();
           this.videos = data.Message;
-          
+
           // Fetch video images
           this.videos.forEach((video, index) => {
             this.fetchImage(video.ImgInnerUrl, index);

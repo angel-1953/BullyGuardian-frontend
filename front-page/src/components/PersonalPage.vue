@@ -1,56 +1,43 @@
 <template>
 
-    <div id="header">
-          <header class="header">
-            
-            <router-link to="/home" class="pgoto_link">
-              <div class="logo">
-                <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
-              </div>
-            </router-link> 
-            
-            <div class="personal">
-              <router-link to="/personalPage" class="header_link">
-                <div class="personal-content">
-                  <img src="./assets/user.png" alt="Personal Logo" />
-                  <p>個人中心</p>
-                </div> 
-              </router-link>      
-            </div>
-            
-            </header>
-            
-            <nav class="nav">
-              <ul>
-                <li>
-                  <router-link to="/data" class="" >
-                    <p>霸凌雷達</p>
-                  </router-link>
-                </li>
-                <li>
-                  <router-link to="/book" class="" >
-                    <p>好書推薦</p>
-                  </router-link>
-                </li>
-                <li>
-                  <router-link to="/video" class="" >
-                    <p>影片欣賞</p>
-                  </router-link>
-                </li>
-                <li>
-                  <router-link to="/test" class="" >
-                    <p>實力測驗</p>
-                  </router-link>
-                </li>
-                <li>
-                    <router-link to="/news" class="" >
-                        <p>資訊導航</p>
-                    </router-link>
-                </li>
-            
-              </ul>
-            </nav>
+<div id="header">
+    <header class="header">
+      <router-link to="/home" class="pgoto_link">
+        <div class="logo">
+          <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;" />
         </div>
+      </router-link>
+
+      <div class="login_register">
+        <router-link to="/login" class="header_link">
+          <p>登入</p>
+        </router-link>
+        <router-link to="/register" class="header_link">
+          <p>註冊</p>
+        </router-link>
+      </div>
+
+      <div class="personal" style="display: none;"> <!-- 預設為隱藏 -->
+        <router-link to="/personalPage" class="header_link">
+          <div class="personal-content">
+            <img src="./assets/user.png" alt="Personal Logo" />
+            <p>個人中心</p>
+          </div>
+        </router-link>
+        <button @click="logout" class="logout_button">登出</button>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <ul>
+        <li><router-link to="/data"><p>霸凌雷達</p></router-link></li>
+        <li><router-link to="/book"><p>好書推薦</p></router-link></li>
+        <li><router-link to="/video"><p>影片欣賞</p></router-link></li>
+        <li><router-link to="/test"><p>實力測驗</p></router-link></li>
+        <li><router-link to="/news"><p>資訊導航</p></router-link></li>
+      </ul>
+    </nav>
+  </div>
       
       <div id="body" >
       
