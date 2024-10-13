@@ -3,13 +3,13 @@
 
 <div id="header">
     <header class="header">
-      <router-link to="/home" class="pgoto_link">
         <div class="logo">
+          <router-link to="/home" class="pgoto_link">
           <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;" />
+        </router-link>
         </div>
-      </router-link>
 
-      <div class="login_register">
+      <div class="login_register" >
         <router-link to="/login" class="header_link">
           <p>登入</p>
         </router-link>
