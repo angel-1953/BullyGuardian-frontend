@@ -5,61 +5,60 @@
     </header>
     <div class="main-container">
       <aside class="sidebar">
-          <nav>
-            <ul>
-              <li>
-                <div class="nolink">
-                  <img src="./assets/個人頭像.png" class="icon" />
-                  XXX,您好
-                </div>
-              </li>
-              <li>
-                <router-link to="/eventList" class="link">
-                  <img src="./assets/事件檢視.png" class="icon" />
-                  事件檢視
-                </router-link>
-              </li>
-              <li style="background-color: #f5f2ca;">
-                <router-link to="/userInfo" class="link" style="background-color: #f5f2ca;">
-                  <img src="./assets/使用者資訊.png" class="icon" />
-                  使用者資訊
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/managementPage" class="link">
-                  <img src="./assets/社群管理.png" class="icon" />
-                  社群管理
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/statisticsPage" class="link">
-                  <img src="./assets/數據統計.png" class="icon" />
-                  數據統計
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/networkInfo" class="link">
-                  <img src="./assets/網路資訊.png" class="icon" />
-                  網路資訊
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/resourcePage" class="link">
-                  <img src="./assets/素養資料.png" class="icon" />
-                  素養資料
-                </router-link>
-              </li>
-            </ul>
-          </nav>
-          <footer>
-            <router-link to="/login" class="link">
-              <img src="./assets/登入.png" class="icon" />
-              登入
-            </router-link>
-          </footer>
-        </aside>
+        <nav>
+          <ul>
+            <li>
+              <div class="nolink">
+                <img src="./assets/個人頭像.png" class="icon" />
+                XXX,您好
+              </div>
+            </li>
+            <li>
+              <router-link to="/eventList" class="link">
+                <img src="./assets/事件檢視.png" class="icon" />
+                事件檢視
+              </router-link>
+            </li>
+            <li style="background-color: #f5f2ca;">
+              <router-link to="/userInfo" class="link" style="background-color: #f5f2ca;">
+                <img src="./assets/使用者資訊.png" class="icon" />
+                使用者資訊
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/managementPage" class="link">
+                <img src="./assets/社群管理.png" class="icon" />
+                社群管理
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/statisticsPage" class="link">
+                <img src="./assets/數據統計.png" class="icon" />
+                數據統計
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/networkInfo" class="link">
+                <img src="./assets/網路資訊.png" class="icon" />
+                網路資訊
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/resourcePage" class="link">
+                <img src="./assets/素養資料.png" class="icon" />
+                素養資料
+              </router-link>
+            </li>
+          </ul>
+        </nav>
+        <footer>
+          <router-link to="/login" class="link">
+            <img src="./assets/登入.png" class="icon" />
+            登入
+          </router-link>
+        </footer>
+      </aside>
       <main class="content">
-
         <div class="title_light">
           <h2>使用者資訊</h2>
           <div class="light">
@@ -88,11 +87,11 @@
         </div>
        
         <div class="register-container">
-
           <table class="styled-table">
             <thead>
               <tr>
                 <th>序號</th>
+                <th>帳號</th>
                 <th>姓名</th>
                 <th>學校/班級</th>
                 <th>身分狀態</th>
@@ -102,11 +101,12 @@
             <tbody>
               <tr v-for="(row, index) in filteredTableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
-                <td>{{ row.UserName }}</td>
-                <td>{{ row.UserSchool }}/ {{ row.UserClass }}</td>
+                <td>{{ row.Account }}</td>
+                <td>{{ row.Name }}</td>
+                <td>{{ row.School }}/ {{ row.Class }}</td>
                 <td class="status flex">
-                  <span class="status-circle" :class="{'red': row.status === '危險', 'yellow': row.status === '警示', 'green': row.status === '安全'}"></span>
-                  {{ row.status }}
+                  <span class="status-circle" :class="{'red': row.State === '危險', 'yellow': row.State === '警示', 'green': row.State === '安全'}"></span>
+                  {{ row.State }}
                 </td>
                 <td> 
                   <router-link to="/userPage" >
@@ -116,9 +116,7 @@
               </tr>
             </tbody>
           </table>
-        
         </div>
-
       </main>
     </div>
   </div>
