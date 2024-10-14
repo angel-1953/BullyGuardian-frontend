@@ -109,10 +109,11 @@
                   {{ row.State }}
                 </td>
                 <td> 
-                  <router-link to="/userPage" >
-                    <input type="submit" value="查看" class="button02">
-                  </router-link> 
-                </td>
+                    <router-link :to="{ name: 'userPage', params: { account: row.Account } }">
+                      <input type="submit" value="查看" class="button02">
+                    </router-link> 
+                  </td>
+
               </tr>
             </tbody>
           </table>

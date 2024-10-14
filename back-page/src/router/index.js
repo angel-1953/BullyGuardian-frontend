@@ -79,6 +79,13 @@ const routes = [
     name: 'TestPage',
     component: TestPage
   },
+  {
+    path: '/userPage/:account',
+    name: 'userPage',
+    component: () => import('@/components/UserPage.vue'),
+    props: true
+  }
+  
   ];
   
 
