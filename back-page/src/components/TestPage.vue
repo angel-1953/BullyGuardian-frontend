@@ -53,8 +53,8 @@
             </nav>
             <footer>
               <router-link to="/login" class="link">
-                <img src="./assets/登入.png" class="icon" />
-                登入
+                <img src="./assets/登出.png" class="icon" />
+                登出
               </router-link>
             </footer>
           </aside>
@@ -69,10 +69,10 @@
                 <h1>書籍</h1>
             </router-link> 
             <router-link to="/videoPage" >
-                <h1 style="background-color: #b1d0cb;">影片</h1>
+                <h1>影片</h1>
             </router-link> 
             <router-link to="/testPage" >
-                <h1>題庫</h1>
+                <h1 style="background-color: #b1d0cb;">題庫</h1>
             </router-link> 
           </div>
           

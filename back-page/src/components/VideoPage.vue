@@ -53,8 +53,8 @@
         </nav>
         <footer>
           <router-link to="/login" class="link">
-            <img src="./assets/登入.png" class="icon" />
-            登入
+            <img src="./assets/登出.png" class="icon" />
+            登出
           </router-link>
         </footer>
       </aside>
@@ -78,7 +78,7 @@
         </div>
 
         <div class="register-container">
-          <table class="styled-table">
+          <table class="video-styled-table">
             <thead>
               <tr>
                 <th>序號</th>

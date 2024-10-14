@@ -54,8 +54,8 @@
           </nav>
           <footer>
             <router-link to="/login" class="link">
-              <img src="./assets/登入.png" class="icon" />
-              登入
+              <img src="./assets/登出.png" class="icon" />
+              登出
             </router-link>
           </footer>
         </aside>

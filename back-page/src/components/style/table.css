@@ -3,16 +3,7 @@
     border-collapse: collapse;
     background-color: white;
   }
-  .styled-table th, .styled-table td {
-    padding: 20px;
-    text-align: left;
-    border: 1px solid #ffffff;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 22px;
-    color: #6e6560;
-  }
-  
+
   .styled-table th {
     background-color: #f5ebde;
     text-align: center;
@@ -20,7 +11,50 @@
     font-size: 22px;
     color: #92734a;
   }
-  
+
+  .styled-table td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ffffff;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 22px;
+    color: #6e6560;
+  }
+
+
+
+
+
+  .resource-styled-table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+
+  .resource-styled-table th {
+    background-color: #f5ebde;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 22px;
+    color: #92734a;
+  }
+
+  .resource-styled-table td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    background-color: rgb(255, 255, 255);
+    font-size: 22px;
+    color: #6e6560;
+  }
+
+  .booknameleft{
+    text-align: left !important;
+  }
+
+
+
   button {
     margin-right: 5px;
   }
