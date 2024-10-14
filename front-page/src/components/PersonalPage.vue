@@ -95,9 +95,12 @@
               </div>
 
 
+              <form @submit.prevent="updatePassword" class="form">
+              <!-- Your form fields here -->
               <div id="goreg">
-                 <input type="submit" value="變更密碼" class="button "> 
-              </div>    
+                <input type="submit" value="變更密碼" class="button"> 
+              </div>
+            </form>    
             </form>     
         </div>
       </div>

@@ -3,20 +3,20 @@
 
 <div id="header">
     <header class="header">
-        <div class="logo">
-          <router-link to="/home" class="pgoto_link">
-          <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;" />
-        </router-link>
-        </div>
+      <router-link to="/home" class="pgoto_link">
+          <div class="logo">
+            <img src="./assets/Final.png" alt="Campus Bully Guardian Logo" style="width: 70%;"/>
+          </div>
+        </router-link> 
 
-      <div class="login_register" >
-        <router-link to="/login" class="header_link">
-          <p>登入</p>
-        </router-link>
-        <router-link to="/register" class="header_link">
-          <p>註冊</p>
-        </router-link>
-      </div>
+        <div class="login_register">
+          <router-link to="/login" class="header_link">
+            <p>登入</p>
+          </router-link>
+          <router-link to="/register" class="header_link">
+            <p>註冊</p>
+          </router-link>      
+        </div>
 
       <div class="personal" style="display: none;"> <!-- 預設為隱藏 -->
         <router-link to="/personalPage" class="header_link">

@@ -11,6 +11,7 @@ import TestPage from '../components/TestPage.vue';
 import BookPage from '../components/BookPage.vue';
 import ContentBook from '../components/ContentBook.vue';
 import WritePage from '../components/WritePage.vue';
+import QAstates from '../components/QAstates.vue';
 
 const routes = [
     {
@@ -76,6 +77,11 @@ const routes = [
       path: '/write',
       name: 'Write',
       component: WritePage
+    },
+    {
+      path: '/qastates',
+      name: 'QAstates',
+      component: QAstates
     },
   ];
   

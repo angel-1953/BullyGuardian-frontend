@@ -20,6 +20,7 @@ import TestPage from './components/TestPage.vue';
 import BookPage from './components/BookPage.vue';
 import ContentBook from './components/ContentBook.vue';
 import WritePage from './components/WritePage.vue';
+import QAstates from './components/QAstates.vue';
 
 export default {
   data() {
@@ -42,6 +43,7 @@ export default {
       if (this.currentPage === 'book') return BookPage;
       if (this.currentPage === 'contentBook') return ContentBook;
       if (this.currentPage === 'write') return WritePage;
+      if (this.currentPage === 'qastates') return QAstates;
       return null; 
     }
   }
