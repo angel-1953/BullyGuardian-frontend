@@ -43,7 +43,7 @@
       <h1>實力測驗</h1>
     </div>
 
-    <div id="app">
+    <div id="writeQA">
       <div class="questionnaire">
         <div v-for="(question, index) in questions" :key="index" class="question">
           <div class="question-title">{{ index + 1 }}. {{ question.Question }}</div>
@@ -51,12 +51,12 @@
             <li v-for="(option, optionIndex) in question.Options" :key="optionIndex">
               <label>
                 <input type="radio" :name="'question' + index" :value="option" v-model="answers[index]" />
-                {{ option }}
+                {{ getOptionLabel(optionIndex) }}. {{ option }}
               </label>
             </li>
           </ul>
         </div>
-        <button @click="submit">提交問卷</button>
+        <button @click="submit" class="sumitQA">提交問卷</button>
       </div>
     </div>
   </div>
@@ -68,5 +68,6 @@
 
         
         <script scoped src="./JavaScript/WritePage.js"></script>
+        <style scoped src="./style/notification.css" ></style>
         <style scoped src="./style/header.css" ></style>
-        <style scoped src="./style/table.css" ></style>
+        <style scoped src="./style/write.css" ></style>

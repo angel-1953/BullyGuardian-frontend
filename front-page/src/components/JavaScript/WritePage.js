@@ -68,6 +68,10 @@ export default {
         console.error('API 請求失敗', error);
       }
     },
+    getOptionLabel(index) {
+      const labels = ['A', 'B', 'C', 'D']; // 可擴充的選項標籤
+      return labels[index] || ''; // 防止超過 D 的選項出錯
+    },
     // 提交答案
     async submit() {
       const token = localStorage.getItem('token');

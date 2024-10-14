@@ -50,7 +50,7 @@
           <img :src="video.imgSrc" :alt="video.VideoName" class="thumbnail" />
           <h3>{{ video.VideoName }}</h3>
         </a>
-        <p>{{ video.LinkClick }} 次點擊</p>
+        <p>點擊次數：{{ video.LinkClick }}</p>
       </div>
     </div>
   </div>
