@@ -1,11 +1,21 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default {
   name: "HomePage",
+  data() {
+    return {
+      videos: [
+        { url: require('../assets/video1.png') },
+        { url: require('../assets/video2.png') },
+        { url: require('../assets/video3.png') }
+      ]
+    };
+  },
   mounted() {
     document.title = "校園凌制零-首頁";
     this.handleHeaderDisplay();  // 當頁面載入時呼叫函數
   },
   methods: {
-    // 判斷是否有 token，並根據狀態動態切換 header
     handleHeaderDisplay() {
       const token = localStorage.getItem('token'); // 從 localStorage 中抓取 token
       const loginRegisterSection = document.querySelector('.login_register');
@@ -23,7 +33,6 @@ export default {
         console.log("未登入");
       }
     },
-    // 登出函數，清除 token 並更新 header 顯示狀態
     logout() {
       localStorage.removeItem('token'); // 清除 token
       this.handleHeaderDisplay();  // 更新 header
