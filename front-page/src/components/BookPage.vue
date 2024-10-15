@@ -52,7 +52,6 @@
               <th class="book">書名</th>
               <th>作者</th>
               <th>出版日期</th>
-              <th>功能</th>
             </tr>
           </thead>
           <tbody>
@@ -62,7 +61,6 @@
               <td class="book">{{ item.BookName }}</td>
               <td>{{ item.Author }}</td>
               <td>{{ new Date(item.PublicDate).toLocaleDateString() }}</td>
-              <td><router-link to="/contentBook" class="" ><button class="view-btn">查看</button></router-link></td>
             </tr>
           </tbody>
         </table>
