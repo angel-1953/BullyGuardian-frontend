@@ -9,6 +9,7 @@
     text-align: center;
     padding: 15px 0;
     font-size: 22px;
+    border: 1px solid #ffffff;
     color: #92734a;
   }
 
@@ -37,6 +38,7 @@
     text-align: center;
     padding: 15px 0;
     font-size: 22px;
+    border: 1px solid #ffffff;
     color: #92734a;
   }
 
@@ -52,6 +54,35 @@
   .booknameleft{
     text-align: left !important;
   }
+
+
+  .video-styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+
+  .video-styled-table th {
+    background-color: #f5ebde;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 22px;
+    border: 1px solid #ffffff;
+    color: #92734a;
+  }
+
+  .video-styled-table td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ffffff;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 22px;
+    color: #6e6560;
+  }
+
+
+
 
 
 

@@ -27,7 +27,13 @@
     margin: 15px 5px;
     color: #936766;
   }
-  
+
+  .video-img{
+    display: flex;
+    width: 200px;
+    
+  }
+
   .thumbnail {
     width: 90%;
     border-radius: 10px;
