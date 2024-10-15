@@ -103,19 +103,31 @@
             <input type="text" v-model="form.name" id="name" required />
           </div>
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="school">學校：</label>
             <input type="text" v-model="form.school" id="school" required />
-          </div>
+          </div> -->
 
           <div class="form-group">
+            <h3>學校：</h3>
+            <input v-model="form.School" type="text" @input="filterSchools" placeholder="請輸入學校" class="text" name="School" />
+            <div class="school-dropdown" v-if="filteredSchools.length > 0">
+              <ul class="school-list">
+                <li v-for="school in filteredSchools" :key="school.SchoolId" @click="selectSchool(school)">
+                  {{ school.School1 }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- <div class="form-group">
             <label for="photo">教師證明：</label>
             <div class="custom-file-input">
               <input type="file" @change="handleFileUpload" id="photo" style="display:none" />
               <button type="button" @click="triggerFileInput">上傳圖片</button>
               <span v-if="form.photoName">{{ form.photoName }}</span>
             </div>
-          </div>
+          </div> -->
 
           <div class="form-footer">
             <button type="submit">註冊</button>
@@ -127,6 +139,32 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.school-dropdown {
+  max-height: 200px; /* 設置小視窗的最大高度 */
+  overflow-y: auto; /* 啟用垂直滾動條 */
+  border: 1px solid #ccc; /* 添加邊框 */
+  background-color: #fff; /* 背景色 */
+  position: absolute; /* 使下拉菜單絕對定位 */
+  z-index: 10; /* 確保下拉菜單在其他元素之上 */
+}
+
+.school-list {
+  list-style: none; /* 去掉列表樣式 */
+  padding: 0; /* 去掉內邊距 */
+  margin: 0; /* 去掉外邊距 */
+}
+
+.school-list li {
+  padding: 10px; /* 添加內邊距 */
+  cursor: pointer; /* 鼠標懸停變成手指 */
+}
+
+.school-list li:hover {
+  background-color: #f0f0f0; /* 鼠標懸停高亮 */
+}
+</style>
   
 <script scoped src="./JavaScript/RegisterPage.js"></script>
 <style scoped src="./style/Common.css" ></style>
