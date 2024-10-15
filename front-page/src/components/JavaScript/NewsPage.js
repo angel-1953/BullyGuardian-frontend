@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       isLoggedIn: false, // Track login status
+      dataFromApi: [], // 儲存從 API 獲得的資料
       tableData: [
         { id: 1, name: '教育部防制校園霸凌專區', path: 'https://bully.moe.edu.tw/index' },
         { id: 2, name: '中小學資訊素養與認知網', path: 'https://myppt.cc/zNlnaA' },
@@ -16,6 +17,7 @@ export default {
   mounted() {
     document.title = "校園凌制零-資訊導航室";
     this.handleHeaderDisplay(); // Call handleHeaderDisplay when the page is loaded
+    this.fetchData(); // Fetch API data when the page is loaded
   },
   methods: {
     // 判斷是否有 token，並根據狀態動態切換 header
@@ -38,6 +40,28 @@ export default {
         console.log("未登入");
       }
     },
+    // Fetch API data
+    fetchData() {
+      const token = localStorage.getItem('token'); // 從 localStorage 取出 token
+      fetch('http://localhost:5280/api/Front/GetExtLink', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // 帶上身份驗證的 Bearer Token
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.Message) {
+          this.dataFromApi = data.Message; // 將 API 返回的資料存入 dataFromApi
+        } else {
+          console.error('無法取得資料');
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+    },
     // 登出函數，清除 token 並更新 header 顯示狀態
     logout() {
       localStorage.removeItem('token'); // 清除 token
@@ -45,6 +69,10 @@ export default {
       this.handleHeaderDisplay(); // 更新 header
       console.log("已登出");
       this.$router.push('/login'); // Redirect to login page after logout
+    },
+    formatDate(dateTimeString) {
+      if (!dateTimeString) return ''; // 防止空資料
+      return dateTimeString.split('T')[0]; // 提取 T 之前的日期部分
     }
   }
 };

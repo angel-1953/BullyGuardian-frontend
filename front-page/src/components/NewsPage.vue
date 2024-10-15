@@ -1,7 +1,5 @@
-
 <template>
-
-<div id="header">
+  <div id="header">
     <header class="header">
       <router-link to="/home" class="pgoto_link">
         <div class="logo">
@@ -39,69 +37,64 @@
       </ul>
     </nav>
   </div>
-      
-      <div id="body" >
-    
-        <div class="noti_title">
-            <h1>最新相關資訊</h1>
-        </div>
-        <div class="content1" style="margin:0 8%; width: 84%;">
-            <div class="content2" style="height: 500px;">
-              <table>
-                    <thead>
-                      <tr>
-                        <th>序號</th>
-                        <th>網站名稱/連結</th>
-                        <th>更新日期</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="(item, index) in Data" :key="index" :class="{'odd-row': index % 2 !== 0}">
-                        <td>{{ item.id }}</td>
-                        <td>{{ item.date }}</td>
-                        <td><button class="view-btn">查看</button></td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>            
-        </div>
-        <div class="noti_title" >
-            <h1>教育部網路霸凌相關網站</h1>
-        </div>
-        <div class="content1" style="margin:0 8%; width: 84%;">
-            <div class="content2">
-              <table>
-                    <thead>
-                      <tr >
-                        <th style="width: 15%;">序號</th>
-                        <th style="width: 40%;">網站名稱</th>
-                        <th class="td_link" style="width: 45%;">網站連結</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
-                        <td>{{ item.id }}</td>
-                        <td>{{ item.name }}</td>
-                        <td class="td_link"><a :href="item.path" target="_blank">{{ item.path }}</a></td> 
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>            
-        </div>
-    
+
+  <div id="body">
+    <!-- 這一塊要接API -->
+    <div class="noti_title">
+      <h1>最新相關資訊</h1>
     </div>
-      
-    
-      
-      
-        <footer>
-        <p>校園凌制零</p>
-      </footer>
-      
-    
-      
-      </template>
-      
+    <div class="content1" style="margin:0 8%; width: 84%;">
+      <div class="content2" style="height: 500px;">
+        <table>
+          <thead>
+            <tr>
+              <th>序號</th>
+              <th>網站名稱/連結</th>
+              <th>更新日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in dataFromApi" :key="index" :class="{'odd-row': index % 2 !== 0}">
+              <td>{{ index + 1 }}</td>
+              <td>{{ item.Title }} - <a :href="item.Link">{{ item.Link }}</a></td>
+              <td>{{ formatDate(item.LinkTime) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 這一塊是寫死的不用接API -->
+    <div class="noti_title">
+      <h1>教育部網路霸凌相關網站</h1>
+    </div>
+    <div class="content1" style="margin:0 8%; width: 84%;">
+      <div class="content2">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 15%;">序號</th>
+              <th style="width: 40%;">網站名稱</th>
+              <th class="td_link" style="width: 45%;">網站連結</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
+              <td>{{ item.id }}</td>
+              <td>{{ item.name }}</td>
+              <td class="td_link"><a :href="item.path" target="_blank">{{ item.path }}</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>校園凌制零</p>
+  </footer>
+</template>
+
       <script scoped src="./JavaScript/NewsPage.js"></script>
       <style scoped src="./style/header.css" ></style>
       <style scoped src="./style/notification.css" ></style>
