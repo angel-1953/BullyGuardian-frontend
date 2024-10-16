@@ -15,24 +15,37 @@ export default {
             SchoolId: '',
             email: ''
         },
-        schoolList: [],  // 初始化為空陣列
-        filteredSchools: []  // 初始化為空陣列
+        schoolList: [],
+        filteredSchools: [] ,
+        errorMsg: "",
+        successMsg: ""
+
     };
   },
   methods: {
     async fetchSchoolList() {
         try {
-            const response = await fetch('http://localhost:5280/api/Member/GetSchoolList');
-            const data = await response.json();
-            if (response.ok) {
-                this.schoolList = data.Message;
+            // 同時請求兩個 API，並使用 Promise.all 等待它們完成
+            const [schoolResponse, midSchoolResponse] = await Promise.all([
+                fetch('http://localhost:5280/api/Member/GetSchoolList'),
+                fetch('http://localhost:5280/api/Member/GetMidSchoolList')
+            ]);
+    
+            // 將兩個 API 的結果解析為 JSON
+            const schoolData = await schoolResponse.json();
+            const midSchoolData = await midSchoolResponse.json();
+  
+            // 檢查兩個 API 返回的狀態，並合併數據
+            if (schoolData.Status === 200 && midSchoolData.Status === 200) {
+                // 合併學校列表
+                this.schoolList = [...schoolData.Message, ...midSchoolData.Message];
             } else {
-                console.error('學校列表載入失敗:', data.Message);
+                console.error('Failed to fetch school list:', schoolData.Message || midSchoolData.Message);
             }
-        } catch (error) {
-            console.error('載入學校列表時出錯:', error);
-        }
-    },
+            } catch (error) {
+            console.error('Error fetching school list:', error);
+            }
+        },
     filterSchools() {
         const searchTerm = this.form.school.toLowerCase();
         this.filteredSchools = this.schoolList.filter(school =>
@@ -65,16 +78,14 @@ export default {
             });
 
             const result = await response.json();
-
-            if (response.ok) {
-                alert(result.Message);
-                this.$router.push('/login');
+            if (response.status === 200 && result.Status === 200) {
+            this.successMsg = result.Message || "註冊成功！";
+            this.errorMsg = "";
             } else {
-                alert(`註冊失敗: ${result.Message}`);
+            this.errorMsg = result.Message || "註冊失敗，請重試。";
             }
         } catch (error) {
-            console.error('註冊過程中出現錯誤:', error);
-            alert('註冊過程中出現錯誤，請稍後再試。');
+            this.errorMsg = "系統發生錯誤，請稍後再試。";
         }
     }
   }

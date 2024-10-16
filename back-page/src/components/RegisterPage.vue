@@ -110,7 +110,7 @@
 
           <div class="form-group">
             <h3>學校：</h3>
-            <input v-model="form.School" type="text" @input="filterSchools" placeholder="請輸入學校" class="text" name="School" />
+            <input v-model="form.School" type="text" @input="filterSchools" placeholder="請選擇學校" class="text" name="School" />
             <div class="school-dropdown" v-if="filteredSchools.length > 0">
               <ul class="school-list">
                 <li v-for="school in filteredSchools" :key="school.SchoolId" @click="selectSchool(school)">
