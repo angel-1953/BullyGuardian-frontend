@@ -75,7 +75,7 @@
         <div class="line"></div>
       </div>
 
-      <div id="app" style="display: flex; justify-content: center; margin:0 0 50px 0; " >
+      <div id="app" style="display: flex; justify-content: center; margin:0 0 50px 0; z-index: 1;" >
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width: 80%;">
           <div class="carousel-inner">
             <div v-for="(video, index) in video" :key="index" :class="['carousel-item', { active: index === 0 }]">

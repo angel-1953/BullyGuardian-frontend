@@ -5,6 +5,11 @@
 }
 
 #header{
+  z-index:100000000000000000000!important;
+}
+
+
+#header{
   position: fixed;
   top: 0;
 }
@@ -18,6 +23,10 @@
   text-decoration: none ;  /* 去除下劃線 */
 }
 
+.header>a{
+  width: 50%;
+}
+
 .header{
     background-color: rgb(241, 198, 178);
     display: flex;
@@ -28,15 +37,18 @@
 }
 
 .logo{
-    width: 30%;
+    width: 50%;
 }
 
+.login_register>.header_link{
+  margin: 10px !important;
+}
 .login_register{
     text-decoration: none;
     font-weight: bold;
     color: white;
     font-size: 22px;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -44,19 +56,23 @@
 }
 
 .personal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.pgoto_link{
+  width: 100%;
 }
 
 
 .personal-content {
-  width: 100px;
+  width: 150px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #FAF3F0;
   color: #936766;
-  border-radius: 10px;
+  border-radius: 50px;
   padding: 10px 15px 10px 15px;
   transition: background-color 0.3s ease;
 }
@@ -99,7 +115,6 @@
 .header_link{
   color: inherit;  /* 繼承父元素顏色 */
   text-decoration: none;  /* 去除下劃線 */
-  width: 80px;
 }
 
 
