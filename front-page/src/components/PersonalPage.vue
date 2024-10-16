@@ -59,13 +59,18 @@
               </div>
               
               <div class="field">
-                <h4>密碼：</h4>
-                <input type="password" v-model="password" @input="checkPassword" />
+                <h4>原始密碼：</h4>
+                <input type="password" v-model="oldpassword" autocomplete="new-password" @input="checkPassword" />
               </div>
 
               <div class="field">
-                <h4>密碼確認：</h4>
-                <input type="password" v-model="confirmPassword" @input="checkPassword" />
+                <h4>新密碼：</h4>
+                <input type="password" v-model="newpassword" autocomplete="new-password" @input="checkPassword" />
+              </div>
+
+              <div class="field">
+                <h4>新密碼確認：</h4>
+                <input type="password" v-model="confirmPassword" autocomplete="new-password" @input="checkPassword" />
                 <span v-if="passwordError" class="error">{{ passwordError }}</span>
               </div>
 
@@ -95,12 +100,12 @@
               </div>
 
 
-              <form @submit.prevent="updatePassword" class="form">
+              <!-- <form @submit.prevent="updatePassword" class="form"> -->
               <!-- Your form fields here -->
               <div id="goreg">
                 <input type="submit" value="變更密碼" class="button"> 
               </div>
-            </form>    
+            <!-- </form>     -->
             </form>     
         </div>
       </div>
@@ -113,6 +118,10 @@
         <p>校園凌制零</p>
       </footer>
       
+
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+      <input type="text" name="username" autocomplete="username" hidden>
+
       </template>
       
       <script scoped src="./JavaScript/PersonalPage.js"></script>
