@@ -83,7 +83,9 @@
                 <td>{{ index + 1 }}</td>
                 <td>{{ row.date }}</td>
                 <td>{{ row.account }}</td>
-                <td>{{ row.path }}</td>
+                <td>
+                  <a href={{ row.path }}>點擊前往</a>
+                </td>
                 <td>
                   <router-link to="/PostPage" >
                     <input type="submit" value="查看" class="button02">
