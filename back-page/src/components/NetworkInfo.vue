@@ -75,7 +75,6 @@
                 <th>網站名稱</th>
                 <th>網站連結</th>
                 <th>更新日期</th>
-                <th>功能</th>
               </tr>
             </thead>
             <tbody>
@@ -84,7 +83,6 @@
                 <td>{{ item.Title }}</td>
                 <td>{{ item.Link }}</td>
                 <td>{{ item.LinkTime }}</td>
-                <td><button class="button02">刪除</button></td>
               </tr>
             </tbody>
           </table>

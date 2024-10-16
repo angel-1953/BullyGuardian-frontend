@@ -1,171 +1,117 @@
 <template>
   <div class="app-container">
     <header>
-      <img src="./assets/Final.png" alt="Logo" class="logo" width="15%"/>
+      <img src="./assets/Final.png" alt="Logo" class="logo" width="15%" />
       <div class="header-button">
-        
-          <router-link to="/login" class="link-button">
-            <button class="button">
-              登入
-            </button>
-          </router-link>
-        
-          <router-link to="/register" class="link-button">
-            <button class="button">
-              註冊
-            </button>
-          </router-link>
+        <router-link to="/login" class="link-button">
+          <button class="button">登入</button>
+        </router-link>
+        <router-link to="/register" class="link-button">
+          <button class="button">註冊</button>
+        </router-link>
       </div>
     </header>
     <div class="main-container">
       <aside class="sidebar">
-          <nav>
-            <ul>
-              <li>
-                <div class="nolink">
-                  <img src="./assets/個人頭像.png" class="icon" />
-                  XXX,您好
-                </div>
-              </li>
-              <li>
-                <router-link to="/eventList" class="link">
-                  <img src="./assets/事件檢視.png" class="icon" />
-                  事件檢視
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/userInfo" class="link">
-                  <img src="./assets/使用者資訊.png" class="icon" />
-                  使用者資訊
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/managementPage" class="link">
-                  <img src="./assets/社群管理.png" class="icon" />
-                  社群管理
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/statisticsPage" class="link">
-                  <img src="./assets/數據統計.png" class="icon" />
-                  數據統計
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/networkInfo" class="link">
-                  <img src="./assets/網路資訊.png" class="icon" />
-                  網路資訊
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/resourcePage" class="link">
-                  <img src="./assets/素養資料.png" class="icon" />
-                  素養資料
-                </router-link>
-              </li>
-            </ul>
-          </nav>
-          <footer>
-            <router-link to="/login" class="link">
-              <img src="./assets/登入.png" class="icon" />
-              登入
-            </router-link>
-          </footer>
-        </aside>
-      
+        <nav></nav>
+        <footer></footer>
+      </aside>
+
       <main class="content">
         <h2>會員註冊</h2>
-        <div class="line"> </div>
+        <div class="line"></div>
         <div class="register-container">
-        <form @submit.prevent="submitForm">
-          <div class="form-group">
-            <label for="account">帳號：</label>
-            <input type="text" v-model="form.account" id="account" required />
-          </div>
-
-          <div class="form-group">
-            <label for="password">密碼：</label>
-            <input type="password" v-model="form.password" id="password" required />
-          </div>
-
-          <div class="form-group">
-            <label for="confirmPassword">密碼確認：</label>
-            <input type="password" v-model="form.confirmPassword" id="confirmPassword" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-MAIL：</label>
-            <input type="email" v-model="form.email" id="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="name">姓名：</label>
-            <input type="text" v-model="form.name" id="name" required />
-          </div>
-
-          <!-- <div class="form-group">
-            <label for="school">學校：</label>
-            <input type="text" v-model="form.school" id="school" required />
-          </div> -->
-
-          <div class="form-group">
-            <h3>學校：</h3>
-            <input v-model="form.School" type="text" @input="filterSchools" placeholder="請選擇學校" class="text" name="School" />
-            <div class="school-dropdown" v-if="filteredSchools.length > 0">
-              <ul class="school-list">
-                <li v-for="school in filteredSchools" :key="school.SchoolId" @click="selectSchool(school)">
-                  {{ school.School1 }}
-                </li>
-              </ul>
+          <form @submit.prevent="submitForm">
+            <div class="form-group">
+              <label for="account">帳號：</label>
+              <input type="text" v-model="form.account" id="account" required class="log" />
             </div>
-          </div>
 
-          <!-- <div class="form-group">
-            <label for="photo">教師證明：</label>
-            <div class="custom-file-input">
-              <input type="file" @change="handleFileUpload" id="photo" style="display:none" />
-              <button type="button" @click="triggerFileInput">上傳圖片</button>
-              <span v-if="form.photoName">{{ form.photoName }}</span>
+            <div class="form-group">
+              <label for="password">密碼：</label>
+              <input type="password" v-model="form.password" id="password" required class="log" />
             </div>
-          </div> -->
 
-          <div class="form-footer">
-            <button type="submit">註冊</button>
-          </div>
-          
-        </form>
+            <div class="form-group">
+              <label for="confirmPassword">密碼確認：</label>
+              <input type="password" v-model="form.confirmPassword" id="confirmPassword" required class="log" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-MAIL：</label>
+              <input type="email" v-model="form.email" id="email" required class="log" />
+            </div>
+
+            <div class="form-group">
+              <label for="name">姓名：</label>
+              <input type="text" v-model="form.name" id="name" required class="log" />
+            </div>
+
+            <div class="form-group">
+              <label for="school">學校：</label>
+              <input
+                v-model="form.school"
+                type="text"
+                @input="filterSchools"
+                placeholder="請選擇學校"
+                class="text"
+                name="School"
+                autocomplete="off"
+              />
+              <div class="school-dropdown" v-if="filteredSchools.length > 0">
+                <ul class="school-list">
+                  <li v-for="school in filteredSchools" :key="school.SchoolId" @click="selectSchool(school)">
+                    {{ school.School1 }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit">註冊</button>
+            </div>
+          </form>
         </div>
       </main>
     </div>
   </div>
 </template>
 
+
 <style scoped>
 .school-dropdown {
-  max-height: 200px; /* 設置小視窗的最大高度 */
-  overflow-y: auto; /* 啟用垂直滾動條 */
-  border: 1px solid #ccc; /* 添加邊框 */
-  background-color: #fff; /* 背景色 */
-  position: absolute; /* 使下拉菜單絕對定位 */
-  z-index: 10; /* 確保下拉菜單在其他元素之上 */
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: absolute; /* 絕對定位 */
+  z-index: 10;
+  width: 100%; /* 跟輸入框保持相同寬度 */
+  top: 100%; /* 選單緊貼在輸入框下方 */
+  left: 0; /* 確保選單與輸入框左邊對齊 */
 }
 
 .school-list {
-  list-style: none; /* 去掉列表樣式 */
-  padding: 0; /* 去掉內邊距 */
-  margin: 0; /* 去掉外邊距 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .school-list li {
-  padding: 10px; /* 添加內邊距 */
-  cursor: pointer; /* 鼠標懸停變成手指 */
+  padding: 10px;
+  cursor: pointer;
 }
 
 .school-list li:hover {
-  background-color: #f0f0f0; /* 鼠標懸停高亮 */
+  background-color: #f0f0f0;
+}
+
+.form-group {
+  position: relative; /* 父容器需要是相對定位的 */
 }
 </style>
   
 <script scoped src="./JavaScript/RegisterPage.js"></script>
 <style scoped src="./style/Common.css" ></style>
 <style scoped src="./style/Register.css" ></style>
+<style scoped src="./style/LoginPage.css" ></style>

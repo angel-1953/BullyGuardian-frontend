@@ -88,7 +88,7 @@
             <h3>貼文內容：</h3> <h2>{{ postDetails.content }}</h2>
           </div>
             <div class="post">
-            <h3>貼文網址：</h3> <h2><a :href="postDetails.url" target="_blank">{{ postDetails.url }}</a></h2>
+            <h3>貼文網址：</h3> <h2><a :href="postDetails.url" target="_blank">點擊前往</a></h2>
           </div>
           <div class="post">
             <h3>霸凌關鍵字：</h3>

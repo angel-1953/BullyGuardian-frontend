@@ -78,13 +78,13 @@
                 <th>功能</th>
               </tr>
             </thead>
-            <tbody>
-              <tr v-for="(row, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
-                <td>{{ index + 1 }}</td>
-                <td>{{ row.date }}</td>
+            <tbody class="tb">
+              <tr v-for="(row, index) in tableData" :key="index" :class=" {'odd-row': index % 2 !== 0}">
+                <td >{{ index + 1 }}</td>
+                <td >{{ row.date }}</td>
                 <td>{{ row.account }}</td>
                 <td>
-                  <a href={{ row.path }}>點擊前往</a>
+                    <a :href="row.path">點擊前往</a>
                 </td>
                 <td>
                   <router-link to="/PostPage" >

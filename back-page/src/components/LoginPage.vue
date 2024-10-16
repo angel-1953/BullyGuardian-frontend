@@ -16,20 +16,10 @@
         <nav>
           <ul>
             <li>
-              <div class="nolink">
-                <img src="./assets/個人頭像.png" class="icon" />
-                XXX,您好
-              </div>
             </li>
             <!-- 其他選單項目 -->
           </ul>
         </nav>
-        <footer>
-          <router-link to="/login" class="link">
-            <img src="./assets/登入.png" class="icon" />
-            登入
-          </router-link>
-        </footer>
       </aside>
       <main class="content">
         <h2>會員登入</h2>
@@ -38,11 +28,11 @@
           <form @submit.prevent="submitForm">
             <div class="form-group">
               <label for="account">帳號：</label>
-              <input type="text" v-model="form.account" id="account" required />
+              <input type="text" v-model="form.account" id="account" required class="log"/>
             </div>
             <div class="form-group">
               <label for="password">密碼：</label>
-              <input type="password" v-model="form.password" id="password" required />
+              <input type="password" v-model="form.password" id="password" required class="log"/>
             </div>
             <div class="form-footer">
               <button type="submit">登入</button>
