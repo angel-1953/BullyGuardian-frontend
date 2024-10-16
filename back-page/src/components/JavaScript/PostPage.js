@@ -1,18 +1,50 @@
 export default {
     name: "PostPage",
     data() {
-      return {
-        postDetails: {
-          author: '曾小凌',
-          postTime: '2024-10-10 10:30',
-          content: '像你這種沒用的垃圾，活在這世界上都是浪費空氣，誰看你都覺得噁心，趕快去死吧！',
-          url: 'https://www.example.com/post/12345',
-          keywords: ['垃圾', '噁心', '去死']
-        }
-      };
+        return {
+            postDetails: {
+                author: '',
+                postTime: '',
+                content: '',
+                url: '',
+                keywords: []
+            }
+        };
     },
     mounted() {
-      document.title = "事件詳細頁";
+        document.title = "事件詳細頁";
+        this.fetchPostDetails();
+    },
+    methods: {
+        fetchPostDetails() {
+            const token = localStorage.getItem('token');
+            fetch('http://localhost:5280/api/Back/ShowCaseDetail?BPId=0', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data && data.Status === 200) {
+                    // 使用 API 返回的數據填充 postDetails
+                    this.postDetails = {
+                        author: data.Message.Bullyinger,
+                        postTime: data.Message.PostTime,
+                        content: data.Message.PostInfo,
+                        url: data.Message.Posturl,
+                        keywords: [data.Message.KeyWord]
+                    };
+                } else {
+                    console.error("API returned an error:", data);
+                }
+            })
+            .catch(error => console.error("Error fetching data:", error));
+        }
     }
-  };
-  
+};
