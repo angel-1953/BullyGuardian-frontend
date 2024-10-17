@@ -63,8 +63,15 @@
       <main class="content">
         <h2>數據統計</h2>
         <div class="line"> </div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <!-- 新的圓餅圖 -->
+              <div style="width: 60%;">
+                <canvas id="stateChart"></canvas>
+              </div>
 
-        <div class="register-container">
+              <div style="width: 60%;">
+                <canvas id="bullyingChart"></canvas>
+              </div>
           
         </div>
 
@@ -75,3 +82,9 @@
 
 <script scoped src="./JavaScript/StatisticsPage.js"></script>
 <style scoped src="./style/Common.css" ></style>
+<style scoped>
+canvas {
+  margin: 70px;
+  border: 1px solid darkblue;
+}
+</style>

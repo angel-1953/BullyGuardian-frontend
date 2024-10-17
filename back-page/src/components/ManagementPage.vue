@@ -76,10 +76,10 @@
           </thead>
           <tbody>
             <tr v-for="(row, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
-              <td>{{ index + 1 }}</td>
-              <td>{{ row.ClubName }}</td>
-              <td>{{ row.ClubURL }}</td>
-              <td><button class="button02" @click="deleteRow(index)">刪除</button></td>
+              <td style="text-align: center;">{{ index + 1 }}</td>
+              <td style="text-align: center;">{{ row.ClubName }}</td>
+              <td style="text-align: center;">{{ row.ClubURL }}</td>
+              <td style="text-align: center;"><button class="button02" @click="deleteRow(index)">刪除</button></td>
             </tr>
           </tbody>
         </table>

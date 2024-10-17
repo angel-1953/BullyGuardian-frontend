@@ -46,8 +46,16 @@
             <h1>數據圖表展示</h1>
         </div>
 
-        <div style="height: 700px;">
+        <div style="display: flex;  align-items: center; justify-content: center;">
+              <!-- 新的圓餅圖 -->
+              <div style="width: 40%;">
+                <canvas id="stateChart"></canvas>
+              </div>
 
+              <div style="width: 40%;">
+                <canvas id="bullyingChart"></canvas>
+              </div>
+          
         </div>
     
     
@@ -68,3 +76,11 @@
       <style scoped src="./style/header.css" ></style>
       <style scoped src="./style/notification.css" ></style>
       <style scoped src="./style/table.css" ></style>
+      <style scoped>
+        canvas {
+          margin: 30px;
+          border: 1px solid darkblue;
+          background-color: white;
+          padding: 30px;
+        }
+      </style>
