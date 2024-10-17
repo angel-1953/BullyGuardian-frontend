@@ -30,7 +30,10 @@
               <p>個人中心</p>
             </div>
           </router-link>
-          <button @click="logout" class="logout_button">登出</button>
+          <router-link to="/login" >
+            <button @click="logout" class="logout_button">登出</button>
+          </router-link>
+          
         </div>
       </header>
 

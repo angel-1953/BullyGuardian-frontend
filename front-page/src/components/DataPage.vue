@@ -46,7 +46,7 @@
             <h1>數據圖表展示</h1>
         </div>
 
-        <div style="display: flex;  align-items: center; justify-content: center;">
+        <div style="display: flex;   justify-content: center;">
               <!-- 新的圓餅圖 -->
               <div style="width: 40%;">
                 <canvas id="stateChart"></canvas>
