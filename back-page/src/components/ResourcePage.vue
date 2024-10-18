@@ -116,8 +116,8 @@
                 </div>
 
                 <div class="type">
-                  <label for="bookYear" class="club">出版年：</label>
-                  <input type="number" v-model="newBook.BookYear" id="bookYear" class="text" required>
+                  <label for="PublicDate" class="club">出版年：</label>
+                  <input type="text" v-model="newBook.PublicDate" id="bookYear" class="text" required placeholder="請輸入此格式：xxxx-xx-xx">
                 </div>
 
                 <div class="modal-actions">

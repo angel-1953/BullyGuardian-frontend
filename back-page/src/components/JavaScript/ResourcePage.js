@@ -17,63 +17,65 @@ export default {
   },
   methods: {
     openModal() {
-      this.showModal = true; // 打開彈跳視窗
+      this.showModal = true; // Open the modal
     },
     closeModal() {
-      this.showModal = false; // 關閉彈跳視窗
-      this.newBook = { BookName: '', BookAuthor: '', BookYear: '' }; // 重置輸入欄位
+      this.showModal = false; // Close the modal
+      this.newBook = { BookName: '', BookAuthor: '', BookYear: '' }; // Reset input fields
     },
     fetchBooks() {
-      const token = localStorage.getItem('token'); // 從 localStorage 中讀取 token
-
-      // 使用 fetch API 來進行 GET 請求
+      const token = localStorage.getItem('token'); // Read token from localStorage
+  
+      // Use fetch API to make a GET request
       fetch('http://localhost:5280/api/Back/GetBooks', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${token}`,  // 使用從 localStorage 中獲取的 token
+          'Authorization': `Bearer ${token}`,  // Use token from localStorage
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         }
       })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);  // 捕捉非 2xx 的回應
-          }
-          return response.json();
-        })
-        .then(data => {
-          if (data.Status === 200) {
-            this.data = data.Message; // 將 API 回傳的書籍資料存入 data
-          } else {
-            console.error('API returned an error:', data);
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching books:', error);
-        });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);  // Handle non-2xx responses
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data.Status === 200) {
+          this.data = data.Message; // Store the books data
+        } else {
+          console.error('API returned an error:', data);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching books:', error);
+      });
     },
+    
     addNewBook() {
-      if (this.newBook.BookName && this.newBook.BookAuthor && this.newBook.BookYear) {
-        this.data.push({
+      const token = localStorage.getItem('token'); // Get token from localStorage
+    
+      if (this.newBook.BookName && this.newBook.BookAuthor && this.newBook.PublicDate) {
+        // 先將輸入的日期轉換為 JavaScript Date 對象
+        const formattedDate = new Date(this.newBook.PublicDate).toISOString().split('T')[0]; // 格式化為 YYYY-MM-DD
+    
+        // 構建發送給後端的書籍資料
+        const bookData = {
           BookName: this.newBook.BookName,
           Author: this.newBook.BookAuthor,
-          PublicDate: `${this.newBook.BookYear}-01-01`
-        });
-        this.closeModal(); // 新增後關閉彈跳視窗
-      }
-    },
-    deleteBook(BookId) {
-      const token = localStorage.getItem('token'); // 從 localStorage 中讀取 token
-
-      // 發送 DELETE 請求刪除書籍
-      fetch(`http://localhost:5280/api/Back/DeleteOneBook?BookId=${BookId}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${token}`,  // 使用 token
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      })
+          PublicDate: formattedDate // 傳遞格式化後的日期
+        };
+    
+        fetch('http://localhost:5280/api/Back/UploadBooks', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(bookData)
+        })
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -82,14 +84,50 @@ export default {
         })
         .then(data => {
           if (data.Status === 200) {
-            this.data = this.data.filter(book => book.BookId !== BookId); // 從列表中移除已刪除的書籍
+            this.data.push(bookData);
+            this.closeModal();
           } else {
-            console.error('API returned an error:', data);
+            console.error('Error uploading book:', data);
           }
         })
         .catch(error => {
-          console.error('Error deleting book:', error);
+          console.error('Error:', error);
         });
+      }
+    },
+    
+    
+    
+    deleteBook(BookId) {
+      const token = localStorage.getItem('token'); // Get token from localStorage
+  
+      // Send a DELETE request to remove the book
+      fetch(`http://localhost:5280/api/Back/DeleteOneBook?BookId=${BookId}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,  // Include token in Authorization header
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data.Status === 200) {
+          // Remove the deleted book from the list
+          this.data = this.data.filter(book => book.BookId !== BookId);
+        } else {
+          console.error('Error deleting book:', data);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
     }
   }
+  
 };
