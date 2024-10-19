@@ -84,9 +84,9 @@ const routes = [
       component: QAstates
     },
     {
-      path: '/test/:id',
-      name: 'test',
-      component: TestPage,
+      path: '/qastates/:id',
+      name: 'testid',
+      component: () => import('@/components/QAstates.vue'),
       props: true // 這樣可以在組件中通過 props 訪問參數
     }
   ];
