@@ -13,12 +13,16 @@ export default {
     },
     mounted() {
         document.title = "事件詳細頁";
-        this.fetchPostDetails();
+        const id = this.$route.params.id; // 從路由參數中獲取 account
+        console.log("收到ID:", id);  // 確認是否正確抓到 id
+        this.fetchPostDetails(id);  // 當頁面掛載後抓取問題資料
     },
     methods: {
-        fetchPostDetails() {
+        fetchPostDetails(id) {
+            const payload = id;
+            console.log(payload);
             const token = localStorage.getItem('token');
-            fetch('http://localhost:5280/api/Back/ShowCaseDetail?BPId=0', {
+            fetch(`http://localhost:5280/api/Back/ShowCaseDetail?BPId=${payload}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`

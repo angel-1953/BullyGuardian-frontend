@@ -84,6 +84,12 @@ const routes = [
     name: 'userPage',
     component: () => import('@/components/UserPage.vue'),
     props: true
+  },
+  {
+    path: '/postPage/:id',
+    name: 'postPageid',
+    component: () => import('@/components/PostPage.vue'),
+    props: true // 這樣可以在組件中通過 props 訪問參數
   }
   
   ];
