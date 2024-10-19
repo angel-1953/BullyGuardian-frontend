@@ -5,6 +5,7 @@
   font-weight: bolder;  
 }
 
+
 template{
   background-color: #D3E8EA;
 }
@@ -12,7 +13,6 @@ template{
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 header {
@@ -96,6 +96,7 @@ header {
 
 .sidebar nav ul li {
   margin-bottom: 15px;
+
 }
 
 .link {
@@ -164,6 +165,7 @@ h2{
 .main-container{
   display: flex;
   background-color: #D3E8EA;
+  height: 100%;
 
 }
 

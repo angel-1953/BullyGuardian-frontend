@@ -50,11 +50,12 @@ export default {
     async fetchUserData() {
       const token = localStorage.getItem('token');
       const account = localStorage.getItem('account');
+    
       if (!token) {
         console.error("缺少 Token，請先登入。");
         return;
       }
-
+    
       try {
         const response = await fetch(`http://localhost:5280/api/Member/GetAccountInfo?account=${account}`, {
           method: 'GET',
@@ -62,15 +63,17 @@ export default {
             'Authorization': `Bearer ${token}`
           }
         });
-
+    
         if (response.ok) {
           const data = await response.json();
-          this.account = data.account;
-          this.email = data.email;
-          this.name = data.name;
-          this.school = data.school;
-          this.grade = data.grade;
-          this.studentId = data.studentId;
+    
+          // 更新 Vue 組件的數據
+          this.account = data.Message.Account || 'N/A';
+          this.email = data.Message.Email || 'N/A';
+          this.name = data.Message.Name || 'N/A';
+          this.school = data.Message.School || 'N/A';
+          this.grade = data.Message.Class || 'N/A';
+          this.studentId = data.Message.StudentId || 'N/A';
         } else {
           console.error("無法獲取使用者數據");
         }
@@ -111,46 +114,38 @@ export default {
     },
 
     // 使用 API 更新密碼
-    async updatePassword() {
-      if (!this.passwordError && this.newpassword && this.confirmPassword) {
-        const token = localStorage.getItem('token');
-        if (!token) {
-          console.error("缺少 Token，請先登入。");
-          return;
-        }
-
-        const requestBody = {
-          OldPassword: this.oldpassword,
-          NewPassword: this.newpassword,
-          NewPasswordCheck: this.confirmPassword
-        };
-
-        try {
-          const response = await fetch('http://localhost:5280/api/Member/ChangePassword', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(requestBody)
-          });
-
+    async changePassword() {
+      const token = localStorage.getItem('token');  // 假設 token 已經存在 localStorage
+      const payload = {
+        OldPassword: this.oldPassword,
+        NewPassword: this.newPassword,
+        NewPasswordCheck: this.newPasswordCheck
+      };
+  
+      try {
+        const response = await fetch('http://localhost:5280/api/Member/ChangePassword', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+  
+        if (response.ok) {
           const data = await response.json();
-
-          if (response.ok) {
-            console.log("密碼更新成功", data);
-            alert("密碼更新成功");
+          if (data.Status === 200) {
+            this.successMessage = data.Message;
           } else {
-            console.error("密碼更新失敗", data);
-            alert(`密碼更新失敗: ${data.message}`);
+            this.errorMessage = data.Message;
           }
-        } catch (error) {
-          console.error("更新密碼時發生錯誤", error);
-          alert("更新密碼時發生錯誤");
+        } else {
+          this.errorMessage = "伺服器錯誤，請稍後再試。";
         }
-      } else {
-        console.log("請確認密碼是否一致。");
+      } catch (error) {
+        this.errorMessage = "請求失敗，請檢查網路連線。";
       }
-    }
+    },
+    
   }
 };

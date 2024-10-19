@@ -83,6 +83,12 @@ const routes = [
       name: 'QAstates',
       component: QAstates
     },
+    {
+      path: '/test/:id',
+      name: 'test',
+      component: TestPage,
+      props: true // 這樣可以在組件中通過 props 訪問參數
+    }
   ];
   
 

@@ -57,22 +57,6 @@
                 <h4>帳號：</h4>
                 <span>{{ account }}</span>
               </div>
-              
-              <div class="field">
-                <h4>原始密碼：</h4>
-                <input type="password" v-model="oldpassword" autocomplete="new-password" @input="checkPassword" />
-              </div>
-
-              <div class="field">
-                <h4>新密碼：</h4>
-                <input type="password" v-model="newpassword" autocomplete="new-password" @input="checkPassword" />
-              </div>
-
-              <div class="field">
-                <h4>新密碼確認：</h4>
-                <input type="password" v-model="confirmPassword" autocomplete="new-password" @input="checkPassword" />
-                <span v-if="passwordError" class="error">{{ passwordError }}</span>
-              </div>
 
               <div class="field">
                 <h4>E-MAIL：</h4>

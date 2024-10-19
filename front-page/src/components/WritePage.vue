@@ -51,7 +51,7 @@
             <li v-for="(option, optionIndex) in question.Options" :key="optionIndex">
               <label>
                 <input type="radio" :name="'question' + index" :value="option" v-model="answers[index]" />
-                {{ getOptionLabel(optionIndex) }}. {{ option }}
+                {{ option }}
               </label>
             </li>
           </ul>
