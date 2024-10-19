@@ -145,7 +145,7 @@ footer .link:hover{
   flex: 1;
   background-color: #fff;
   border-top-left-radius: 15px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h2{
