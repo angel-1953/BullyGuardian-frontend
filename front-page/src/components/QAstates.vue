@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+<div id="header">
     <header class="header">
       <router-link to="/home" class="pgoto_link">
         <div class="logo">
@@ -38,6 +38,7 @@
     </nav>
   </div>
 
+
   <div id="body">
     <div class="noti_title">
       <h1>實力測驗</h1>
@@ -60,7 +61,9 @@
             </li>
           </ul>
         </div>
-        <button>返回</button>
+        <div class="button">
+          <router-link to="/test"><button class="view-btn">返回</button></router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -82,7 +85,8 @@
 
     
             
-            <script scoped src="./JavaScript/QAstates.js"></script>
-            <style scoped src="./style/notification.css" ></style>
-            <style scoped src="./style/header.css" ></style>
-            <style scoped src="./style/write.css" ></style>
+<script scoped src="./JavaScript/QAstates.js"></script>
+<style scoped src="./style/notification.css" ></style>
+<style scoped src="./style/header.css" ></style>
+<style scoped src="./style/write.css" ></style>
+<style scoped src="./style/table.css" ></style>
