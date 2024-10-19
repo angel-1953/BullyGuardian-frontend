@@ -26,7 +26,6 @@
     background-color: white;
     margin: 30px;
     width: 100%;
-    height: 700px;
     border-radius: 30px;
 }
 
@@ -56,7 +55,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 80px;
+    margin: 30px;
 }
 
 
@@ -70,4 +69,43 @@
 h1{
     color: #a06c6c;
 }
+
+/* 疊加影片名稱的樣式 */
+.video-title-overlay {
+    position: absolute;       /* 絕對定位 */
+    top: 10px;                /* 距離圖片頂部10px */
+    left: 10px;               /* 距離圖片左側10px */
+    background-color: white;  /* 半透明黑色背景 */
+    color: rgb(169, 113, 113);             /* 白色文字 */
+    padding: 20px 30px;        /* 內邊距 */
+    border-radius: 0 0 30px 0;       /* 圓角邊框 */
+    font-size: 18px;          /* 字體大小 */
+    font-weight: bold !important;
+    margin: 0 !important;
+    display: flex;            /* 讓標題和 icon 橫向排列 */
+    align-items: center;
+  }
+
+
+  
+  /* 播放 icon 的樣式，讓它居中顯示 */
+  .play-icon {
+    position: absolute;       /* 絕對定位 */
+    top: 50%;                 /* 垂直居中 */
+    left: 50%;                /* 水平居中 */
+    transform: translate(-50%, -50%);  /* 修正偏移，保證 icon 完全居中 */
+    cursor: pointer;          /* 鼠標移過變成手指形狀 */
+  }
+  
+  .play-icon img {
+    width: 150px;              /* 播放 icon 的寬度 */
+    height: 150px;             /* 播放 icon 的高度 */
+    opacity: 0.7;             /* 透明度讓 icon 看起來不那麼刺眼 */
+  }
+  
+  .play-icon img:hover {
+    opacity: 1;               /* 滑鼠移過時變為不透明 */
+  }
+  
+  
 
