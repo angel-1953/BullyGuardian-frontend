@@ -46,14 +46,20 @@
     <div class="video">
       <div v-for="(video) in videos" :key="video.VideoId" class="card">
         <!-- Trigger API call when video is clicked -->
-        <a :href="video.VideoLink1" target="_blank" @click.prevent="handleVideoClick(video.VideoId, video.VideoLink1)">
-          <div class="video-img">
+        <div class="video-content">
+          <a :href="video.VideoLink1" target="_blank" @click.prevent="handleVideoClick(video.VideoId, video.VideoLink1)">
             <img :src="video.imgSrc" :alt="video.VideoName" class="thumbnail" />
-          </div>
-          
-          <h3>{{ video.VideoName }}</h3>
-        </a>
-        <p>點擊次數：{{ video.LinkClick }}</p>
+          </a>
+        </div>
+        
+        <div class="video-info">
+          <h3>
+            <a :href="video.VideoLink1" target="_blank" @click.prevent="handleVideoClick(video.VideoId, video.VideoLink1)">
+              {{ video.VideoName }}
+            </a>
+          </h3>
+          <p>點擊次數：{{ video.LinkClick }}</p>
+        </div>
       </div>
     </div>
   </div>
