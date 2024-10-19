@@ -89,7 +89,11 @@ export default {
         const result = await response.json();
 
         if (result.Status === 200) {
-          alert(result.Message); // 顯示後端傳回的 Message
+          const userConfirmed = window.confirm(result.Message);
+          // 如果使用者按下確認，跳轉到 test.vue
+          if (userConfirmed) {
+            this.$router.push('/test'); // 跳回 test.vue
+          }
         } else {
           alert('提交失敗，請重試');
         }

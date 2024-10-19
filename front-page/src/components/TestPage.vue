@@ -82,9 +82,12 @@
               <td>{{ index + 1 }}</td>
               <td>{{ item.Correct }}</td>
               <td>{{ new Date(item.Time).toLocaleString() }}</td>
+                <div class="button">
                   <router-link :to="{ name: 'testid', params: { id: item.RecoveryId } }">
-                      <input type="submit" value="查看" class="button02">
-                  </router-link> 
+                    <button class="view-btn">查看</button>
+                  </router-link>
+                </div>
+                   
             </tr>
           </tbody>
         </table>

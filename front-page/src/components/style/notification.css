@@ -114,3 +114,21 @@
   text-align: left;
 }
 
+.view-btn {
+  border: none;
+  padding: 5px 30px;
+  margin-top: 15px;
+  cursor: pointer;
+  color: #dd8f8f;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+  border: #dd8f8f 3px solid;
+  border-radius: 10px;
+}
+
+.view-btn:hover {
+  background-color: #f5b3a7;
+  color: white;
+}
+
