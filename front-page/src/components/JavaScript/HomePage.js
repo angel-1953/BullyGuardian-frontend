@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // 引入 Bootstrap 的 JS
 import { Carousel } from 'bootstrap'; // 導入 Bootstrap 的 Carousel
 import { Chart } from 'chart.js/auto';
+import WordCloud from 'wordcloud';
 
 export default {
   name: "HomePage",
@@ -22,6 +23,7 @@ export default {
     this.fetchDataAndRenderChart(); // 繪製折線圖
     this.fetchStateChart(); // 繪製圓餅圖
     this.handleHeaderDisplay();  // Call handleHeaderDisplay when the page is loaded
+    this.fetchKeywords();
 
     // 使用 nextTick 確保輪播在 DOM 完成更新後初始化
     nextTick(() => {
@@ -224,6 +226,39 @@ export default {
           },
         },
       });
-    }
-  }
+    },
+    fetchKeywords() {
+      fetch('http://localhost:5280/api/Front/GetKeywordSum')
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.Status === 200) {
+            this.wordList = Object.entries(data.Message).map(([text, weight]) => [text, weight]);
+            this.generateWordCloud();
+          } else {
+            console.error('Error fetching data:', data);
+          }
+        })
+        .catch((error) => {
+          console.error('Fetch error:', error);
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
+    generateWordCloud() {
+      WordCloud(this.$refs.wordCloud, {
+        list: this.wordList,
+        gridSize: Math.round(14 * window.innerWidth / 1024),
+        weightFactor: 25,
+        fontFamily: 'Times, serif',
+        color: () => {
+          const colors = ['#e8c030', '#eb7b73', '#b371b3', '#b31515']; // 隨機顏色
+          return colors[Math.floor(Math.random() * colors.length)];
+        },
+        rotateRatio: 0,
+        rotationSteps: 2,
+        backgroundColor: '#fff',
+      });
+    },
+  },
 };

@@ -55,7 +55,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 0px;
 }
 
 
@@ -106,6 +106,18 @@ h1{
   .play-icon img:hover {
     opacity: 1;               /* 滑鼠移過時變為不透明 */
   }
-  
-  
 
+  .s1{
+    color: #e8c030;
+  }
+  .s2{
+    color: #eb7b73;
+  }
+  .s3{
+    color: #b371b3;
+  }
+  .s4{
+    color: #b31515;
+  }
+  
+  

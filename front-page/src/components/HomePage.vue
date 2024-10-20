@@ -78,11 +78,17 @@
 
       <div class="video_title">
         <div class="line"></div>
-        <h1 style="font-weight: bold;">好書推薦</h1>
+        <h1 style="font-weight: bold;" >霸凌文字雲</h1>
         <div class="line"></div>
       </div>
 
-      <div style="height: 500px;"></div>
+        <div style="display: flex;justify-content: center; margin-bottom: 150px;">
+          <div v-if="loading">載入中...</div>
+            <div v-else>
+              <div id="word-cloud" ref="wordCloud" style="width: 1000px; min-height: 400px;"></div>
+            </div>
+        </div>
+
 
       <div style="background-color: #f8f4e9;">
            <div class="video_title">
@@ -134,4 +140,13 @@
 <script scoped src="./JavaScript/HomePage.js"></script>
 <style scoped src="./style/header.css"></style>
 <style scoped src="./style/home.css"></style>
+
+<style scoped>
+#word-cloud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</style>
 
