@@ -63,6 +63,7 @@ export default {
 
         if (response.ok) {
           const data = await response.json();
+          console.log(data);
           this.tableData = data.Message; // Assuming 'Message' contains the answer records
         } else {
           console.error('Failed to fetch data:', response.statusText);
