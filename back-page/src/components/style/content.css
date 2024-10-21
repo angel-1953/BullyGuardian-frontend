@@ -2,13 +2,51 @@
     margin: 30px 8%;
 }
 
-.content-main>h3{
+.content-main>h3,a{
     margin: 50px 0;
     font-size: 24px;
     color: rgb(127, 121, 113);
 }
 
+.content-main a:hover{
+    color: #b3300fc9;
+}
+
 .content-button{
     display: flex;
     justify-content: center;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-container h3 {
+    margin-right: 20px;
+    font-size: 24px;
+    color: rgb(127, 121, 113);
+}
+
+.todo-container table {
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(127, 121, 113);
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.todo-container table, th, td {
+    border: 1px solid black; /* 為表格、表頭和單元格設置實線框 */
+}
+
+.todo-container td {
+    padding: 8px; /* 為單元格增加內部邊距 */
+    text-align: center; /* 文字靠左對齊 */
+}
+
+.todo-container th {
+    padding: 8px;
+    text-align: center;
+    background-color: #f2f2f2;
 }

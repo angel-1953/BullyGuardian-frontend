@@ -23,9 +23,19 @@
     color: #6e6560;
   }
 
+  .styled-table td a{
+    color: #6e6560;
+  }
+
+  .styled-table td a:hover{
+    color: #b3300fc9;
+  }
 
 
-
+  .styled-table-content td{
+    height: 90px;
+    text-align: center;
+  }
 
   .resource-styled-table{
     width: 100%;

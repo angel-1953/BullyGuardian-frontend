@@ -25,7 +25,7 @@ export default {
                   // 格式化資料結構，以便在表格中顯示
                   this.tableData = data.Message.map((event) => ({
                       caseId: event.BPId,
-                      date: event.PostTime,
+                      date: event.PostTime.replace('T', ' '),
                       account: event.Bullyinger,
                       path: event.Posturl
                   }));

@@ -133,6 +133,7 @@ header {
 }
 
 footer .link{
+  margin-bottom: 0;
   background-color: #EDF9FA;
   color: #647F8C
 }

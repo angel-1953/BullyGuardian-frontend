@@ -99,7 +99,7 @@
                 <th>功能</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="styled-table-content">
               <tr v-for="(row, index) in filteredTableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td style="text-align: center;">{{ index + 1 }}</td>
                 <td style="text-align: center;">{{ row.Account }}</td>

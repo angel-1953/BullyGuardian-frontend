@@ -81,8 +81,10 @@
               <tr v-for="(item, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
                 <td>{{ item.Title }}</td>
-                <td>{{ item.Link }}</td>
-                <td>{{ item.LinkTime }}</td>
+                <td style="word-wrap: break-word !important;word-break: break-all;">
+                  {{ item.Link }}
+                </td>
+                <td>{{ item.LinkTime.replace('T', ' ') }}</td>
               </tr>
             </tbody>
           </table>

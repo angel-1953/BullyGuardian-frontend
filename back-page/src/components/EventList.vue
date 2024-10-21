@@ -87,9 +87,9 @@
                     <a :href="row.path">點擊前往</a>
                 </td>
                 <td>
-                  <div class="button">
+                  <div>
                   <router-link :to="{ name: 'postPageid', params: { id: row.caseId } }">
-                    <button class="view-btn">查看</button>
+                    <input type="submit" value="查看" class="button">
                   </router-link>
                 </div>
                 </td>
