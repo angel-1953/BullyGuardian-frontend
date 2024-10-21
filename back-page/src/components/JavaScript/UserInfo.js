@@ -41,6 +41,7 @@ export default {
         return response.json(); // 解析為 JSON
       })
       .then(data => {
+        console.log(data)
         this.tableData = data.Message; // 將獲取的數據賦值給 tableData
       })
       .catch(error => {

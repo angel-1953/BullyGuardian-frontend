@@ -110,7 +110,10 @@
                   {{ row.State }}
                 </td>
                 <td>
-                  
+                  <div v-if="!row.Todo0">-觀看影片</div>
+                  <div v-if="!row.Todo1">-答題測驗</div>
+                  <div v-if="!row.Todo2">-校方介入</div>
+                  <div v-if="row.Todo0 && row.Todo1 && row.Todo2">無</div>
                 </td>
                 <td style="text-align: center;"> 
                     <router-link :to="{ name: 'userPage', params: { account: row.Account } }">
