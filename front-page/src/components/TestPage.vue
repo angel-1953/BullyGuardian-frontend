@@ -83,7 +83,7 @@
               <td>{{ item.Correct }}</td>
               <td>{{ new Date(item.Time).toLocaleString() }}</td>
                 <div class="button">
-                  <router-link :to="{ name: 'QAstates', params: { id: item.RecoveryId } }">
+                  <router-link :to="{ name: 'testid', params: { id: item.RecoveryId } }">
                     <button class="view-btn">查看</button>
                   </router-link>
                 </div>

@@ -53,7 +53,7 @@
         <img src="./assets/pic.png" alt="" class="topimg" style="width: 100%; margin-bottom: 50px;" />
       </div>
 
-      <div class="">
+      <div class="todo">
         <div class="video_title">
         <div class="line"></div>
         <h1 style="font-weight: bold;" >待辦事項
@@ -62,19 +62,19 @@
       </div>
 
         <!-- 顯示待辦事項 -->
-  <div v-for="(todo, index) in todos" :key="index">
-    <p v-if="todo.TodoThing === 0">
-      影片：<span v-if="!todo.State">未完成</span><span v-else>已完成</span>
-      <router-link v-if="!todo.State" to="/video">前往影片欣賞</router-link>
-    </p>
-    <p v-if="todo.TodoThing === 1">
-      測驗：<span v-if="!todo.State">未完成</span><span v-else>已完成</span>
-      <router-link v-if="!todo.State" to="/test">前往測驗</router-link>
-    </p>
-    <p v-if="todo.TodoThing === 2">
-      教師介入：<span v-if="!todo.State">未完成</span><span v-else>已完成</span>
-    </p>
-  </div>
+      <div v-for="(todo, index) in todos" :key="index">
+        <p v-if="todo.TodoThing === 0">
+          <span v-if="!todo.State">影片：未完成</span><span v-else>已完成</span>
+          <router-link v-if="!todo.State" to="/video">前往影片欣賞</router-link>
+        </p>
+        <p v-if="todo.TodoThing === 1">
+          <span v-if="!todo.State">測驗：未完成</span><span v-else>已完成</span>
+          <router-link v-if="!todo.State" to="/test">前往測驗</router-link>
+        </p>
+        <p v-if="todo.TodoThing === 2">
+          <span v-if="!todo.State">教師介入：未完成</span><span v-else style="display: none;"></span>
+        </p>
+      </div>
 
       </div>
 
