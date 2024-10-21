@@ -82,6 +82,22 @@
           <h3>身分狀態：{{ userInfo.State }}</h3>
           <h3>表情符號點擊次數：{{ userInfo.BullyingerPoint }}</h3>
           <h3>攻擊性發文次數：{{ userInfo.BullyingerPost }}</h3>
+
+          <h3>待辦事項：</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>待辦名稱</th>
+                <th>狀態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="todo in userInfo.Todo" :key="todo.TodoName">
+                <td>{{ todo.TodoName }}</td>
+                <td>{{ todo.TodoState }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div class="content-button">

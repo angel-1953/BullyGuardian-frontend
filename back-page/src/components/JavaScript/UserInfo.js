@@ -41,13 +41,37 @@ export default {
         return response.json(); // 解析為 JSON
       })
       .then(data => {
-        // 假設 API 返回的數據是類似這樣的結構
-        // { "Status": 200, "Message": [{Account: "Student1", Name: "張三", School: "某中學", Class: "初一3班", State: "安全"}] }
         this.tableData = data.Message; // 將獲取的數據賦值給 tableData
       })
       .catch(error => {
         console.error('Error fetching user data:', error);
       });
-    }
+    },
+    handleTodoChange(account) {
+      const token = localStorage.getItem('token');
+      
+      fetch(`http://localhost:5280/api/Back/UserTodoChage?Account=${account}`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('狀態變更成功:', data.Message); // 可以根據需求更新狀態或顯示提示
+        alert(data.Message); // 彈出提示顯示操作結果
+        this.fetchUserData(); // 操作成功後重新載入使用者數據
+      })
+      .catch(error => {
+        console.error('Error changing To-Do state:', error);
+      });
+    },
   },
+  
 };

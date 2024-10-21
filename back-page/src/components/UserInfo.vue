@@ -95,23 +95,28 @@
                 <th>姓名</th>
                 <th>學校/班級</th>
                 <th>身分狀態</th>
+                <th>待辦事項</th>
                 <th>功能</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(row, index) in filteredTableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
-                <td>{{ index + 1 }}</td>
-                <td>{{ row.Account }}</td>
-                <td>{{ row.Name }}</td>
-                <td>{{ row.School }}/ {{ row.Class }}</td>
+                <td style="text-align: center;">{{ index + 1 }}</td>
+                <td style="text-align: center;">{{ row.Account }}</td>
+                <td style="text-align: center;">{{ row.Name }}</td>
+                <td style="text-align: center;">{{ row.School }}/ {{ row.Class }}</td>
                 <td class="status flex">
                   <span class="status-circle" :class="{'red': row.State === '危險', 'yellow': row.State === '警示', 'green': row.State === '安全'}"></span>
                   {{ row.State }}
                 </td>
-                <td> 
+                <td>
+                  
+                </td>
+                <td style="text-align: center;"> 
                     <router-link :to="{ name: 'userPage', params: { account: row.Account } }">
                       <input type="submit" value="查看" class="button02">
                     </router-link> 
+                    <input type="submit" value="已處理" class="button02" @click="handleTodoChange(row.Account)">
                   </td>
 
               </tr>
