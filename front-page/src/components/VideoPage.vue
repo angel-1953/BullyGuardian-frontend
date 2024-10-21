@@ -31,7 +31,7 @@
       <ul>
         <li><router-link to="/data"><p>霸凌雷達</p></router-link></li>
         <li><router-link to="/book"><p>好書推薦</p></router-link></li>
-        <li><router-link to="/video"><p>影片欣賞</p></router-link></li>
+        <li style="background-color: #e1fcfa;"><router-link to="/video"><p>影片欣賞</p></router-link></li>
         <li><router-link to="/test"><p>實力測驗</p></router-link></li>
         <li><router-link to="/news"><p>資訊導航</p></router-link></li>
       </ul>

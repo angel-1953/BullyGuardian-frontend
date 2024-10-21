@@ -50,7 +50,7 @@
 
     <div id="body">
       <div>
-        <img src="./assets/pic.png" alt="" class="topimg" style="width: 100%; margin-bottom: 50px;" />
+        <img src="./assets/pic.png" alt="" class="topimg" style="width: 100%; " />
       </div>
 
       <div class="todo1">
@@ -66,11 +66,11 @@
       <div v-for="(todo, index) in todos" :key="index" class="todo">
         <p v-if="todo.TodoThing === 0">
           <span v-if="!todo.State">影片：未完成</span><span v-else>已完成</span>
-          <router-link v-if="!todo.State" to="/video">前往影片欣賞</router-link>
+          <router-link v-if="!todo.State" to="/video"><button class="button">前往影片欣賞>></button></router-link>
         </p>
         <p v-if="todo.TodoThing === 1">
           <span v-if="!todo.State">測驗：未完成</span><span v-else>已完成</span>
-          <router-link v-if="!todo.State" to="/test">前往測驗</router-link>
+          <router-link v-if="!todo.State" to="/test"><button class="button">前往實力測驗>></button></router-link>
         </p>
         <p v-if="todo.TodoThing === 2">
           <span v-if="!todo.State">教師介入：未完成</span><span v-else style="display: none;"></span>

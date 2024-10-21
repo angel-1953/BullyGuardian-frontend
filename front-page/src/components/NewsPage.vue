@@ -33,7 +33,7 @@
         <li><router-link to="/book"><p>好書推薦</p></router-link></li>
         <li><router-link to="/video"><p>影片欣賞</p></router-link></li>
         <li><router-link to="/test"><p>實力測驗</p></router-link></li>
-        <li><router-link to="/news"><p>資訊導航</p></router-link></li>
+        <li style="background-color: #e1fcfa;"><router-link to="/news"><p>資訊導航</p></router-link></li>
       </ul>
     </nav>
   </div>
@@ -49,14 +49,16 @@
           <thead>
             <tr>
               <th>序號</th>
-              <th>網站名稱/連結</th>
+              <th>網站名稱</th>
+              <th style="width: 50%;">連結</th>
               <th>更新日期</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(item, index) in dataFromApi" :key="index" :class="{'odd-row': index % 2 !== 0}">
               <td>{{ index + 1 }}</td>
-              <td>{{ item.Title }} - <a :href="item.Link">{{ item.Link }}</a></td>
+              <td>{{ item.Title }} </td>
+              <td class="link"><a :href="item.Link">{{ item.Link }}</a></td>
               <td>{{ formatDate(item.LinkTime) }}</td>
             </tr>
           </tbody>
@@ -95,7 +97,14 @@
   </footer>
 </template>
 
-      <script scoped src="./JavaScript/NewsPage.js"></script>
-      <style scoped src="./style/header.css" ></style>
-      <style scoped src="./style/notification.css" ></style>
-      <style scoped src="./style/table.css" ></style>
+<script scoped src="./JavaScript/NewsPage.js"></script>
+<style scoped src="./style/header.css" ></style>
+<style scoped src="./style/notification.css" ></style>
+<style scoped src="./style/table.css" ></style>
+<style scoped>
+  .link{
+    text-align: left;
+    word-wrap: break-word !important;
+    word-break: break-all;
+  }
+</style>
