@@ -53,7 +53,8 @@
         <img src="./assets/pic.png" alt="" class="topimg" style="width: 100%; margin-bottom: 50px;" />
       </div>
 
-      <div class="todo">
+      <div class="todo1">
+      <div class="todo2">
         <div class="video_title">
         <div class="line"></div>
         <h1 style="font-weight: bold;" >待辦事項
@@ -62,7 +63,7 @@
       </div>
 
         <!-- 顯示待辦事項 -->
-      <div v-for="(todo, index) in todos" :key="index">
+      <div v-for="(todo, index) in todos" :key="index" class="todo">
         <p v-if="todo.TodoThing === 0">
           <span v-if="!todo.State">影片：未完成</span><span v-else>已完成</span>
           <router-link v-if="!todo.State" to="/video">前往影片欣賞</router-link>
@@ -77,6 +78,8 @@
       </div>
 
       </div>
+      </div>
+
 
       <div class="div2">
         <div class="count_title">

@@ -44,7 +44,7 @@
       <h1>最新相關資訊</h1>
     </div>
     <div class="content1" style="margin:0 8%; width: 84%;">
-      <div class="content2" style="height: 500px;">
+      <div class="content2" >
         <table>
           <thead>
             <tr>

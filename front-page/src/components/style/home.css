@@ -119,5 +119,23 @@ h1{
   .s4{
     color: #b31515;
   }
+
+  .todo1{
+    margin: 50px;
+    border:3px solid #efdaa0;
+    border-radius: 30px;
+  }
+  .todo2{
+    margin: 10px;
+    border:5px solid #ecbbbb;
+    border-radius: 30px;
+  }
   
+  .todo{
+    font-weight: bold;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    
+  }
   
