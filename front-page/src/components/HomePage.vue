@@ -53,6 +53,31 @@
         <img src="./assets/pic.png" alt="" class="topimg" style="width: 100%; margin-bottom: 50px;" />
       </div>
 
+      <div class="">
+        <div class="video_title">
+        <div class="line"></div>
+        <h1 style="font-weight: bold;" >待辦事項
+        </h1>
+        <div class="line"></div>
+      </div>
+
+        <!-- 顯示待辦事項 -->
+  <div v-for="(todo, index) in todos" :key="index">
+    <p v-if="todo.TodoThing === 0">
+      影片：<span v-if="!todo.State">未完成</span><span v-else>已完成</span>
+      <router-link v-if="!todo.State" to="/video">前往影片欣賞</router-link>
+    </p>
+    <p v-if="todo.TodoThing === 1">
+      測驗：<span v-if="!todo.State">未完成</span><span v-else>已完成</span>
+      <router-link v-if="!todo.State" to="/test">前往測驗</router-link>
+    </p>
+    <p v-if="todo.TodoThing === 2">
+      教師介入：<span v-if="!todo.State">未完成</span><span v-else>已完成</span>
+    </p>
+  </div>
+
+      </div>
+
       <div class="div2">
         <div class="count_title">
           <h1 style="font-weight: bold;">霸凌雷達</h1>

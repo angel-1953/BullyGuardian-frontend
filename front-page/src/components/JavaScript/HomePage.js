@@ -13,10 +13,10 @@ export default {
         { url: require('@/components/assets/video1.png'), title: '湖中女神的困擾' ,link: 'https://video.cloud.edu.tw/video/co_video_content.php?p=410605' },
         { url: require('@/components/assets/video2.png'), title: '70分女孩_ep6：沒有人是100分的' ,link: 'https://video.cloud.edu.tw/video/co_video_content.php?p=410605' },
         { url: require('@/components/assets/video3.png'), title: '請登入聊天室' ,link: 'https://video.cloud.edu.tw/video/co_video_content.php?p=410605' }
-      ]
+      ],
+      todos: []
     };
-  }
-  ,
+  },
   mounted() {
     document.title = "校園凌制零-首頁";
     this.handleHeaderDisplay();
@@ -24,6 +24,7 @@ export default {
     this.fetchStateChart(); // 繪製圓餅圖
     this.handleHeaderDisplay();  // Call handleHeaderDisplay when the page is loaded
     this.fetchKeywords();
+    this.fetchUserData();
 
     // 使用 nextTick 確保輪播在 DOM 完成更新後初始化
     nextTick(() => {
@@ -32,6 +33,58 @@ export default {
     });
   },
   methods: {
+     // 假設登入成功後的回應
+     async login() {
+      // 假設在 data 中有 account 和 password
+      const response = await fetch('http://localhost:5280/api/Member/Login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // 設置內容類型
+        },
+        body: JSON.stringify({
+          account: this.account, // 需從 data 獲取使用者輸入的帳號
+          password: this.oldpassword // 假設使用舊密碼作為登入密碼
+        })
+      });
+      const data = await response.json();
+    
+      if (response.ok) {
+        // 儲存 token 和 account 到 localStorage
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('account', data.account);
+        this.isLoggedIn = true; // 設置為已登入狀態
+        this.handleHeaderDisplay();
+      } else {
+        console.error("登入失敗", data.message);
+      }
+    },
+    async fetchUserData() {
+      const token = localStorage.getItem('token');
+  
+      if (!token) {
+        console.error("缺少 Token，請先登入。");
+        return;
+      }
+  
+      try {
+        const response = await fetch(`http://localhost:5280/api/Member/GetAccountTodo`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+  
+        if (response.ok) {
+          const todoData = await response.json();
+          console.log(todoData);
+          this.todos = todoData.Message; // 儲存待辦事項資料到 todos
+        } else {
+          console.error("無法獲取使用者數據");
+        }
+      } catch (error) {
+        console.error("加載使用者數據時發生錯誤", error);
+      }
+    },
     handleHeaderDisplay() {
       const token = localStorage.getItem('token');
       const loginRegisterSection = document.querySelector('.login_register');
