@@ -82,7 +82,7 @@
             <h3>發文者：</h3> <h2>{{ postDetails.author }}</h2>
             </div>
             <div class="post">
-            <h3>發文時間：</h3> <h2>{{ postDetails.postTime }}</h2>
+            <h3>發文日期：</h3> <h2>{{ postDetails.postTime }}</h2>
           </div>
             <div class="post">
             <h3>貼文內容：</h3> <h2>{{ postDetails.content }}</h2>
