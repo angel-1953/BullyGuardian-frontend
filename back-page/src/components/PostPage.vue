@@ -4,7 +4,7 @@
         <img src="./assets/Final.png" alt="Logo" class="logo" width="15%"/>
         <div class="header-button">
           
-            <router-link to="/login" class="link-button">
+            <!-- <router-link to="/login" class="link-button">
               <button class="button">
                 登入
               </button>
@@ -14,7 +14,7 @@
               <button class="button">
                 註冊
               </button>
-            </router-link>
+            </router-link> -->
         </div>
       </header>
       <div class="main-container">
