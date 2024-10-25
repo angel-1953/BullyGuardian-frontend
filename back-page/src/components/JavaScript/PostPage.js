@@ -39,7 +39,7 @@ export default {
                     // 使用 API 返回的數據填充 postDetails
                     this.postDetails = {
                         author: data.Message.Bullyinger,
-                        postTime: data.Message.PostTime.replace('T', ' '),
+                        postTime: data.Message.PostTime.replace('T', ' ').split(' ')[0],
                         content: data.Message.PostInfo,
                         url: data.Message.Posturl,
                         keywords: [data.Message.KeyWord]
