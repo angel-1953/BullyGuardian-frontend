@@ -11,7 +11,7 @@
               <li>
                 <div class="nolink">
                   <img src="./assets/個人頭像.png" class="icon" />
-                  {{ username }},您好
+                  {{ username }}您好
                 </div>
               </li>
               <li style="background-color: #f5f2ca;">

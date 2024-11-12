@@ -37,7 +37,7 @@
 
 .thumbnail {
   width: 100%; /* Keep the image size as you desire */
-  margin: 0 auto; /* This centers the image horizontally */
+  margin: 0 ; /* This centers the image horizontally */
   border-radius: 10px;
   display: block;
 }

@@ -3,12 +3,12 @@
     <header>
       <img src="./assets/Final.png" alt="Logo" class="logo" width="15%" />
       <div class="header-button">
-        <router-link to="/login" class="link-button">
+        <!-- <router-link to="/login" class="link-button">
           <button class="button">登入</button>
         </router-link>
         <router-link to="/register" class="link-button">
           <button class="button">註冊</button>
-        </router-link>
+        </router-link> -->
       </div>
     </header>
 
@@ -62,8 +62,8 @@
         </nav>
         <footer>
           <router-link to="/login" class="link">
-            <img src="./assets/登入.png" class="icon" />
-            登入
+            <img src="./assets/登出.png" class="icon" />
+            登出
           </router-link>
         </footer>
       </aside>

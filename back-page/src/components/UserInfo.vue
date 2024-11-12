@@ -116,10 +116,11 @@
                   <div v-if="row.Todo0 && row.Todo1 && row.Todo2">無</div>
                 </td>
                 <td style="text-align: center;"> 
+                     
+                    <input type="submit" value="已處理" class="button02" @click="handleTodoChange(row.Account)">
                     <router-link :to="{ name: 'userPage', params: { account: row.Account } }">
                       <input type="submit" value="查看" class="button02">
-                    </router-link> 
-                    <input type="submit" value="已處理" class="button02" @click="handleTodoChange(row.Account)">
+                    </router-link>
                   </td>
 
               </tr>
