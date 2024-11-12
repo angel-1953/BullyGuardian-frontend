@@ -20,6 +20,11 @@
     <nav class="nav">
       <ul>
         <li>
+          <router-link to="/notification">
+            <p>事件通報</p>
+          </router-link>
+        </li>
+        <li>
           <router-link to="/data" class="">
             <p>霸凌雷達</p>
           </router-link>

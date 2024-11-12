@@ -30,6 +30,7 @@
 
     <nav class="nav">
       <ul>
+        <li><router-link to="/notification"><p>事件通報</p></router-link></li>
         <li><router-link to="/data"><p>霸凌雷達</p></router-link></li>
         <li><router-link to="/book"><p>好書推薦</p></router-link></li>
         <li><router-link to="/video"><p>影片欣賞</p></router-link></li>

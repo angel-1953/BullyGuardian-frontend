@@ -29,6 +29,7 @@
 
     <nav class="nav">
       <ul>
+        <li><router-link to="/notification"><p>事件通報</p></router-link></li>
         <li><router-link to="/data"><p>霸凌雷達</p></router-link></li>
         <li style="background-color: #e1fcfa;"><router-link to="/book"><p>好書推薦</p></router-link></li>
         <li><router-link to="/video"><p>影片欣賞</p></router-link></li>
@@ -52,6 +53,8 @@
               <th class="book">書名</th>
               <th>作者</th>
               <th>出版日期</th>
+              <th>ISBN</th>
+              <th>功能</th>
             </tr>
           </thead>
           <tbody>
@@ -61,6 +64,8 @@
               <td class="book">{{ item.BookName }}</td>
               <td>{{ item.Author }}</td>
               <td>{{ new Date(item.PublicDate).toLocaleDateString() }}</td>
+              <td>12345678</td>
+              <td> <button class="view-btn" style="padding:5px 20px;">閱讀</button></td>
             </tr>
           </tbody>
         </table>

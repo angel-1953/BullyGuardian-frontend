@@ -31,6 +31,8 @@
 
     <nav class="nav">
       <ul>
+        
+        <li><router-link to="/notification"><p>事件通報</p></router-link></li>
         <li><router-link to="/data"><p>霸凌雷達</p></router-link></li>
         <li><router-link to="/book"><p>好書推薦</p></router-link></li>
         <li><router-link to="/video"><p>影片欣賞</p></router-link></li>
@@ -60,45 +62,49 @@
 
                 <div class="event">
                   <h3>不當來源：</h3>
-                  <label>
+                  <label class="lab">
                     <input 
                       type="radio" 
                       value="個人頁面" 
                       v-model="sourceType"
+                      class="label"
                       required
                     />
-                    個人頁面
+                    <h5>個人頁面</h5>
+                    
                   </label>
-                  <label>
+                  <label class="lab">
                     <input 
                       type="radio" 
                       value="社團" 
                       v-model="sourceType"
+                      class="label"
                     />
-                    社團
+                    <h5>社團</h5>
                   </label>
-                  <label>
+                  <label class="lab">
                     <input 
                       type="radio" 
                       value="粉絲專頁" 
                       v-model="sourceType"
+                      class="label"
                     />
-                    粉絲專頁
+                    <h5>粉絲專頁</h5>
                   </label>
                 </div>
 
-                <div class="event">
-                    <h3>補充說明：</h3>
-                    <input type="text" placeholder="請輸入Facebook連結" class="text" name="username">  
+                <div class="event" style="align-items: start;padding: 15px 0;">
+                    <h3 >補充說明：</h3>
+                    <textarea placeholder="請輸入補充說明" class="text" name="username" style="width: 70%;"></textarea> 
                 </div>
-                <div class="event">
+                <!-- <div class="event">
                     <h3>附加圖片：</h3> 
                     <input 
                       type="file" 
                       id="image-upload" 
                       @change="handleImageUpload"
                     />                   
-                </div>
+                </div> -->
                 
                 <div id="goreg">
                     <input type="submit" value="送出" class="button "> 
@@ -123,3 +129,4 @@
   <script scoped src="./JavaScript/NotificationPage.js"></script>
   <style scoped src="./style/header.css" ></style>
   <style scoped src="./style/notification.css" ></style>
+  <style scoped src="./style/login.css" ></style>
