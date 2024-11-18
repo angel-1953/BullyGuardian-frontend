@@ -43,11 +43,13 @@
       <div id="body" >
       
         <h1>個人中心</h1>
-        <div class="page">
+        <div class="page ">
             <div class="title_login">
-              <h2>個人資料管理</h2> 
+              <h2><router-link to="/personalPage" style="text-decoration: none; font-size: 28px; " class="header_link"><p>個人資料管理</p></router-link></h2> 
             </div>
-            
+            <div class="title_login">
+              <h2><router-link to="/scasePage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>歷史通報紀錄</p></router-link></h2> 
+            </div>
         </div>
       
       

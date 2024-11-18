@@ -1,5 +1,5 @@
 export default {
-  name: "PersonalPage",
+  name: "scasePage",
   data() {
     return {
       account: '',
@@ -16,7 +16,7 @@ export default {
     };
   },
   mounted() {
-    document.title = "個人中心-個人資料管理";
+    document.title = "個人中心-歷史通報紀錄";
     this.handleHeaderDisplay();
     this.fetchUserData(); // 呼叫方法來從 API 獲取使用者數據
   },

@@ -1,4 +1,5 @@
 <template>
+
 <div id="header">
     <header class="header">
       <router-link to="/home" class="pgoto_link">
@@ -31,30 +32,39 @@
       <ul>
         <li><router-link to="/notification"><p>事件通報</p></router-link></li>
         <li><router-link to="/data"><p>霸凌雷達</p></router-link></li>
-        <li style="background-color: #e1fcfa;"><router-link to="/book"><p>好書推薦</p></router-link></li>
+        <li><router-link to="/book"><p>好書推薦</p></router-link></li>
         <li><router-link to="/video"><p>影片欣賞</p></router-link></li>
         <li><router-link to="/test"><p>實力測驗</p></router-link></li>
         <li><router-link to="/news"><p>資訊導航</p></router-link></li>
       </ul>
     </nav>
   </div>
+      
+      <div id="body" >
+      
+        <h1>個人中心</h1>
+        <div class="page ">
+            <div class="title_login">
+              <h2><router-link to="/personalPage" style="text-decoration: none; font-size: 28px; " class="header_link"><p>個人資料管理</p></router-link></h2> 
+            </div>
+            <div class="title_login">
+              <h2><router-link to="/scasePage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>歷史通報紀錄</p></router-link></h2> 
+            </div>
+        </div>
 
-
-  <div id="body">
-    <div class="noti_title">
-      <h1>好書推薦</h1>
-    </div>
-    <div class="content1" style="margin:0 8%; width: 84%;">
-      <div class="content2">
-        <table>
+      
+      
+      <div class="div">
+          <div class="content">
+            <table>
           <thead>
             <tr>
               <th>序號</th>
-              <th class="book">書名</th>
-              <th>作者</th>
-              <th>出版日期</th>
-              <th>ISBN</th>
-              <th>功能</th>
+              <th class="book">Facebook連結</th>
+              <th class="book">不當來源</th>
+              <th class="book">補充說明</th>
+              <th class="book">通報時間</th>
+              <th class="book">處理狀態</th>
             </tr>
           </thead>
           <tbody>
@@ -64,31 +74,29 @@
               <td class="book">{{ item.BookName }}</td>
               <td>{{ item.Author }}</td>
               <td>{{ new Date(item.PublicDate).toLocaleDateString() }}</td>
+              <td>{{ new Date(item.PublicDate).toLocaleDateString() }}</td>
               <td>{{ item.ISBN }}</td>
-              <td>
-                <button class="button_02" style="padding:5px 20px;">
-                  <a href="{{ item.ISBNurl }}" style="text-decoration:none; color: white;">前往閱讀</a>
-                </button>
-              </td>
             </tr>
           </tbody>
         </table>
-      </div>            
-    </div>
-  </div>
+        </div>
+      </div>
+      
+      
+    
+      
+      </div>
+          <footer>
+        <p>校園凌制零</p>
+      </footer>
+      
 
-  <footer>
-    <p>校園凌制零</p>
-  </footer>
-</template>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+      <input type="text" name="username" autocomplete="username" hidden>
 
-
-
-
-
-
-          
-          <script scoped src="./JavaScript/BookPage.js"></script>
-          <style scoped src="./style/header.css" ></style>
-          <style scoped src="./style/notification.css" ></style>
-          <style scoped src="./style/table.css" ></style>
+      </template>
+      
+      <script scoped src="./JavaScript/ScasePage.js"></script>
+      <style scoped src="./style/header.css" ></style>
+      <style scoped src="./style/login.css" ></style>
+      <style scoped src="./style/table.css" ></style>

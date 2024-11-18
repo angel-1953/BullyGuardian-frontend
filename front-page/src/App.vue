@@ -21,6 +21,7 @@ import BookPage from './components/BookPage.vue';
 import ContentBook from './components/ContentBook.vue';
 import WritePage from './components/WritePage.vue';
 import QAstates from './components/QAstates.vue';
+import ScasePage from './components/ScasePage.vue';
 
 export default {
   data() {
@@ -44,6 +45,7 @@ export default {
       if (this.currentPage === 'contentBook') return ContentBook;
       if (this.currentPage === 'write') return WritePage;
       if (this.currentPage === 'qastates') return QAstates;
+      if (this.currentPage === 'scase') return ScasePage;
       return null; 
     }
   }

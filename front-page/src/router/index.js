@@ -12,6 +12,8 @@ import BookPage from '../components/BookPage.vue';
 import ContentBook from '../components/ContentBook.vue';
 import WritePage from '../components/WritePage.vue';
 import QAstates from '../components/QAstates.vue';
+import ScasePage from '../components/ScasePage.vue';
+
 
 const routes = [
     {
@@ -82,6 +84,11 @@ const routes = [
       path: '/qastates',
       name: 'QAstates',
       component: QAstates
+    },
+    {
+      path: '/scasePage',
+      name: 'scase',
+      component: ScasePage
     },
     {
       path: '/qastates/:id',
