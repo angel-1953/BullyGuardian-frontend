@@ -40,7 +40,7 @@
   </div>
 
 
-  <div id="body">
+  <div style="margin-top: 140px;padding-bottom: 50px;  background-color: #fffdee;">
     <div class="noti_title">
       <h1>實力測驗</h1>
     </div>

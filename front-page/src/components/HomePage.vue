@@ -23,7 +23,7 @@
           </router-link>
         </div>
 
-        <div class="personal" style="display: none;"> <!-- 預設為隱藏 -->
+        <div class="personal1" style="display: none;"> <!-- 預設為隱藏 -->
           <router-link to="/personalPage" class="header_link">
             <div class="personal-content">
               <img src="./assets/user.png" alt="Personal Logo" />
@@ -33,7 +33,6 @@
           <router-link to="/login" >
             <button @click="logout" class="logout_button">登出</button>
           </router-link>
-          
         </div>
       </header>
 

@@ -88,14 +88,17 @@ export default {
     handleHeaderDisplay() {
       const token = localStorage.getItem('token');
       const loginRegisterSection = document.querySelector('.login_register');
-      const personalSection = document.querySelector('.personal');
+      const personalSection = document.querySelector('.personal1');
+      console.log(token)
 
       if (token) {
-        if (loginRegisterSection) loginRegisterSection.style.display = 'none';
-        if (personalSection) personalSection.style.display = 'block';
+        loginRegisterSection.style.display = 'none';
+        personalSection.style.display = 'block';
+        console.log("o")
       } else {
-        if (loginRegisterSection) loginRegisterSection.style.display = 'block';
-        if (personalSection) personalSection.style.display = 'none';
+        loginRegisterSection.style.display = 'block';
+        personalSection.style.display = 'none';
+        console.log("x")
       }
     },
     logout() {

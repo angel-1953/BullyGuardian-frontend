@@ -39,58 +39,47 @@
       </ul>
     </nav>
   </div>
-      
-      <div id="body" >
-      
-        <h1>個人中心</h1>
-        <div class="page ">
-            <div class="title_login">
-              <h2><router-link to="/personalPage" style="text-decoration: none; font-size: 28px; " class="header_link"><p>個人資料管理</p></router-link></h2> 
-            </div>
-            <div class="title_login">
-              <h2><router-link to="/scasePage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>歷史通報紀錄</p></router-link></h2> 
-            </div>
-        </div>
+  <div id="body">
+    <h1>個人中心</h1>
+    <div class="page">
+      <div class="title_login">
+        <h2><router-link to="/personalPage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>個人資料管理</p></router-link></h2>
+      </div>
+      <div class="title_login">
+        <h2><router-link to="/scasePage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>歷史通報紀錄</p></router-link></h2>
+      </div>
+    </div>
 
-      
-      
-      <div class="div">
-          <div class="content">
-            <table>
+    <div class="div">
+      <div class="content">
+        <table>
           <thead>
             <tr>
               <th>序號</th>
-              <th class="book">Facebook連結</th>
-              <th class="book">不當來源</th>
-              <th class="book">補充說明</th>
-              <th class="book">通報時間</th>
-              <th class="book">處理狀態</th>
+              <th>Facebook連結</th>
+              <th>不當來源</th>
+              <th>補充說明</th>
+              <th>通報時間</th>
+              <th>處理狀態</th>
             </tr>
           </thead>
           <tbody>
-            <!-- 使用 index + 1 來生成序號 -->
             <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
-              <td>{{ index + 1 }}</td> <!-- 流水號 -->
-              <td class="book">{{ item.BookName }}</td>
-              <td>{{ item.Author }}</td>
-              <td>{{ new Date(item.PublicDate).toLocaleDateString() }}</td>
-              <td>{{ new Date(item.PublicDate).toLocaleDateString() }}</td>
-              <td>{{ item.ISBN }}</td>
+              <td>{{ index + 1 }}</td>
+              <td>{{ item.PostUrl || '無資料' }}</td>
+              <td>{{ mapSourceType(item.Source) }}</td>
+              <td>{{ item.Info || '無資料' }}</td>
+              <td>{{ formatDate(item.Date) }}</td>
+              <td>{{ mapState(item.State) }}</td>
             </tr>
           </tbody>
         </table>
-        </div>
       </div>
-      
-      
-    
-      
-      </div>
-          <footer>
-        <p>校園凌制零</p>
-      </footer>
-      
-
+    </div>
+  </div>
+  <footer>
+    <p>校園凌制零</p>
+  </footer>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
       <input type="text" name="username" autocomplete="username" hidden>
 

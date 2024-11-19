@@ -67,7 +67,7 @@
               <td>{{ item.ISBN }}</td>
               <td>
                 <button class="button_02" style="padding:5px 20px;">
-                  <a href="{{ item.ISBNurl }}" style="text-decoration:none; color: white;">前往閱讀</a>
+                  <a :href="item.ISBNUrl" target="_blank" style="text-decoration: none; color: white;">前往閱讀</a>
                 </button>
               </td>
             </tr>

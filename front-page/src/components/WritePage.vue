@@ -38,14 +38,13 @@
       </ul>
     </nav>
   </div>
-
-  <div id="body">
+  <div style="margin-top: 140px;padding-bottom: 50px;  background-color: #fffdee;">
     <div class="noti_title">
       <h1>實力測驗</h1>
     </div>
 
     <div id="writeQA">
-      <div class="questionnaire">
+      <div class="questionnaire" style="width: 100%;">
         <div v-for="(question, index) in questions" :key="index" class="question">
           <div class="question-title">{{ index + 1 }}. {{ question.Question }}</div>
           <ul class="options">
@@ -57,7 +56,7 @@
             </li>
           </ul>
         </div>
-        <button @click="submit" class="sumitQA">提交問卷</button>
+        <button @click="submit" class="sumitQA" style="font-size: 20px;">提交問卷</button>
       </div>
     </div>
   </div>
@@ -72,3 +71,6 @@
         <style scoped src="./style/notification.css" ></style>
         <style scoped src="./style/header.css" ></style>
         <style scoped src="./style/write.css" ></style>
+
+      <style>
+      </style>

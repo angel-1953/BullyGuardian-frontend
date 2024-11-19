@@ -49,10 +49,10 @@
         <table>
           <thead>
             <tr>
-              <th>序號</th>
+              <th style="width: 8%;">序號</th>
               <th>網站名稱</th>
-              <th style="width: 50%;">連結</th>
-              <th>更新日期</th>
+              <th style="width: 35%;">連結</th>
+              <th style="width: 20%;">更新日期</th>
             </tr>
           </thead>
           <tbody>

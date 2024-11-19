@@ -49,11 +49,11 @@
 
         <div style="display: flex;   justify-content: center;">
               <!-- 新的圓餅圖 -->
-              <div style="width: 40%;">
+              <div style="">
                 <canvas id="stateChart"></canvas>
               </div>
 
-              <div style="width: 40%;">
+              <div style="">
                 <canvas id="bullyingChart"></canvas>
               </div>
           
@@ -78,6 +78,10 @@
       <style scoped src="./style/notification.css" ></style>
       <style scoped src="./style/table.css" ></style>
       <style scoped>
+        #body{
+          display: flex;
+          justify-content: start;
+        }
         canvas {
           margin: 30px;
           border: 1px solid darkblue;

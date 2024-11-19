@@ -53,15 +53,15 @@
       <div class="content2">
         <form @submit.prevent="submitForm" class="form"> <!-- 綁定 submitForm 方法 -->
           <div class="event">
-            <h3>Facebook連結：</h3>
+            <h3 style="font-weight: bold;">Facebook連結：</h3>
             <input type="text" v-model="postUrl" placeholder="請輸入Facebook連結" class="text" name="username">  
           </div>
 
           <div class="event">
-            <h3>不當來源：</h3>
+            <h3 style="font-weight: bold;">不當來源：</h3>
             <label class="lab">
               <input type="radio" value="個人頁面" v-model="sourceType" class="label" name="event" required />
-              <h5>個人頁面</h5>
+              <h5 >個人頁面</h5>
             </label>
             <label class="lab">
               <input type="radio" value="社團" v-model="sourceType" class="label" name="event" />
@@ -74,7 +74,7 @@
           </div>
 
           <div class="event" style="align-items: start;padding: 15px 0;">
-            <h3>補充說明：</h3>
+            <h3 style="font-weight: bold;">補充說明：</h3>
             <textarea v-model="info" placeholder="請輸入補充說明" class="text" name="username" style="width: 70%;"></textarea> 
           </div>
           
