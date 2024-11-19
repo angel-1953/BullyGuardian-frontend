@@ -44,17 +44,17 @@
       
         <h1>個人中心</h1>
         <div class="page ">
-            <div class="title_login">
+            <div class="title_login" style="background-color: #ffeaaf;">
               <h2><router-link to="/personalPage" style="text-decoration: none; font-size: 28px; " class="header_link"><p>個人資料管理</p></router-link></h2> 
             </div>
-            <div class="title_login">
+            <div class="title_login" >
               <h2><router-link to="/scasePage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>歷史通報紀錄</p></router-link></h2> 
             </div>
         </div>
       
       
-      <div class="div">
-          <div class="content">
+      <div class="div" >
+          <div class="content" style="border: 5px solid #feeab3;">
            <form action="" class="form">
               <div class="field">
                 <h4>帳號：</h4>

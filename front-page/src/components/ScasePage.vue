@@ -8,16 +8,7 @@
         </div>
       </router-link>
 
-      <div class="login_register">
-        <router-link to="/login" class="header_link">
-          <p>登入</p>
-        </router-link>
-        <router-link to="/register" class="header_link">
-          <p>註冊</p>
-        </router-link>
-      </div>
-
-      <div class="personal" style="display: none;"> <!-- 預設為隱藏 -->
+      <div class="personal" > <!-- 預設為隱藏 -->
         <router-link to="/personalPage" class="header_link">
           <div class="personal-content">
             <img src="./assets/user.png" alt="Personal Logo" />
@@ -42,16 +33,16 @@
   <div id="body">
     <h1>個人中心</h1>
     <div class="page">
-      <div class="title_login">
+      <div class="title_login" >
         <h2><router-link to="/personalPage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>個人資料管理</p></router-link></h2>
       </div>
-      <div class="title_login">
+      <div class="title_login" style="background-color: #ffeaaf;">
         <h2><router-link to="/scasePage" style="text-decoration: none; font-size: 28px;" class="header_link"><p>歷史通報紀錄</p></router-link></h2>
       </div>
     </div>
 
     <div class="div">
-      <div class="content">
+      <div class="content" style="border: 5px solid #feeab3;">
         <table>
           <thead>
             <tr>
