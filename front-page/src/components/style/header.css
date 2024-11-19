@@ -53,12 +53,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100px;
 }
 
 .personal {
-  display: flex !important;
-  flex-direction: row !important;
+  display: flex ;
+  flex-direction: row ;
 }
 
 .pgoto_link{

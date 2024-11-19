@@ -22,7 +22,6 @@ export default {
     this.handleHeaderDisplay();
     this.fetchDataAndRenderChart(); // 繪製折線圖
     this.fetchStateChart(); // 繪製圓餅圖
-    this.handleHeaderDisplay();  // Call handleHeaderDisplay when the page is loaded
     this.fetchKeywords();
     this.fetchUserData();
 
@@ -85,26 +84,83 @@ export default {
         console.error("加載使用者數據時發生錯誤", error);
       }
     },
+    // 判斷是否有 token，並根據狀態動態切換 header 顯示
     handleHeaderDisplay() {
       const token = localStorage.getItem('token');
-      const loginRegisterSection = document.querySelector('.login_register');
-      const personalSection = document.querySelector('.personal1');
-      console.log(token)
+      this.isLoggedIn = !!token; // 簡化邏輯，使用布林值
 
-      if (token) {
-        loginRegisterSection.style.display = 'none';
-        personalSection.style.display = 'block';
-        console.log("o")
-      } else {
-        loginRegisterSection.style.display = 'block';
-        personalSection.style.display = 'none';
-        console.log("x")
+      // 顯示/隱藏區塊
+      const loginRegisterSection = document.querySelector('.login_register');
+      const personalSection = document.querySelector('.personal');
+      if (loginRegisterSection){
+        loginRegisterSection.style.display = this.isLoggedIn ? 'none' : 'flex';
+        console.log(this.isLoggedIn ? "我有登入" : "我沒登入");
       }
+
+      if (personalSection) {
+        personalSection.style.display = this.isLoggedIn ? 'flex' : 'none';
+        console.log(this.isLoggedIn ? "有登入" : "沒登入");
+      }
+      if(!this.isLoggedIn){
+        personalSection.style.display = 'none';
+        personalSection.style.backgroundColor='white';
+
+      }
+
+      console.log(this.isLoggedIn ? "已登入" : "未登入");
     },
+
+    // 登出函數，清除 token 並更新 header 顯示狀態
     logout() {
       localStorage.removeItem('token');
+      localStorage.removeItem('account'); // 清除帳號資訊
+      this.isLoggedIn = false;
       this.handleHeaderDisplay();
+      console.log("已登出");
+      this.$router.push('/login'); // 跳轉到登入頁面
     },
+
+    // 密碼一致性檢查
+    checkPassword() {
+      if (this.newpassword && this.confirmPassword) {
+        this.passwordError = this.newpassword !== this.confirmPassword ? '密碼不一致' : '';
+      }
+    },
+
+    // 使用 API 更新密碼
+    async changePassword() {
+      const token = localStorage.getItem('token');  // 假設 token 已經存在 localStorage
+      const payload = {
+        OldPassword: this.oldPassword,
+        NewPassword: this.newPassword,
+        NewPasswordCheck: this.newPasswordCheck
+      };
+  
+      try {
+        const response = await fetch('http://localhost:5280/api/Member/ChangePassword', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          if (data.Status === 200) {
+            this.successMessage = data.Message;
+          } else {
+            this.errorMessage = data.Message;
+          }
+        } else {
+          this.errorMessage = "伺服器錯誤，請稍後再試。";
+        }
+      } catch (error) {
+        this.errorMessage = "請求失敗，請檢查網路連線。";
+      }
+    },
+
     async fetchDataAndRenderChart() {
       const token = localStorage.getItem('token');
       try {

@@ -23,12 +23,12 @@ export default {
         // 已登入
         this.isLoggedIn = true;
         if (loginRegisterSection) loginRegisterSection.style.display = 'none';
-        if (personalSection) personalSection.style.display = 'block';
+        if (personalSection) personalSection.style.display = 'flex';
         console.log("已登入");
       } else {
         // 未登入
         this.isLoggedIn = false;
-        if (loginRegisterSection) loginRegisterSection.style.display = 'block';
+        if (loginRegisterSection) loginRegisterSection.style.display = 'flex';
         if (personalSection) personalSection.style.display = 'none';
         console.log("未登入");
       }

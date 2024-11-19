@@ -90,8 +90,8 @@ export default {
       // 顯示/隱藏區塊
       const loginRegisterSection = document.querySelector('.login_register');
       const personalSection = document.querySelector('.personal');
-      if (loginRegisterSection) loginRegisterSection.style.display = this.isLoggedIn ? 'none' : 'block';
-      if (personalSection) personalSection.style.display = this.isLoggedIn ? 'block' : 'none';
+      if (loginRegisterSection) loginRegisterSection.style.display = this.isLoggedIn ? 'none' : 'flex';
+      if (personalSection) personalSection.style.display = this.isLoggedIn ? 'flex' : 'none';
 
       console.log(this.isLoggedIn ? "已登入" : "未登入");
     },
