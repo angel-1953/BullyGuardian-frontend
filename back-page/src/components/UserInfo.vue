@@ -19,6 +19,12 @@
                 事件檢視
               </router-link>
             </li>
+            <li>
+                <router-link to="/historyBully" class="link">
+                  <img src="./assets/通報.png" class="icon" />
+                  歷史通報
+                </router-link>
+              </li>
             <li style="background-color: #f5f2ca;">
               <router-link to="/userInfo" class="link" style="background-color: #f5f2ca;">
                 <img src="./assets/使用者資訊.png" class="icon" />

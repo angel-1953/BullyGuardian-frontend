@@ -11,6 +11,8 @@ import PostPage from '../components/PostPage.vue';
 import UserPage from '../components/UserPage.vue';
 import VideoPage from '../components/VideoPage.vue';
 import TestPage from '../components/TestPage.vue';
+import HistoryBully from '../components/HistoryBully.vue';
+
 
 
 
@@ -90,6 +92,11 @@ const routes = [
     name: 'postPageid',
     component: () => import('@/components/PostPage.vue'),
     props: true // 這樣可以在組件中通過 props 訪問參數
+  },
+  {
+    path: '/historyBully',
+    name: 'HistoryBully',
+    component: HistoryBully
   }
   
   ];

@@ -20,6 +20,7 @@ import PostPage from './components/PostPage.vue';
 import UserPage from './components/UserPage.vue';
 import VideoPage from './components/VideoPage.vue';
 import TestPage from './components/TestPage.vue';
+import HistoryBully from './components/HistoryBully.vue';
 
 export default {
   data() {
@@ -42,6 +43,7 @@ export default {
       if (this.currentPage === 'userPage') return UserPage;
       if (this.currentPage === 'videoPage') return VideoPage;
       if (this.currentPage === 'testPage') return TestPage;
+      if (this.currentPage === 'historyBully') return HistoryBully;
       return null; 
     }
   }

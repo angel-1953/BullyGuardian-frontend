@@ -11,7 +11,8 @@ export default {
       newBook: {
         BookName: '',
         BookAuthor: '',
-        BookYear: ''
+        BookYear: '',
+        ISBN:''
       }
     };
   },
@@ -21,7 +22,7 @@ export default {
     },
     closeModal() {
       this.showModal = false; // Close the modal
-      this.newBook = { BookName: '', BookAuthor: '', BookYear: '' }; // Reset input fields
+      this.newBook = { BookName: '', BookAuthor: '', BookYear: '' , ISBN: ''}; // Reset input fields
     },
     fetchBooks() {
       const token = localStorage.getItem('token'); // Read token from localStorage
@@ -64,7 +65,8 @@ export default {
         const bookData = {
           BookName: this.newBook.BookName,
           Author: this.newBook.BookAuthor,
-          PublicDate: formattedDate // 傳遞格式化後的日期
+          PublicDate: formattedDate, // 傳遞格式化後的日期
+          ISBN: this.newBook.ISBN,
         };
     
         fetch('http://localhost:5280/api/Back/UploadBooks', {

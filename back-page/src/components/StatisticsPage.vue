@@ -21,6 +21,12 @@
                 </router-link>
               </li>
               <li>
+                <router-link to="/historyBully" class="link">
+                  <img src="./assets/通報.png" class="icon" />
+                  歷史通報
+                </router-link>
+              </li>
+              <li>
                 <router-link to="/userInfo" class="link">
                   <img src="./assets/使用者資訊.png" class="icon" />
                   使用者資訊

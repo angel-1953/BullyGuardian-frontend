@@ -20,6 +20,12 @@
               </router-link>
             </li>
             <li>
+                <router-link to="/historyBully" class="link">
+                  <img src="./assets/通報.png" class="icon" />
+                  歷史通報
+                </router-link>
+              </li>
+            <li>
               <router-link to="/userInfo" class="link">
                 <img src="./assets/使用者資訊.png" class="icon" />
                 使用者資訊
@@ -85,6 +91,7 @@
                 <th>書名</th>
                 <th>作者</th>
                 <th>出版年</th>
+                <th>ISBN</th>
                 <th>功能</th>
               </tr>
             </thead>
@@ -94,6 +101,7 @@
                 <td class="booknameleft">{{ row.BookName }}</td>
                 <td>{{ row.Author }}</td>
                 <td>{{ new Date(row.PublicDate).toLocaleDateString() }}</td>
+                <td>{{ row.ISBN }}</td>
                 <td>
                   <input type="submit" value="刪除" class="button02" @click="deleteBook(row.BookId)">
                 </td>
@@ -118,8 +126,13 @@
                 <div class="type">
                   <label for="PublicDate" class="club">出版年：</label>
                   <input type="text" v-model="newBook.PublicDate" id="bookYear" class="text" required placeholder="請輸入此格式：xxxx-xx-xx">
-                </div>
+                </div>              
 
+                <div class="type">
+                  <label for="ISBN" class="club">ISBN：</label>
+                  <input type="text" v-model="newBook.ISBN" id="ISBN" class="text" required>
+                </div>
+                
                 <div class="modal-actions">
                   <button type="button" class="button02" @click="closeModal" style="background-color: #bfb6ad;">取消</button>
                   <button type="submit" class="button02">確認</button>
