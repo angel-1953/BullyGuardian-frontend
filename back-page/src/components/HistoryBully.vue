@@ -81,6 +81,8 @@
                   <th>Facebook連結</th>
                   <th>不當來源</th>
                   <th>補充說明</th>
+                  <th>通報時間</th>
+                  <th>功能</th>
                 </tr>
               </thead>
               <tbody>
