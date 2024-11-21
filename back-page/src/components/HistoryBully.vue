@@ -82,6 +82,7 @@
                   <th>不當來源</th>
                   <th>補充說明</th>
                   <th>通報時間</th>
+                  <th>狀態</th>
                   <th>功能</th>
                 </tr>
               </thead>
@@ -93,6 +94,9 @@
                     <td>{{ item.Info || '無資料' }}</td>
                     <td>{{ formatDate(item.Date) }}</td>
                     <td>{{ mapState(item.State) }}</td>
+                    <td>
+                      <input type="button" value="已處理" class="button02" @click="changeStatus(index + 1)" >
+                    </td>
                 </tr>
               </tbody>
             </table>

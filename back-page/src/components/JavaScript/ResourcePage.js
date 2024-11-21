@@ -55,28 +55,24 @@ export default {
     },
     
     addNewBook() {
-      const token = localStorage.getItem('token'); // Get token from localStorage
+      const token = localStorage.getItem('token'); // 從 localStorage 獲取 token
     
-      if (this.newBook.BookName && this.newBook.BookAuthor && this.newBook.PublicDate) {
-        // 先將輸入的日期轉換為 JavaScript Date 對象
-        const formattedDate = new Date(this.newBook.PublicDate).toISOString().split('T')[0]; // 格式化為 YYYY-MM-DD
+      // 驗證必填字段是否完整
+      if (this.newBook.BookName && this.newBook.BookAuthor && this.newBook.PublicDate && this.newBook.ISBN) {
+        // 創建 FormData 對象
+        const formData = new FormData();
+        formData.append('BookName', this.newBook.BookName);
+        formData.append('Author', this.newBook.BookAuthor);
+        formData.append('PublicDate', this.newBook.PublicDate); // 保持原格式，後端應能處理 YYYY-MM-DD
+        formData.append('ISBN', this.newBook.ISBN);
     
-        // 構建發送給後端的書籍資料
-        const bookData = {
-          BookName: this.newBook.BookName,
-          Author: this.newBook.BookAuthor,
-          PublicDate: formattedDate, // 傳遞格式化後的日期
-          ISBN: this.newBook.ISBN,
-        };
-    
+        // 發送 POST 請求
         fetch('http://localhost:5280/api/Back/UploadBooks', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Authorization': `Bearer ${token}` // 不要設置 Content-Type，瀏覽器會自動添加正確的邊界
           },
-          body: JSON.stringify(bookData)
+          body: formData // 傳遞 FormData 對象
         })
         .then(response => {
           if (!response.ok) {
@@ -86,8 +82,13 @@ export default {
         })
         .then(data => {
           if (data.Status === 200) {
-            this.data.push(bookData);
-            this.closeModal();
+            this.data.push({ 
+              BookName: this.newBook.BookName,
+              Author: this.newBook.BookAuthor,
+              PublicDate: this.newBook.PublicDate,
+              ISBN: this.newBook.ISBN,
+            });
+            this.closeModal(); // 關閉模態框
           } else {
             console.error('Error uploading book:', data);
           }
@@ -95,8 +96,11 @@ export default {
         .catch(error => {
           console.error('Error:', error);
         });
+      } else {
+        console.error('Missing required fields');
       }
     },
+    
     
     
     
