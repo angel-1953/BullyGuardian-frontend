@@ -95,7 +95,12 @@ const routes = [
       name: 'testid',
       component: () => import('@/components/QAstates.vue'),
       props: true // 這樣可以在組件中通過 props 訪問參數
-    }
+    },
+    {
+      path: '/test/:id',
+      name: 'testid',
+      component: () => import('@/components/QAstates.vue'), // 對應的詳細頁組件
+    },
   ];
   
 

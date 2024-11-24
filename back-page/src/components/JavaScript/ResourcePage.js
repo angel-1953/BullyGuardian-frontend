@@ -89,6 +89,7 @@ export default {
               ISBN: this.newBook.ISBN,
             });
             this.closeModal(); // 關閉模態框
+            window.location.reload();
           } else {
             console.error('Error uploading book:', data);
           }
