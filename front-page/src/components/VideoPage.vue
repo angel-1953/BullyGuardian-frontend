@@ -47,9 +47,9 @@
     <div class="video">
       <div v-for="(video) in videos" :key="video.VideoId" class="card">
         <!-- Trigger API call when video is clicked -->
-        <div class="video-content">
+        <div class="video-content" >
           <a :href="video.VideoLink1" target="_blank" @click.prevent="handleVideoClick(video.VideoId, video.VideoLink1)">
-            <img :src="video.imgSrc" :alt="video.VideoName" class="thumbnail" />
+            <img :src="video.imgSrc" :alt="video.VideoName" class="thumbnail"  />
           </a>
         </div>
         
