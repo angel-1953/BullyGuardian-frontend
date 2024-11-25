@@ -98,7 +98,7 @@
               <tr v-for="(row, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                   <td>{{ index + 1 }}</td>
                   <td>{{ row.VideoName }}</td>
-                  <td><a :href="row.VideoLink1" target="_blank">{{ row.VideoLink1 }}</a></td>
+                  <td id="url"><a :href="row.VideoLink1" target="_blank">{{ row.VideoLink1 }}</a></td>
                   <td>{{ row.LinkClick }}</td>
                   <td>
                     <input type="submit" value="刪除" class="button02" @click="deleteVideo(row.VideoId)">

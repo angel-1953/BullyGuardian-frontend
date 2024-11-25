@@ -87,8 +87,10 @@
               <tr v-for="(item, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
                 <td>{{ item.Title }}</td>
-                <td style="word-wrap: break-word !important;word-break: break-all;">
-                  {{ item.Link }}
+                <td id="url">
+                  <a :href="item.Link || '#'" target="_blank" rel="noopener noreferrer">
+                    {{ item.Link }}
+                  </a>
                 </td>
                 <td>{{ item.LinkTime.replace('T', ' ') }}</td>
               </tr>

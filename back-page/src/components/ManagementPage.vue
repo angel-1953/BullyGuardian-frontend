@@ -84,8 +84,11 @@
             <tr v-for="(row, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
               <td style="text-align: center;">{{ index + 1 }}</td>
               <td style="text-align: left;">{{ row.ClubName }}</td>
-              <td style="text-align: left; word-wrap: break-word !important; word-break: break-all;">
-                {{ row.ClubURL }}
+              <td id="url">
+                <a :href="row.ClubURL || '#'" target="_blank" rel="noopener noreferrer">
+                  {{ row.ClubURL }}
+                </a>
+                
               </td>
               <td style="text-align: center;"><button class="button02" @click="deleteRow(index)">刪除</button></td>
             </tr>
