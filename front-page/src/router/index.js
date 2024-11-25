@@ -18,7 +18,7 @@ import ScasePage from '../components/ScasePage.vue';
 const routes = [
     {
       path: '/',
-      redirect: '/home' // 預設重定向到首頁
+      redirect: '/login' // 預設重定向到首頁
     },
     {
       path: '/home',
