@@ -54,7 +54,7 @@
               </div>
 
               <div style="">
-                <canvas id="bullyingChart"></canvas>
+                <canvas id="bullyingChart" style="height: 450px;"></canvas>
               </div>
           
         </div>

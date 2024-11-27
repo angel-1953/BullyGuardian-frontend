@@ -59,3 +59,18 @@ table {
     background-color: #f5b3a7;
     color: white;
   }
+
+  #url{
+    max-width: 400px;
+    white-space: nowrap; /* 不允許換行 */
+    overflow: hidden; /* 隱藏超出部分 */    
+    text-overflow: ellipsis;
+  }
+
+  #url a{
+    color: #a7786f;
+  }
+
+  #url a:hover{
+    color: #C15959;
+  }

@@ -57,7 +57,10 @@
           <tbody>
             <tr v-for="(item, index) in tableData" :key="index" :class="{'odd-row': index % 2 !== 0}">
               <td>{{ index + 1 }}</td>
-              <td>{{ item.PostUrl || '無資料' }}</td>
+              <td id="url">
+                <a :href="item.PostUrl || '#'" target="_blank" rel="noopener noreferrer">
+                  {{ item.PostUrl || '無資料' }}
+                </a></td>
               <td>{{ mapSourceType(item.Source) }}</td>
               <td>{{ item.Info || '無資料' }}</td>
               <td>{{ formatDate(item.Date) }}</td>
