@@ -123,12 +123,10 @@
     white-space: nowrap; /* 不允許換行 */
     overflow: hidden; /* 隱藏超出部分 */    
     text-overflow: ellipsis;
-    text-decoration: none;
   }
 
   #url a{
     color: #6e6560;
-    text-decoration: none;
   }
 
   #url a:hover{

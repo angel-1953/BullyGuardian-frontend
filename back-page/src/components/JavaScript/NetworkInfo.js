@@ -6,30 +6,34 @@ export default {
   },
   data() {
     return {
-      data: [], // 從 API 接收到的資料將存儲在這裡
+      data: [], // 存放 API 返回的資料
     };
   },
   methods: {
     fetchData() {
-      const token = localStorage.getItem('token'); // 從 localStorage 取出 token
-      fetch('http://localhost:5280/api/Back/GetExtLink', {
-        method: 'GET',
+      const token = localStorage.getItem("token"); // 從 localStorage 取出 token
+      fetch("http://localhost:5280/api/Back/GetExtLink", {
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}` // 加上身份驗證的 Bearer Token
-        }
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // 加上身份驗證的 Bearer Token
+        },
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data && data.Message) {
-          this.data = data.Message; // 將 API 返回的資料存入 data
-        } else {
-          console.error('無法取得資料');
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-    }
-  }
+        .then((response) => response.json())
+        .then((data) => {
+          if (data && data.Message) {
+            // 處理 LinkTime 格式，移除時分秒
+            this.data = data.Message.map((item) => ({
+              ...item,
+              LinkTime: item.LinkTime.split("T")[0], // 僅保留日期部分
+            }));
+          } else {
+            console.error("無法取得資料");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    },
+  },
 };

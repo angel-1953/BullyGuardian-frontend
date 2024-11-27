@@ -86,7 +86,7 @@
             <tbody>
               <tr v-for="(item, index) in data" :key="index" :class="{'odd-row': index % 2 !== 0}">
                 <td>{{ index + 1 }}</td>
-                <td>{{ item.Title }}</td>
+                <td style="max-width: 500px;">{{ item.Title }}</td>
                 <td id="url">
                   <a :href="item.Link || '#'" target="_blank" rel="noopener noreferrer">
                     {{ item.Link }}

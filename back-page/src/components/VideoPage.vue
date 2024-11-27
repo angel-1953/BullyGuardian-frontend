@@ -84,7 +84,7 @@
         </div>
 
         <div class="register-container">
-          <table class="video-styled-table">
+          <table class="resource-styled-table">
             <thead>
               <tr>
                 <th>序號</th>
@@ -99,7 +99,7 @@
                   <td>{{ index + 1 }}</td>
                   <td>{{ row.VideoName }}</td>
                   <td id="url"><a :href="row.VideoLink1" target="_blank">{{ row.VideoLink1 }}</a></td>
-                  <td>{{ row.LinkClick }}</td>
+                  <td >{{ row.LinkClick }}</td>
                   <td>
                     <input type="submit" value="刪除" class="button02" @click="deleteVideo(row.VideoId)">
                     <input type="button" @click="previewImage(row.VideoId)" value="封面預覽" class="button02"> <!-- 使用 row.VideoId -->

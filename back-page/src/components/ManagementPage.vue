@@ -77,7 +77,7 @@
               <th>序號</th>
               <th>社團名稱</th>
               <th>Facebook連結</th>
-              <th>功能</th>
+              <th style="width: 150px;">功能</th>
             </tr>
           </thead>
           <tbody>
